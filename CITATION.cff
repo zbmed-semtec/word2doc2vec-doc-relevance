@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: Word2Doc2Vec-Doc-Relevance
+abstract: An approach utilizing a word2vec solution to generate document embeddings from the TREC and RELISH datasets as part to explore and compare various NLP solution.
+authors:
+  - family-names: Dadi
+    given-names: Vishnu Vardhan
+    orcid: " https://orcid.org/0000-0002-3082-7522 "
+  - family-names: Geist
+    given-names: Lukas
+    orcid: "http://orcid.org/0000-0002-2910-7982"
+  - family-names: Jael Castro
+    given-names: Leyla
+    orcid: " https://orcid.org/0000-0003-3986-0510"
+  - family-names: Rebholz-Schuhmann
+    given-names: Dietrich
+    orcid:  https://orcid.org/0000-0002-1018-0370
+version: 0.1.0
+date-released: "2022-4-15"
+identifiers:
+  - description: 
+    type: doi
+    value: ""
+license: gpl-3.0
+repository-code: "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance.git"
