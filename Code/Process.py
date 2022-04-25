@@ -13,13 +13,15 @@ def prepareFromTSV(filepathIn):
         
         Input:  filepathIn      ->  string: The filepath of the RELISH or TREC input tsv file.
 
-        Output: titles          ->  list: A list of all words (string) within the title.
+        Output: pmids           ->  list: A list of all pubmed ids (string) associated to the paper.
+                titles          ->  list: A list of all words (string) within the title.
                 abstrats        ->  list: A list of all words (string) within the abstract.
         '''
         if not isinstance(filepathIn, str):
                 logging.alert("Wrong parameter type for prepareFromTSV.")
                 sys.exit("filepathIn needs to be of type string")
         else:
+                pmids = []
                 titles = []
                 abstracts = []
                 with open(filepathIn) as input:
@@ -29,4 +31,5 @@ def prepareFromTSV(filepathIn):
                                 abstract = line[2].lower().split()
                                 titles.append([w for w in title if w not in stop_words])
                                 abstracts.append([w for w in abstract if w not in stop_words])
-                return(titles, abstracts)
+                                pmids.append(line[0])
+                return(pmids, titles, abstracts)
