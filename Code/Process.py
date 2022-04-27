@@ -7,6 +7,7 @@ def prepareFromTSV(filepathIn):
         from nltk.corpus import stopwords
         download('stopwords')
         stop_words = stopwords.words('english')
+        excluded_special_characters = [".", ",", ":", ";", "\'", "\""]
         '''
         To retrieve the correct word embeddings from word2vec modules, the spelling should be in lowercase letters only and all the stopwords need to be omitted.
         Once the input text has been processed, a list of all the words included in the title and abstract get returned.
@@ -29,6 +30,16 @@ def prepareFromTSV(filepathIn):
                         for line in inputFile:
                                 title = line[1].lower().split()
                                 abstract = line[2].lower().split()
+                                iteration = 0
+                                while(iteration < len(title)):
+                                        word = "".join([c for c in title[iteration] if c not in excluded_special_characters])
+                                        title[iteration] = word
+                                        iteration += 1
+                                iteration = 0
+                                while(iteration < len(abstract)):
+                                        word = "".join([c for c in abstract[iteration] if c not in excluded_special_characters])
+                                        abstract[iteration] = word
+                                        iteration += 1
                                 titles.append([w for w in title if w not in stop_words])
                                 abstracts.append([w for w in abstract if w not in stop_words])
                                 pmids.append(line[0])
@@ -66,9 +77,11 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("distributionAbstract needs to be of type int")
         else:
-                from gensim.models import KeyedVectors
+                #from gensim.models import KeyedVectors
+                import gensim.downloader as api
                 missingWords = 0
-                word_vectors = KeyedVectors.load_word2vec_format('pubmed2018_w2v_200D/pubmed2018_w2v_200D.bin', binary=True)
+                word_vectors = api.load('wiki-english-20171001')
+                #word_vectors = KeyedVectors.load_word2vec_format('pubmed2018_w2v_200D/pubmed2018_w2v_200D.bin', binary=True)
                 iteration = 0
                 documentEmbeddings = []
                 while (iteration < len(pmids)):
@@ -121,3 +134,8 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                                 docDimension += 1
 
                         iteration += 1
+                        print(documentAbstract)
+
+
+pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
+generateDocumentEmbeddings(pmids, titles, abstracts, "../Data/RELISH/TSV")
