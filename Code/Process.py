@@ -27,22 +27,26 @@ def prepareFromTSV(filepathIn):
                 abstracts = []
                 with open(filepathIn) as input:
                         inputFile = csv.reader(input, delimiter="\t")
+                        headerline = True
                         for line in inputFile:
-                                title = line[1].lower().split()
-                                abstract = line[2].lower().split()
-                                iteration = 0
-                                while(iteration < len(title)):
-                                        word = "".join([c for c in title[iteration] if c not in excluded_special_characters])
-                                        title[iteration] = word
-                                        iteration += 1
-                                iteration = 0
-                                while(iteration < len(abstract)):
-                                        word = "".join([c for c in abstract[iteration] if c not in excluded_special_characters])
-                                        abstract[iteration] = word
-                                        iteration += 1
-                                titles.append([w for w in title if w not in stop_words])
-                                abstracts.append([w for w in abstract if w not in stop_words])
-                                pmids.append(line[0])
+                                if(headerline):
+                                        headerline = False
+                                else:
+                                        title = line[1].lower().split()
+                                        abstract = line[2].lower().split()
+                                        iteration = 0
+                                        while(iteration < len(title)):
+                                                word = "".join([c for c in title[iteration] if c not in excluded_special_characters])
+                                                title[iteration] = word
+                                                iteration += 1
+                                        iteration = 0
+                                        while(iteration < len(abstract)):
+                                                word = "".join([c for c in abstract[iteration] if c not in excluded_special_characters])
+                                                abstract[iteration] = word
+                                                iteration += 1
+                                        titles.append([w for w in title if w not in stop_words])
+                                        abstracts.append([w for w in abstract if w not in stop_words])
+                                        pmids.append(line[0])
                 return(pmids, titles, abstracts)
 
 def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distributionTitle = 1, distributionAbstract = 4):
@@ -80,11 +84,13 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 #from gensim.models import KeyedVectors
                 import gensim.downloader as api
                 missingWords = 0
-                word_vectors = api.load('wiki-english-20171001')
+                #word_vectors = api.load('wiki-english-20171001')
+                word_vectors = api.load('word2vec-google-news-300')
                 #word_vectors = KeyedVectors.load_word2vec_format('pubmed2018_w2v_200D/pubmed2018_w2v_200D.bin', binary=True)
                 iteration = 0
                 documentEmbeddings = []
-                while (iteration < len(pmids)):
+                while (iteration < 1):
+                #while (iteration < len(pmids)):
                         #Retrieve word embeddings.
                         embeddingsTitle = []
                         embeddingsAbstract = []
@@ -110,9 +116,11 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                                 for dimension in embedding:
                                         documentTitle[docDimension] += dimension
                                         docDimension += 1
+                        docDimension = 0
                         for dimension in documentTitle:
-                                dimension = (dimension / len(embeddingsTitle)) * distributionTitle
-                        
+                                documentTitle[docDimension] = (dimension / len(embeddingsTitle)) * distributionTitle
+                                docDimension += 1
+
                         first = True
                         documentAbstract = []
                         for embedding in embeddingsAbstract:
@@ -124,8 +132,10 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                                 for dimension in embedding:
                                         documentAbstract[docDimension] += dimension
                                         docDimension += 1
+                        docDimension = 0
                         for dimension in documentAbstract:
-                                dimension = (dimension / len(embeddingsAbstract)) * distributionAbstract
+                                documentAbstract[docDimension] = (dimension / len(embeddingsAbstract)) * distributionAbstract
+                                docDimension += 1
 
                         docDimension = 0
                         for dimension in documentTitle:
@@ -134,8 +144,7 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                                 docDimension += 1
 
                         iteration += 1
-                        print(documentAbstract)
 
 
-pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
-generateDocumentEmbeddings(pmids, titles, abstracts, "../Data/RELISH/TSV")
+#pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
+#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/TSV")
