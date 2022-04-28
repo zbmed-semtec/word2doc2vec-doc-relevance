@@ -85,8 +85,8 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 import numpy as np
                 import gensim.downloader as api
                 missingWords = 0
-                #word_vectors = api.load('wiki-english-20171001')
                 word_vectors = api.load('glove-wiki-gigaword-200')
+                #word2vec model retrieved from http://bioasq.org/news/bioasq-releases-continuous-space-word-vectors-obtained-applying-word2vec-pubmed-abstracts
                 #word_vectors = KeyedVectors.load_word2vec_format('pubmed2018_w2v_200D/pubmed2018_w2v_200D.bin', binary=True)
                 iteration = 0
                 documentEmbeddings = []
@@ -149,6 +149,5 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                         np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
 
-
-pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
-generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output")
+#pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
+#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output")
