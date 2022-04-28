@@ -51,7 +51,7 @@ def prepareFromTSV(filepathIn):
 
 def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distributionTitle = 1, distributionAbstract = 4):
         '''
-        Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the mean value of all given word embeddings.
+        Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
         The final document embedding consists of the following distirbution: finalDoc = (distributionTitle * embeddingTitle + distributionAbstract * embeddingAbstract) / (distributionTitle + distributionAbstract)
         
@@ -82,15 +82,15 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 sys.exit("distributionAbstract needs to be of type int")
         else:
                 #from gensim.models import KeyedVectors
+                import numpy as np
                 import gensim.downloader as api
                 missingWords = 0
                 #word_vectors = api.load('wiki-english-20171001')
-                word_vectors = api.load('word2vec-google-news-300')
+                word_vectors = api.load('glove-wiki-gigaword-200')
                 #word_vectors = KeyedVectors.load_word2vec_format('pubmed2018_w2v_200D/pubmed2018_w2v_200D.bin', binary=True)
                 iteration = 0
                 documentEmbeddings = []
-                while (iteration < 1):
-                #while (iteration < len(pmids)):
+                while (iteration < len(pmids)):
                         #Retrieve word embeddings.
                         embeddingsTitle = []
                         embeddingsAbstract = []
@@ -142,9 +142,13 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                                 documentAbstract[docDimension] += dimension
                                 documentAbstract[docDimension] = documentAbstract[docDimension] / (distributionAbstract + distributionTitle)
                                 docDimension += 1
-
+                        documentEmbeddings.append(documentAbstract)
+                        iteration += 1
+                iteration = 0
+                while(iteration < len(documentEmbeddings)):
+                        np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
 
 
-#pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
-#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/TSV")
+pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
+generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output")
