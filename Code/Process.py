@@ -9,6 +9,8 @@ def prepareFromTSV(filepathIn):
         stop_words = stopwords.words('english')
         excluded_special_characters = [".", ",", ":", ";", "\'", "\""]
         '''
+        Retrieves and formats data from the RELISH and TREC tsv files.
+
         To retrieve the correct word embeddings from word2vec modules, the spelling should be in lowercase letters only and all the stopwords need to be omitted.
         Once the input text has been processed, a list of all the words included in the title and abstract get returned.
         
@@ -48,6 +50,36 @@ def prepareFromTSV(filepathIn):
                                         abstracts.append([w for w in abstract if w not in stop_words])
                                         pmids.append(line[0])
                 return(pmids, titles, abstracts)
+
+def prepareFromXML(directoryPath):
+        '''
+        Retrieves and formats data from the RELISH and TREC xml files.
+
+        To retrieve the correct word embeddings from word2vec modules, the spelling should be in lowercase letters only and all the stopwords need to be omitted.
+        Once the input text has been processed, a list of all the words included in the title and abstract get returned.
+        
+        Input:  directoryPath   ->  string: The directory path of the RELISH or TREC input xml directory.
+
+        Output: pmids           ->  list: A list of all pubmed ids (string) associated to the paper.
+                titles          ->  list: A list of all words (string) within the title.
+                abstrats        ->  list: A list of all words (string) within the abstract.
+        '''
+        if not isinstance(directoryPath, str):
+                logging.alert("Wrong parameter type for prepareFromXML.")
+                sys.exit("directoryPath needs to be of type string")
+        else:
+                import os
+                import xml.etree.ElementTree as et
+                pmids = []
+                titles = []
+                abstracts = []
+                for file in os.listdir(directoryPath):
+                        if(file != '.DS_Store'):
+                                xmlTree = et.parse(os.path.join(directoryPath, file))
+                                root = xmlTree.getroot()
+                                pmids.append(root[0][0].text)
+                                titles.append(root[0][1][2].text)
+                                abstracts.append(root[0][2][2].text)
 
 def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbeddingsVectors, wordEmbeddingsTerms, distributionTitle = 1, distributionAbstract = 4):
         '''
@@ -173,4 +205,5 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbed
                         iteration += 1
                 
 #pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
-#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output", "Data/WordEmbeddings/vectors.txt", "Data/WordEmbeddings/types.txt")
+#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output"")
+prepareFromXML("Data/RELISH/XML")
