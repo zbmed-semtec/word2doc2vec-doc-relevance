@@ -1,7 +1,7 @@
 import sys
 import logging
 
-def prepareFromTSV(filepathIn):
+def prepareFromTSV(filepathIn=None):
         import csv
         from nltk import download
         from nltk.corpus import stopwords
@@ -51,7 +51,7 @@ def prepareFromTSV(filepathIn):
                                         pmids.append(line[0])
                 return(pmids, titles, abstracts)
 
-def prepareFromXML(directoryPath):
+def prepareFromXML(directoryPath=None):
         '''
         Retrieves and formats data from the RELISH and TREC xml files.
 
@@ -81,7 +81,7 @@ def prepareFromXML(directoryPath):
                                 titles.append(root[0][1][2].text)
                                 abstracts.append(root[0][2][2].text)
 
-def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbeddingsVectors, wordEmbeddingsTerms, distributionTitle = 1, distributionAbstract = 4):
+def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, wordEmbeddingsVectors=None, wordEmbeddingsTerms=None, distributionTitle=1, distributionAbstract=4):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
@@ -123,6 +123,7 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbed
                 wordList = []
                 embeddingList = []
                 if isinstance(wordEmbeddingsVectors, str) and isinstance(wordEmbeddingsTerms, str):
+                        print("instance not supposed to be here!")
                         with open(wordEmbeddingsTerms, "r") as words:
                                 for line in words:
                                         word = line.strip()
@@ -143,7 +144,7 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbed
                         embeddingsAbstract = []
                         for word in titles[iteration]:
                                 try:
-                                        if(len(wordList > 0)):
+                                        if(wordEmbeddingsVectors != None):
                                                 index = wordList.index(word)
                                                 embeddingsTitle.append(embeddingList[index])
                                         else:
@@ -152,7 +153,7 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbed
                                         missingWords += 1
                         for word in abstracts[iteration]:
                                 try:
-                                        if(len(wordList > 0)):
+                                        if(wordEmbeddingsVectors != None):
                                                 index = wordList.index(word)
                                                 embeddingsAbstract.append(embeddingList[index])
                                         else:
@@ -200,9 +201,12 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbed
                         documentEmbeddings.append(documentAbstract)
                         iteration += 1
                 iteration = 0
+                print(documentEmbeddings[2])
+                print(directoryOut)
                 while(iteration < len(documentEmbeddings)):
+                        print(pmids[iteration])
                         np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
                 
-pmids, titles, abstracts = prepareFromTSV("Data/TREC/TSV/TREC_documents.tsv")
+pmids, titles, abstracts = prepareFromTSV("Data/TREC/TSV/sample.tsv")
 generateDocumentEmbeddings(pmids, titles, abstracts, "Data/TREC/Output")
