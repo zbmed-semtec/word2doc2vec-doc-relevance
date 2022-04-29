@@ -203,3 +203,6 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbed
                 while(iteration < len(documentEmbeddings)):
                         np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
+                
+pmids, titles, abstracts = prepareFromTSV("Data/TREC/TSV/TREC_documents.tsv")
+generateDocumentEmbeddings(pmids, titles, abstracts, "Data/TREC/Output")
