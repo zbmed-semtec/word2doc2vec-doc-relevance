@@ -123,7 +123,6 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 wordList = []
                 embeddingList = []
                 if isinstance(wordEmbeddingsVectors, str) and isinstance(wordEmbeddingsTerms, str):
-                        print("instance not supposed to be here!")
                         with open(wordEmbeddingsTerms, "r") as words:
                                 for line in words:
                                         word = line.strip()
@@ -201,12 +200,6 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                         documentEmbeddings.append(documentAbstract)
                         iteration += 1
                 iteration = 0
-                print(documentEmbeddings[2])
-                print(directoryOut)
                 while(iteration < len(documentEmbeddings)):
-                        print(pmids[iteration])
                         np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
-                
-pmids, titles, abstracts = prepareFromTSV("Data/TREC/TSV/sample.tsv")
-generateDocumentEmbeddings(pmids, titles, abstracts, "Data/TREC/Output")
