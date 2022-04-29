@@ -49,11 +49,14 @@ def prepareFromTSV(filepathIn):
                                         pmids.append(line[0])
                 return(pmids, titles, abstracts)
 
-def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distributionTitle = 1, distributionAbstract = 4):
+def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, wordEmbeddingsVectors, wordEmbeddingsTerms, distributionTitle = 1, distributionAbstract = 4):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
         The final document embedding consists of the following distirbution: finalDoc = (distributionTitle * embeddingTitle + distributionAbstract * embeddingAbstract) / (distributionTitle + distributionAbstract)
+
+        Both of the filepaths for word embeddings are optional and intended for additional resources to include domain-specific embeddings into the project,
+        those will be preffered over the 'glove-wiki-gigaword-200' gensim model, should an embedding not be present in the given list of embeddings, those words will be ignored.
         
         Input:  pmids                   ->  list: The list of all pmids (string) which are processed.
                 titles                  ->  list: The list of all titles (string) which are processed.
@@ -61,6 +64,8 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 directoryOut            ->  string: The filepath of the output directory of all .npy embeddings.
                 distributionTitle       ->  int: The distribution of title for the final document embedding.
                 distributionAbstract    ->  int: The distribution of the abstract for the final document embedding.
+                wordEmbeddingsVectors   ->  string: The filepath of additional word2vec embeddings.
+                wordEmbeddingsTerms     ->  string: The filepath of the associating plaintext terms of the embeddings.
         '''
         if not isinstance(pmids, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
@@ -81,13 +86,23 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("distributionAbstract needs to be of type int")
         else:
-                #from gensim.models import KeyedVectors
                 import numpy as np
                 import gensim.downloader as api
+                wordList = []
+                embeddingList = []
+                if isinstance(wordEmbeddingsVectors, str) and isinstance(wordEmbeddingsTerms, str):
+                        with open(wordEmbeddingsTerms, "r") as words:
+                                for line in words:
+                                        word = line.strip()
+                                        wordList.append(word)
+                        with open(wordEmbeddingsVectors, "r") as vectors:
+                                for line in vectors:
+                                        currentVector = []
+                                        for dimension in line.split():
+                                                currentVector.append(float(dimension))
+                                        embeddingList.append(currentVector)
                 missingWords = 0
                 word_vectors = api.load('glove-wiki-gigaword-200')
-                #word2vec model retrieved from http://bioasq.org/news/bioasq-releases-continuous-space-word-vectors-obtained-applying-word2vec-pubmed-abstracts
-                #word_vectors = KeyedVectors.load_word2vec_format('pubmed2018_w2v_200D/pubmed2018_w2v_200D.bin', binary=True)
                 iteration = 0
                 documentEmbeddings = []
                 while (iteration < len(pmids)):
@@ -96,12 +111,20 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                         embeddingsAbstract = []
                         for word in titles[iteration]:
                                 try:
-                                        embeddingsTitle.append(word_vectors[word])
+                                        if(len(wordList > 0)):
+                                                index = wordList.index(word)
+                                                embeddingsTitle.append(embeddingList[index])
+                                        else:
+                                                embeddingsTitle.append(word_vectors[word])
                                 except:
                                         missingWords += 1
                         for word in abstracts[iteration]:
                                 try:
-                                        embeddingsAbstract.append(word_vectors[word])
+                                        if(len(wordList > 0)):
+                                                index = wordList.index(word)
+                                                embeddingsAbstract.append(embeddingList[index])
+                                        else:
+                                                embeddingsAbstract.append(word_vectors[word])
                                 except:
                                         missingWords += 1
                         #Generate document embeddings from word embeddings.
@@ -148,6 +171,6 @@ def generateDocumentEmbeddings(pmids, titles, abstracts, directoryOut, distribut
                 while(iteration < len(documentEmbeddings)):
                         np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
-
+                
 #pmids, titles, abstracts = prepareFromTSV("Data/RELISH/TSV/sample.tsv")
-#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output")
+#generateDocumentEmbeddings(pmids, titles, abstracts, "Data/RELISH/Output", "Data/WordEmbeddings/vectors.txt", "Data/WordEmbeddings/types.txt")
