@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11603111
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [Early multiple sclerosis therapy in the effects of public health economics].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    78
+   </offset>
+   <text>
+    BACKGROUND: Meanwhile, a number of drugs are available for the course-modifying therapy of multiple sclerosis. Their use depends on the individual indication as well as on the patient's compliance, but also increasingly on the economic considerations of the public health system. For years, the costs of multiple sclerosis and the critically evaluated cost-benefit analyses were based on estimated figures. PATIENTS AND METHODS: For better transparency of the actual costs of the disease, a cross-sectional study of multiple sclerosis patients was performed for the first time in Germany, where the patients answered questionnaires as to their financial resources and quality of life. Within this representative framework of questionnaires, data of 737 patients were evaluated. RESULTS: This study came up with a total cost of DM 65,400.-per patient and year. The complete costs of multiple sclerosis, based on an estimated number of 120,000 patients, thus run up to 7.85 bio. DM a year. Only a small percentage is caused by medication (7%), including the use of new extremely expensive drugs. There is a positive correlation between the severity of the disease and the underlying costs of treatment. CONCLUSION: Due to these results, concrete health-economic goals in the treatment of patients with multiple sclerosis should aim at stabilization on a low disability level at an early stage of the disease.
+   </text>
+  </passage>
+ </document>
+ </collection>

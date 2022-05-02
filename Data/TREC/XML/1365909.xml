@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   1365909
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    p53 loss of function: implications for the processes of immortalization and tumorigenesis.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    91
+   </offset>
+   <text>
+    The complex process of cell immortalization and transformation is likely to involve the inactivation of growth regulatory genes. Mutations (deletions, missense mutations) in the p53 gene are the most frequently observed genetic alteration in human tumors, making p53 a candidate for a cellular protein involved in the control of cell growth. Two recent studies have examined the role of p53 in immortalization and tumorigenesis. In the first study, p53 expression was examined in both mortal and immortal chick embryo fibroblasts. All mortal clones expressed p53 but the loss of wild-type p53 expression was observed in every immortal cell line examined. In the second study, a line of mice carrying two null p53 alleles has been created and characterized. Although these mice develop normally, they show a predisposition to develop a variety of neoplasms at an early age (&lt; 6 months). Although it is unclear whether p53 regulates the same, different, or overlapping pathways in the two experimental systems, these data demonstrate that p53 function is critical for the maintenance of normal growth control and support the current classification of p53 as a growth suppressive or tumor suppressor gene.
+   </text>
+  </passage>
+ </document>
+ </collection>

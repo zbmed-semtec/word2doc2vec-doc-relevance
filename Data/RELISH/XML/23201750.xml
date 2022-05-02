@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   23201750
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    First-principles study of the formation and migration of native defects in LiNH2BH3.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    85
+   </offset>
+   <text>
+    First-principles calculations based on density functional theory were carried out to investigate the formation and migration of native defects in LiNH(2)BH(3). The structural properties and formation energies of H, Li, N and B related defects in various charge states were examined. Our analysis showed that the dominant atomic H defects are positively and negatively charged H interstitial (I(H)(+) and I(H)(-)). The Li related defects are dominated by positively charged Li interstitial (I(Li)(+)) and negatively charged Li vacancy (V(Li)(-)). For N related defects, the energetically favorable defects are positively and negatively charged NH(2) interstitial (I(NH2)(+) and I(NH2)(-)), while B related defect is dominated by neutral BH(3) interstitial (I(BH3)(0)). Further results indicated that the neutral H(2) interstitial (I(H2)) has the lowest formation energy (0.31 eV), suggesting that the major defect in LiNH(2)BH(3) is I(H2). Investigation of migration processes of the defects showed that the migration barriers for V((B)H)(+) (positively charged H vacancy on a B-H site), I(H)(+) and I(H)(-) are relatively high (0.50-0.68 eV), whereas moderate diffusion barriers are presented for V((N)H)(-) (negatively charged H vacancy on a N-H site) and I(Li)(+) (0.29 and 0.32 eV, respectively). The V(Li)(-) and I(H2) defects can migrate with low energy barriers of 0.13 and 0.16 eV, respectively. With a low activation energy of 0.47 eV, I(H2) is the major diffusive species in LiNH(2)BH(3). Our calculation results further suggest that the creation of the V((N)H)(-), I(Li)(+) and V(Li)(-) defects is the rate-limiting step for their transportation in LiNH(2)BH(3).
+   </text>
+  </passage>
+ </document>
+ </collection>

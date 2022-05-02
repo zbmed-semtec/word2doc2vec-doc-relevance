@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   7844900
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [The frequency of glutathione-S-transferase M1 (GSTM1) gene deletion in patients with lung and oral cancer].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    109
+   </offset>
+   <text>
+    A homozygous gene deletion at the glutathione-S-transferase (GST) M1 locus of genomic DNA isolated from the peripheral blood was investigated for its relationship with lung and oral cancer using the polymerase chain reaction (RCR) technique. DNA samples were prepared from 91 healthy controls, 53 lung cancer patients and 48 oral cancer patients. As for the genotype, 38 of 91 healthy controls (41.7%), 27 of 53 lung cancer patients (50.9% [p &gt; 0.05], odds ratio 1.45, 95% confidence interval 0.73-2.86) and 26 of 48 oral cancer patients (54.2% [p &gt; 0.05], odds ratio 1.65, 95% confidence interval 0.82-3.32) were GSTM1 deletion types. When male-smoker patients and healthy controls were analyzed, the frequency of GSTM1 deletion genotype was 41.6% in the healthy controls and 52.2% (p &gt; 0.05, odds ratio 1.53, 95% confidence interval 0.58-4.14), 54.5% (p &gt; 0.05, odds ratio 1.68, 95% confidence interval 0.45-6.26), and 50.0% (p &gt; 0.05, odds ratio 1.40, 95% confidence interval 0.55-3.60) in pulmonary squamous cell carcinoma, small cell carcinoma, intraoral squamous cell carcinoma patients, respectively. Thus, the GSTM1 deletion genotype as a host factor predisposing to lung and oral cancer could not be confirmed in this study.
+   </text>
+  </passage>
+ </document>
+ </collection>

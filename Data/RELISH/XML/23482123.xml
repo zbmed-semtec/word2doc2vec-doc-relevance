@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   23482123
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Fast iterative reconstruction of differential phase contrast X-ray tomograms.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    78
+   </offset>
+   <text>
+    Differential phase-contrast is a recent technique in the context of X-ray imaging. In order to reduce the specimen's exposure time, we propose a new iterative algorithm that can achieve the same quality as FBP-type methods, while using substantially fewer angular views. Our approach is based on 1) a novel spline-based discretization of the forward model and 2) an iterative reconstruction algorithm using the alternating direction method of multipliers. Our experimental results on real data suggest that the method allows to reduce the number of required views by at least a factor of four.
+   </text>
+  </passage>
+ </document>
+ </collection>

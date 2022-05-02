@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   29083301
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Neural computations underlying inverse reinforcement learning in the human brain.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    82
+   </offset>
+   <text>
+    In inverse reinforcement learning an observer infers the reward distribution available for actions in the environment solely through observing the actions implemented by another agent. To address whether this computational process is implemented in the human brain, participants underwent fMRI while learning about slot machines yielding hidden preferred and non-preferred food outcomes with varying probabilities, through observing the repeated slot choices of agents with similar and dissimilar food preferences. Using formal model comparison, we found that participants implemented inverse RL as opposed to a simple imitation strategy, in which the actions of the other agent are copied instead of inferring the underlying reward structure of the decision problem. Our computational fMRI analysis revealed that anterior dorsomedial prefrontal cortex encoded inferences about action-values within the value space of the agent as opposed to that of the observer, demonstrating that inverse RL is an abstract cognitive process divorceable from the values and concerns of the observer him/herself.
+   </text>
+  </passage>
+ </document>
+ </collection>

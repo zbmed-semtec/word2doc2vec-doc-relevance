@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   12045721
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    The diagnosis of multiple sclerosis.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    37
+   </offset>
+   <text>
+    Multiple sclerosis is a clinical diagnosis and as such requires the integration of historical information with neurological examination and relevant laboratory and paraclinical tools, such as magnetic resonance imaging. A recent revision of the diagnostic guidelines for multiple sclerosis has been published that formalizes the use of magnetic resonance imaging information along with the clinical picture. These new guidelines should provide for the earlier and easier diagnosis of multiple sclerosis, useful for both clinical trials and neurological practice.
+   </text>
+  </passage>
+ </document>
+ </collection>

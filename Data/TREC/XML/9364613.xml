@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9364613
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    GABA-ergic transmission in deep cerebellar nuclei.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    51
+   </offset>
+   <text>
+    gamma-Aminobutyric acid (GABA) is the inhibitory transmitter released at Purkinje cell axon terminals in deep cerebellar nuclei (DCN). Neurons in DCN also receive excitatory glutamatergic inputs from the inferior olive. The output of DCN neurons, which depends on the balance between excitation and inhibition on these cells, is involved in cerebellar control of motor coordination. Plasticity of synaptic transmission observed in other areas of the mammalian central nervous system (CNS) has received wide attention. If GABA-ergic and/or glutamatergic synapses in DCN also undergo plasticity, it would have major implications for cerebellar function. In this review, literature evidence for GABA-ergic synaptic transmission in DCN as well as its plasticity are discussed. Studies indicate that fast inhibitory postsynaptic potentials (IPSPs) and currents (IPSCs) in neurons of DCN are mediated by GABAA receptors. While GABAB receptors are present in DCN, they do not appear to be activated by Purkinje cell axons. The IPSPs undergo paired-pulse, as well as frequency-dependent, depressions. In addition, tetanic stimulation of inputs can induce a long-term depression (LTD) of the IPSPs and IPSCs. Excitatory synapses do not appear to undergo long-term potentiation or LTD. The LTD of the IPSP is not input-specific, as it can be induced heterosynaptically and is associated with a reduced response of DCN neurons to a GABAA receptor agonist. Postsynaptic Ca2+ and protein phosphatases appear to contribute to the LTD. The N-methyl-D-aspartate receptor-gated, as well as the voltage-gated Ca2+ channels are proposed to be sources of the Ca2+. It is suggested that LTD of GABA-ergic transmission, by regulating DCN output, can modulate cerebellar function.
+   </text>
+  </passage>
+ </document>
+ </collection>

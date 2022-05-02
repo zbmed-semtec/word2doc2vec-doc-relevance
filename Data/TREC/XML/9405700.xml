@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9405700
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    A genetic screen for mutations that disrupt an auditory response in Drosophila melanogaster.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    93
+   </offset>
+   <text>
+    Hearing is one of the last sensory modalities to be subjected to genetic analysis in Drosophila melanogaster. We describe a behavioral assay for auditory function involving courtship among groups of males triggered by the pulse component of the courtship song. In a mutagenesis screen for mutations that disrupt the auditory response, we have recovered 15 mutations that either reduce or abolish this response. Mutant audiograms indicate that seven mutants reduced the amplitude of the response at all intensities. Another seven abolished the response altogether. The other mutant, 5L3, responded only at high sound intensities, indicating that the threshold was shifted in this mutant. Six mutants were characterized in greater detail. 5L3 had a general courtship defect; courtship of females by 5L3 males also was affected strongly. 5P1 males courted females normally but had reduced success at copulation. 5P1 and 5N18 showed a significant decrement in olfactory response, indicating that the defects in these mutations are not specific to the auditory pathway. Two other mutants, 5M8 and 5N30, produced amotile sperm although in 5N30 this phenotype was genetically separable from the auditory phenotype. Finally, a new adult circling behavior phenotype, the pirouette phenotype, associated with massive neurodegeneration in the brain, was discovered in two mutants, 5G10 and 5N18. This study provides the basis for a genetic and molecular dissection of auditory mechanosensation and auditory behavior.
+   </text>
+  </passage>
+ </document>
+ </collection>

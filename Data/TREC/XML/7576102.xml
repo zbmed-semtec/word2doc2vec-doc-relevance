@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   7576102
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Delay of dimethylbenz[a]anthracene-induced mammary tumorigenesis in transgenic mice by apoptosis induced by an unusual mutant p53 protein.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    139
+   </offset>
+   <text>
+    Murine p53 containing an Arg--&gt;Leu substitution at amino acid 172 possesses many properties characteristic of wild-type p53, including the ability to induce p21/WAF/Cip1 and apoptosis. To determine if p53-dependent apoptosis plays a critical role in mammary tumorigenesis, transgenic mice were generated in which the expression of this mutant p53 protein was targeted to the mammary gland by using the rat whey acidic protein gene promoter. Mice bearing pituitary isografts were treated with 7,12-dimethylbenz[a]anthracene (DMBA) and examined for mammary tumor development. Mice overexpressing the p53 transgene exhibited a statistically significant increase in apoptosis in the mammary gland and a statistically significant decrease in the incidence of DMBA-induced mammary tumors. No difference in tumor incidence was observed in mice without pituitary isografts who were treated with DMBA, because the transgene is not overexpressed in the absence of hormone stimulation provided by the pituitary isograft. The unexpected wild-type properties of the 172Arg--&gt;Leu mutant p53, including its ability to stimulate apoptosis, make it a possible candidate for use in gene therapy protocols.
+   </text>
+  </passage>
+ </document>
+ </collection>

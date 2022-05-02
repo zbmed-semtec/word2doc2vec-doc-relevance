@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9849317
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Correlation of 9G4 idiotope with disease activity in patients with systemic lupus erythematosus.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    97
+   </offset>
+   <text>
+    OBJECTIVE: To compare the levels of the 9G4 idiotope (9G4 Id) in systemic lupus erythematosus (SLE) patients with a detailed disease activity index, the British Isles Lupus Assessment Group (BILAG) index, and serological parameters of disease activity by ds DNA antibody levels and serum C3 concentrations. METHODS: In a cross sectional analysis serum samples from 190 patients with SLE were studied and a further 55 serial bleeds from 14 patients. An enzyme linked immunosorbent assay was used to measure the 9G4 Id, and anti dsDNA and antimyeloperoxidase (MPO) antibodies. The C3 levels were measured by laser nephelometer. RESULTS: Seventy six of 190 (40%) of the patients tested had raised 9G4 Id levels. In the cross sectional study 9G4 Id levels were found to correlate with disease activity in the BILAG cardiovascular/respiratory renal, and haematological systems and with global BILAG score (p &lt; 0.01). In the serial bleeds 9G4 Id levels correlated with anti-dsDNA antibody and C3 levels, but not with anti-MPO antibodies. No correlations were found with treatment. In six cases the 9G4 Id levels correlated well with global BILAG scores and dsDNA antibody levels. In four cases the BILAG global and 9G4 Id levels alone correlated well. CONCLUSIONS: Raised levels of the 9G4 Id are present in a substantial proportion of serum samples from patients with lupus, correlate with various aspects of disease activity in SLE. The Id is detectable on anti-dsDNA antibodies, though it must also be present on other immunoglobulins whose specificities remain unknown.
+   </text>
+  </passage>
+ </document>
+ </collection>

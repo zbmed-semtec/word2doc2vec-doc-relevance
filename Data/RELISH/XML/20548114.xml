@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   20548114
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Efficient Rasterization for Outdoor Radio Wave Propagation.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    60
+   </offset>
+   <text>
+    Conventional beam tracing can be used for solving global illumination problems. It is an efficient algorithm and performs very well when implemented on the GPU. This allows us to apply the algorithm in a novel way to the problem of radio wave propagation. The simulation of radio waves is conceptually analogous to the problem of light transport. We use a custom, parallel rasterization pipeline for creation and evaluation of the beams. We implement a subset of a standard 3D rasterization pipeline entirely on the GPU, supporting 2D and 3D frame buffers for output. Our algorithm can provide a detailed description of complex radio channel characteristics like propagation losses and the spread of arriving signals over time (delay spread). Those are essential for the planning of communication systems required by mobile network operators. For validation, we compare our simulation results with measurements from a real-world network. Furthermore, we account for characteristics of different propagation environments and estimate the influence of unknown components like traffic or vegetation by adapting model parameters to measurements.
+   </text>
+  </passage>
+ </document>
+ </collection>

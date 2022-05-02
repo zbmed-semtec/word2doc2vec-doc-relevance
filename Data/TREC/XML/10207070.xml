@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   10207070
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Specific acetylation of chromosomal protein HMG-17 by PCAF alters its interaction with nucleosomes.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    100
+   </offset>
+   <text>
+    Nonhistone chromosomal proteins HMG-14 and HMG-17 are closely related nucleosomal binding proteins that unfold the higher-order chromatin structure, thereby enhancing the transcription and replication potential of chromatin. Here we report that PCAF, a transcription coactivator with intrinsic histone acetyltransferase activity, specifically acetylates HMG-17 but not HMG-14. Using mass spectrum sequence analysis, we identified the lysine at position 2 as the predominant site acetylated by PCAF. Lysine 2 is a prominent acetylation site in vivo, suggesting that this PCAF-mediated acetylation is physiologically relevant. Experiments with HMG-17 deletion mutants and competition studies with various protein fragments indicate that the specific acetylation of HMG-17 is not determined solely by the primary sequence near the acetylation site. By equilibrium dialysis we demonstrated that acetylation reduces the affinity of HMG-17 to nucleosome cores. In addition, we found that the binding of HMG-14 and HMG-17 to nucleosome cores inhibits the PCAF-mediated acetylation of histone H3. Thus, the presence of HMG-14 and HMG-17 affects the ability of PCAF to acetylate chromatin, while the acetylation of HMG-17 reduces its binding affinity to chromatin. Conceivably, in HMG-17-containing chromatin, acetylation of HMG-17 precedes the acetylation of histones.
+   </text>
+  </passage>
+ </document>
+ </collection>

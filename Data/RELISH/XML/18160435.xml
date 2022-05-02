@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   18160435
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Alpha/beta interferon inhibits cap-dependent translation of viral but not cellular mRNA by a PKR-independent mechanism.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    120
+   </offset>
+   <text>
+    The alpha/beta interferon (IFN-alpha/beta) response is critical for host protection against disseminated replication of many viruses, primarily due to the transcriptional upregulation of genes encoding antiviral proteins. Previously, we determined that infection of mice with Sindbis virus (SB) could be converted from asymptomatic to rapidly fatal by elimination of this response (K. D. Ryman et al., J. Virol. 74:3366-3378, 2000). Probing of the specific antiviral proteins important for IFN-mediated control of virus replication indicated that the double-stranded RNA-dependent protein kinase, PKR, exerted some early antiviral effects prior to IFN-alpha/beta signaling; however, the ability of IFN-alpha/beta to inhibit SB and protect mice from clinical disease was essentially undiminished in the absence of PKR, RNase L, and Mx proteins (K. D. Ryman et al., Viral Immunol. 15:53-76, 2002). One characteristic of the PKR/RNase L/Mx-independent antiviral effect was a blockage of viral protein accumulation early after infection (K. D. Ryman et al., J. Virol. 79:1487-1499, 2005). We show here that IFN-alpha/beta priming induces a PKR-independent activity that inhibits m(7)G cap-dependent translation at a step after association of cap-binding factors and the small ribosome subunit but before formation of the 80S ribosome. Furthermore, the activity targets mRNAs that enter across the cytoplasmic membrane, but nucleus-transcribed RNAs are relatively unaffected. Therefore, this IFN-alpha/beta-induced antiviral activity represents a mechanism through which IFN-alpha/beta-exposed cells are defended against viruses that enter the cytoplasm, while preserving essential host activities, including the expression of antiviral and stress-responsive genes.
+   </text>
+  </passage>
+ </document>
+ </collection>

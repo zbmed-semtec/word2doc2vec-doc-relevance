@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9017530
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Depression, delusions, and hallucinations in Alzheimer's disease: no relationship to apolipoprotein E genotype.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    112
+   </offset>
+   <text>
+    The apolipoprotein E (APOE) locus on chromosome 19 has been shown to modify risk, and age at onset, of Alzheimer's disease (AD). The authors hypothesized that the phenotypic expression of different psychiatric symptoms in patients with AD would be associated with variability in APOE locus. Neuropsychiatric and genetic testing of 120 probable AD patients revealed 28% had major depression, 17% had minor depression, 30% had delusions, and 14% had hallucinations; 69% were carriers of at least one APOE E4 allele (14% homozygous E4/E4, 49% heterozygous E3/E4, 6% heterozygous E2/E4, 29% homozygous E3/E3, 2% heterozygous E2/E3). Prevalence of the various psychiatric disturbances did not differ significantly in AD patients with different APOE genotypes. Apolipoprotein E does not appear to modify the risk of developing AD-associated psychiatric symptomatology.
+   </text>
+  </passage>
+ </document>
+ </collection>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   7836377
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Detection and characterization of a transport system mediating cysteamine entry into human fibroblast lysosomes. Specificity for aminoethylthiol and aminoethylsulfide derivatives.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    180
+   </offset>
+   <text>
+    The uptake of [3H]cysteamine by Percoll-purified human fibroblast lysosomes was investigated to determine whether lysosomes contain a transport system recognizing cysteamine. Lysosomal cysteamine uptake is a Na(+)-independent process which rapidly attains a steady state within 1 min at pH 7.0 and 37 degrees C. A biphasic Arrhenius plot is observed for cysteamine uptake, giving a Q10 of 2.2 from 17 to 26 degrees C and a Q10 of 1.2 from 27 to 35 degrees C. The rate of lysosomal cysteamine uptake is maximal at pH 8.2, half-maximal at pH 6.8, and declines approximately 50-fold from the maximum to show very little transport at pH 5.0. Cysteamine uptake into fibroblast lysosomes displays complete saturability with a Km of 0.88 mM and Vmax of 1410 pmol of beta-N-acetylhexosaminidase/min at pH 7.0 and 37 degrees C. Analog inhibition studies demonstrated that all analogs recognized thus far by the cysteamine carrier are either aminothiols or aminosulfides and contain an amino group and sulfur atom separated by a carbon chain, 2 carbon atoms in length. The Ki constants for these analogs as competitive inhibitors of lysosomal cysteamine uptake are 2-(ethylthio)ethylamine (0.64 mM), 1-amino-2-methyl-2-propanethiol (0.74 mM), 2-dimethylaminoethanethiol (0.87 mM), thiocholine (1.6 mM), and bis(2-aminoethyl)sulfide (4.9 mM). L-Cysteine, D-penicillamine, and analogs lacking either a sulfur atom or amino group are not recognized by the cysteamine carrier including ethanolamine, choline, taurine, beta-mercaptoethanol, ethylenediamine, cadaverine, spermine, spermidine, histamine, dopamine, and 3-hydroxytyramine. In a cystine-depletion assay, a 2-h exposure of cystinotic fibroblasts to 1 mM 1-amino-2-methyl-2-propanethiol lowers cell cystine levels to the same low level obtained with cysteamine. Thus, all four aminothiols, known to deplete cystinotic fibroblasts of their accumulated cystine, are recognized as substrates by the lysosomal cysteamine carrier, suggesting the importance of this transporter in the delivery of aminothiols to the lysosomal compartment.
+   </text>
+  </passage>
+ </document>
+ </collection>

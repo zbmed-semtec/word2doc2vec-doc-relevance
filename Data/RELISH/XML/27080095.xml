@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   27080095
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    DNA-Nanoparticle Tinkertoys.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    29
+   </offset>
+   <text>
+    Nanoparticle superlattices can be self-assembled by using DNA linkers, which gives control over their size, shape, and composition. Recently, such programmable atom equivalents have been tailored to respond to chemical stimuli and result in specific crystalline lattices. Moreover, the molecular recognition properties and the robustness of designed DNA nanostructures have been used in combination with metallic nanoparticles for the production of the elusive diamond superlattice.
+   </text>
+  </passage>
+ </document>
+ </collection>

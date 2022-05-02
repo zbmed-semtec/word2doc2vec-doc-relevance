@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9155193
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [Parkinsonism and postoperative complications in the elderly].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    63
+   </offset>
+   <text>
+    The risk factors for postoperative morbidity and mortality in elderly patients with Parkinsonism after gastrointestinal surgery were evaluated by univariate and multivariate analyses in comparison to those of patients with cerebrovascular disease and to those of patients with no comorbid condition. Data were obtained on 36 patients with Parkinsonism (PK), 77 with cerebrovascular disease (CVD) and 120 with no comorbid condition (ND). All data were adjusted for age, sex and operative procedure. The postoperative morbidity rate was highest in the PK group (77.8%), followed by the CVD group (70.1%), and both differed significantly from the rate of the ND group (32.5%). Gastrointestinal and pulmonary complications and delirium were the major postoperative complications, and were significantly more common in the PK group than in the ND group. Patients in the PK group had the longest postoperative hospital stay, followed by those in the CVD and ND groups; the differences were significant between the PK and ND groups and between CVD and ND groups. The PK group had the highest operative and hospital mortality rates, and they differed significantly from the ND group. Hayashi's second method of quantification was used to assess the risk factors for postoperative death. The highest partial correlation coefficient was that found for postoperative pulmonary complication. We conclude that we should pay close attention to postoperative respiratory management, particularly in elderly patients with Parkinsonism, to prevent pulmonary complications and reduce postoperative mortality.
+   </text>
+  </passage>
+ </document>
+ </collection>

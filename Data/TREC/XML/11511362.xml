@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11511362
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    p53DINP1, a p53-inducible gene, regulates p53-dependent apoptosis.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    67
+   </offset>
+   <text>
+    Using the differential display method combined with a cell line that carries a well-controlled expression system for wild-type p53, we isolated a p53-inducible gene, termed p53DINP1 (p53-dependent damage-inducible nuclear protein 1). Cell death induced by DNA double-strand breaks (DSBs), as well as Ser46 phosphorylation of p53 and induction of p53AIP1, were blocked when we inhibited expression of p53DINP1 by means of an antisense oligonucleotide. Overexpression of p53DINP1 and DNA damage by DSBs synergistically enhanced Ser46 phosphorylation of p53, induction of p53AIP1 expression, and apoptotic cell death. Furthermore, the protein complex interacting with p53DINP1 was shown to phosphorylate Ser46 of p53. Our results suggest that p53DINP1 may regulate p53-dependent apoptosis through phosphorylation of p53 at Ser46, serving as a cofactor for the putative p53-Ser46 kinase.
+   </text>
+  </passage>
+ </document>
+ </collection>

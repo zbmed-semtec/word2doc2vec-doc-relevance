@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   22365138
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Particulate matter (PM10) exposure induces endothelial dysfunction and inflammation in rat brain.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    98
+   </offset>
+   <text>
+    Epidemiological studies suggest that particulate matter (PM(10)) inhalation was associated with adverse effects on brain-related health, however, existing experimental data lacked relevant evidences. In this study, we treated Wistar rats with PM(10) at different concentrations (0.3, 1, 3 and 10 mg/kg body weight (bw)), and investigated endothelial dysfunction and inflammatory responses in the brain. The results indicate that mild pathological abnormal occurred after 15-day exposure (five times with 3 days each), followed by the changes of endothelial mediators (ET-1 and eNOS) and inflammatory markers (IL-1β, TNF-α, COX-2, iNOS and ICAM-1). Also, the sample up-regulated bax/bcl-2 ratio and p53 expression, and induced neuronal apoptosis. It implicates that PM(10) exerted injuries to mammals' brain, and the mechanisms might be involved in endothelial dysfunction and inflammatory responses.
+   </text>
+  </passage>
+ </document>
+ </collection>

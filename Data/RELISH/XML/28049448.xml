@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   28049448
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    International Collaboration for the Epidemiology of eGFR in Low and Middle Income Populations - Rationale and core protocol for the Disadvantaged Populations eGFR Epidemiology Study (DEGREE).
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    192
+   </offset>
+   <text>
+    BACKGROUND: There is an increasing recognition of epidemics of primarily tubular-interstitial chronic kidney disease (CKD) clustering in agricultural communities in low- and middle-income countries (LMICs). Although it is currently unclear whether there is a unified underlying aetiology, these conditions have been collectively termed CKD of undetermined cause (CKDu). CKDu is estimated to have led to the premature deaths of tens to hundreds of thousands of young men and women over the last 2 decades. Thus, there is an urgent need to understand the aetiology and pathophysiology of these condition (s). International comparisons have provided the first steps in understanding many chronic diseases, but such comparisons rely on the availability of standardised tools to estimate disease prevalence. This is a particular problem with CKD, since the disease is asymptomatic until the late stages, and the biases inherent in the methods used to estimate the glomerular filtration rate (GFR) in population studies are highly variable across populations. METHOD: We therefore propose a simple standardised protocol to estimate the distribution of GFR in LMIC populations - The Disadvantaged Populations eGFR Epidemiology (DEGREE) Study. This involves the quantification of renal function in a representative adult population-based sample and a requirement for standardisation of serum creatinine measurements, along with storage of samples for future measurements of cystatin C and ascertainment of estimates of body composition, in order to obtain valid comparisons of estimated GFR (eGFR) within and between populations. DISCUSSION: The methodology we present is potentially applicable anywhere, but our particular focus is on disadvantaged populations in LMICs, since these appear to be most susceptible to CKDu. Although the protocol could also be used in specific groups (e.g. occupational groups, thought to be at excess risk of CKDu) the primary aim of the DEGREE project is characterise the population distribution of eGFR in multiple regions so that international comparisons can be performed. It is only with a standardised approach that it will be possible to estimate the scale of, and variation in, impaired kidney function between affected areas. These data should then provide insights into important social, demographic and environmental risk factors for this increasingly recognised disease.
+   </text>
+  </passage>
+ </document>
+ </collection>

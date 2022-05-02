@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   27468399
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Moringa oleifera aqueous leaf extract inhibits reducing monosaccharide-induced protein glycation and oxidation of bovine serum albumin.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    136
+   </offset>
+   <text>
+    Advanced glycation end products (AGEs) play an important factor for pathophysiology of diabetes and its complications. Moringa oleifera is one of the medicinal plants that have anti-hyperglycemic activity. However, anti-glycation property of Moringa oleifera leaf extract on the different types of reducing monosaccharides-induced protein glycation has not been investigated. Therefore, the aim of this study was to examine the protective effect of Moringa oleifera aqueous leaf extract (MOE) on reducing sugars-induced protein glycation and protein oxidation. Total phenolic content of MOE was measured using the Folin-Ciocalteu method. Bovine serum albumin was incubated with 0.5 M of reducing sugars (glucose or fructose) with or without MOE (0.5-2.0 mg/mL) for 1, 2, 3 and 4 weeks. The results found that total phenolic content was 38.56 ± 1.50 mg gallic acid equivalents/g dry extract. The formation of fluorescent and non-fluorescent AGEs [N (ε)-(carboxymethyl) lysine (CML)] and the level of fructosamine were determined to indicate protein glycation, whereas the level of protein carbonyl content and thiol group were examined for protein oxidation. MOE (0.5-2.0 mg/mL) significantly inhibited the formation of fluorescent, N (ε)-CML and markedly decreased fructosamine level (P &lt; 0.05). Moreover, MOE significantly prevented protein oxidation manifested by reducing protein carbonyl and the depletion of protein thiol in a dose-dependent manner (P &lt; 0.05). Thus, the findings indicated that polyphenols containing in MOE have high potential for decreasing protein glycation and protein oxidation that may delay or prevent AGE-related diabetic complications.
+   </text>
+  </passage>
+ </document>
+ </collection>

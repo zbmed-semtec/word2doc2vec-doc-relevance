@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   23045485
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Complete genome sequence of the endophytic Enterobacter cloacae subsp. cloacae strain ENHKU01.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    95
+   </offset>
+   <text>
+    Enterobacter cloacae subsp. cloacae strain ENHKU01 is a Gram-negative endophyte isolated from a diseased pepper (Capsicum annuum) plant in Hong Kong. This is the first complete genome sequence report of a plant-endophytic strain of E. cloacae subsp. cloacae.
+   </text>
+  </passage>
+ </document>
+ </collection>

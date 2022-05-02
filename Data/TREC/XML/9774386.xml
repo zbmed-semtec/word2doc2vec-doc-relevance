@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9774386
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Mutation at the processing site of chicken low density lipoprotein receptor-related protein impairs efficient endoplasmic reticulum exit, but proteolytic cleavage is not essential for its endocytic functions.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    209
+   </offset>
+   <text>
+    The low density lipoprotein receptor-related protein (LRP) is synthesized as a proreceptor that undergoes post-translational proteolytic processing, yielding a noncovalently associated alphabeta dimer as the mature LRP. We tested the role of processing by creating a mutant in which the P1 residue (Arg3942) of the consensus site for furin cleavage (Arg-Asn-Arg-Arg3942 downward arrow) was replaced with Ser in chicken LRP. Transfection of the mutant LRP (designated LRP-RS) into a Chinese hamster ovary cell line lacking endogenous LRP resulted in expression of the unprocessed full-length proreceptor. Comparison of cell lines stably expressing either the wild-type LRP (LRP-wt) or the unprocessed LRP-RS showed that at comparable expression levels, both receptors restored the sensitivity of cellular protein synthesis to Pseudomonas exotoxin A (IC50 = 25 ng/ml). Subcellular fractionation and neuraminidase treatment showed that both LRP forms were transported to the plasma membrane. In addition, LRP-RS exhibited kinetics of binding, endocytosis, and degradation of methylamine-activated alpha2-macroglobulin that were identical to those of LRP-wt. The internalization rate constant was similar for LRP-wt (Ke = 0.259 min-1) and mutant LRP-RS (Ke = 0.252 min-1), suggesting that it takes about 4 min for the entire surface LRP pool to be internalized. Sorting of LRP from the endosomal compartment to lysosomes or recycling to the plasma membrane were also unaltered in mutant LRP-RS. Pulse-chase analysis showed that the lack of processing of LRP had no effect on the stability of its post-endoplasmic reticulum form or on the rate of its intracellular transit from the endoplasmic reticulum to the Golgi apparatus. However, the exit of mutant LRP from the endoplasmic reticulum was retarded by the Arg3942-to-Ser substitution, as evidenced by prolonged retention within the endoplasmic reticulum (t1/2 = 4 h for LRP-wt and t1/2 &gt; 13 h for LRP-RS).
+   </text>
+  </passage>
+ </document>
+ </collection>

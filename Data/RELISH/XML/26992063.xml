@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   26992063
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Nanostructures from Synthetic Genetic Polymers.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    48
+   </offset>
+   <text>
+    Nanoscale objects of increasing complexity can be constructed from DNA or RNA. However, the scope of potential applications could be enhanced by expanding beyond the moderate chemical diversity of natural nucleic acids. Here, we explore the construction of nano-objects made entirely from alternative building blocks: synthetic genetic polymers not found in nature, also called xeno nucleic acids (XNAs). Specifically, we describe assembly of 70 kDa tetrahedra elaborated in four different XNA chemistries (2'-fluro-2'-deoxy-ribofuranose nucleic acid (2'F-RNA), 2'-fluoroarabino nucleic acids (FANA), hexitol nucleic acids (HNA), and cyclohexene nucleic acids (CeNA)), as well as mixed designs, and a ∼600 kDa all-FANA octahedron, visualised by electron microscopy. Our results extend the chemical scope for programmable nanostructure assembly, with implications for the design of nano-objects and materials with an expanded range of structural and physicochemical properties, including enhanced biostability.
+   </text>
+  </passage>
+ </document>
+ </collection>

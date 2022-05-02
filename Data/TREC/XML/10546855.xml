@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   10546855
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Enhanced HIV infectivity and changes in GP120 conformation associated with viral incorporation of human leucocyte antigen class I molecules.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    141
+   </offset>
+   <text>
+    BACKGROUND: Assembly of human immunodeficiency virus type 1 (HIV-1) occurs at the level of the plasma membrane of the host cell. During this process HIV incorporates significant quantities of cell surface-derived molecules into its lipid bilayer including human leucocyte antigen (HLA) class I and II, intercellular adhesion molecule-1 and lymphocyte function antigen-1. Several studies indicate that virion-bound host-cell-derived molecules are functional and affect the biological properties of HIV-1. Virion-associated HLA class II and intercellular adhesion molecule-1 enhance the infectivity of T-cell line-adapted (TCLA) viruses. No role for virion-associated HLA class I molecules has yet been identified. OBJECTIVE: To investigate the role of HLA class I molecules in HIV replication and infectivity. METHODS: HLA class I negative human cells lines transfected with the HLA Cw4 gene were infected with different TCLA viruses as well as primary X4 isolates. The infectivity of HLA Cw4 positive and negative viruses was determined on indicator cell lines and on phytohaemagglutinin-activated peripheral blood mononuclear cells. An entry polymerase chain reaction assay was used to determine differences in entry-competence of Cw4 positive and negative viruses. The expression of selected gp120 epitopes on native Env molecules derived from Cw4 positive and negative viruses was determined by a monoclonal antibody-based enzyme-linked immunosorbent assay. Immunoprecipitation experiments were performed to investigate the presence of gp120/HLA Cw4 complexes. Neutralization assays determined the differences in susceptibility to neutralization between HLA Cw4 negative and positive viruses. RESULTS AND CONCLUSIONS: The infectivity of primary HIV-1 X4 isolates and of TCLA viruses is increased upon viral incorporation of HLA Cw4 molecules. This effect is associated with changes in viral envelope proteins conformation including an enhanced expression of the V3 loop of gp120, and of epitopes that are exposed upon CD4 binding. The gp120 conformational changes are consistent with the formation of a multimolecular complex between HLA class I and gp120/160. HLA Cw4 incorporation is also associated to a lower susceptibility to antibody neutralization. These findings have important implications for understanding the immune response to cryptic and conformational epitopes of the viral envelope.
+   </text>
+  </passage>
+ </document>
+ </collection>

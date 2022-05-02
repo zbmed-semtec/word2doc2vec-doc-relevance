@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   23050871
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Chromium(III) oxidation by three poorly-crystalline manganese(IV) oxides. 1. Chromium(III)-oxidizing capacity.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    111
+   </offset>
+   <text>
+    The Cr(III)-oxidizing capacity of three layered poorly crystalline Mn(IV)O(2) phases, i.e. δ-MnO(2), Random Stacked Birnessite (RSB), and Acid Birnessite (AB), was determined in real-time and in situ, using Quick X-ray Absorption Fine Structure Spectroscopy (Q-XAFS). The results obtained with this technique, which allows the measurement of the total amount of Cr(VI) produced in the system, indicated that the Cr(III) oxidation reaction had ceased between 30 min and 1 h under most experimental conditions. However, this cessation was not observed with a traditional batch technique, which only allows the measurement of Cr(VI) present in solution and thus neglects the amount of Cr(VI) that may be sorbed to Mn(IV)O(2). This study also demonstrated that the Mn(IV)O(2) phase oxidizing the highest amount of Cr(III), which is positively charged in solution, was the mineral featuring the most negatively charged surface. Also, the results indicated that the presence of Mn(II) and/or Mn(III) impurities inside the Mn(IV)O(2) structure could enhance the mineral's capacity to oxidize Cr(III). The information provided in this study will be useful in predicting the capabilities of naturally occurring Mn oxide minerals, which are similar to the three synthetic Mn(IV)O(2) investigated, to oxidize Cr(III) to toxic and mobile Cr(VI) in the soil of contaminated sites.
+   </text>
+  </passage>
+ </document>
+ </collection>

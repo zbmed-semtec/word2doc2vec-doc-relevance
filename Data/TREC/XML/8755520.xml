@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   8755520
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    DP-2, a heterodimeric partner of E2F: identification and characterization of DP-2 proteins expressed in vivo.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    110
+   </offset>
+   <text>
+    E2F is a heterodimeric transcription factor that regulates the expression of genes at the G1/S boundary and is composed of two related but distinct families of proteins, E2F and DP. E2F/DP heterodimers form complexes with the retinoblastoma (Rb) protein, the Rb-related proteins p107 and p130, and cyclins/cdks in a cell cycle-dependent fashion in vivo. E2F is encoded by at least five closely related genes, E2F-1 through -5. Here we report studies of DP-2, the second member of the DP family of genes. Our results indicate that (i) DP-2 encodes at least five distinct mRNAs, (ii) a site of alternative splicing occurs within the 5' untranslated region of DP-2 mRNA, (iii) at least three DP-2-related proteins (of 55, 48, and 43 kDa) are expressed in vivo, (iv) each of these proteins is phosphorylated, and (v) one DP-2 protein (43 kDa) carries a truncated amino terminus. Our data also strongly suggest that the 55-kDa DP-2-related protein is a novel DP-2 isoform that results from alternative splicing. Thus, we conclude that DP-2 encodes a set of structurally, and perhaps functionally, distinct proteins in vivo.
+   </text>
+  </passage>
+ </document>
+ </collection>

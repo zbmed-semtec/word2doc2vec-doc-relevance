@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9467637
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [State of immune reactivity of persons having occupational contact with Pu-239].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    81
+   </offset>
+   <text>
+    Clinical and immunological investigation with immune status evaluation of the group of people who had professionally contacts with Pu-239 in the quantity of 328 persons. The clinical characters of immune deficiency (ID) were defected in 75.3% of examined persons. There are showed that leading clinical syndromes of ID is appeared the infection syndromes (62.5%). The distribution of ID clinical infection characters are increased with increasing of radiation from internal 239Pu contains and seniority of professional contact with them. The particularity of immune status and dependence of the change its indices from the internal radiation dose, seniority of professional contact with Pu-239 and chronic diseases were revealed.
+   </text>
+  </passage>
+ </document>
+ </collection>

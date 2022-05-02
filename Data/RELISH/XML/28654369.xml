@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   28654369
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Gymnotus coatesi (Gymnotiformes): A Case of Colocation of Multiple Sites of 18S rDNA with Telomeric Sequences.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    111
+   </offset>
+   <text>
+    Gymnotus coatesi is a small and rare species of banded knife fish that was originally described by LaMonte in 1935, found along the main stretch of the Amazon River. There is no described cytogenetic data on this species. We analyzed the karyotype of five specimens of G. coatesi collected from Cururutuia Stream in Bragança, Pará, Brazil. The obtained diploid number is 50 and the karyotypic formula is 24 m/sm +26 st/a. The constitutive heterochromatin is DAPI positive and distributed mainly in the centromeric and pericentromeric regions of the chromosomes. Ag-nucleolus organizer regions staining showed nine active sites. The 5S rDNA probe hybridized chromosome pair 17 in the interstitial part of the long arm. Fluorescence in situ hybridization (FISH) with telomeric probes revealed signals only at terminal regions of the chromosomes. The 18S rDNA probe hybridized to 21 sites, and these signals colocalized with the telomeric sequences. This relatively high number of 18S rDNA sites may reflect gene duplication mediated by transposable elements. These results indicate that although the diploid number of G. coatesi is within the range previously observed for other members of the genus, various karyotypic characteristics distinguish G. coatesi from the other species of the genus and members of the Gymnotiform order.
+   </text>
+  </passage>
+ </document>
+ </collection>

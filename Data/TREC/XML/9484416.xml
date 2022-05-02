@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9484416
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Diagnostic aspects of narcolepsy.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    34
+   </offset>
+   <text>
+    The diagnostic criteria for narcolepsy continue to evolve as more is learned about the features of this and other sleep disorders. A variety of symptoms have been said to distinguish narcolepsy from other sleep disorders, including cataplexy, character of daytime sleepiness, sleep paralysis, hypnagogic hallucinations, and automatic behavior. Other diagnostic assessments, such as determination of human leukocyte antigen (HLA) haplotype and findings of sleep laboratory assessments, also contribute to the differential diagnosis. As diagnostic and analytic techniques have become more sophisticated, however, it has become apparent that many of the characteristic features of narcolepsy--including the HLA-DR2 haplotype, sleep-onset REM sleep, and short sleep latency--may also be present in other sleep disorders. Although unambiguous cataplexy does not occur with other sleep disorders and is therefore a valuable symptom for diagnosis, it may occur with a few other neurologic disorders. Furthermore, the clinical assessment of cataplexy-like symptoms is not always straightforward. Current evidence suggests there is a fairly well-defined syndrome of narcolepsy-cataplexy that is highly associated with specific HLA markers and REM sleep abnormalities. On the other hand, there is substantial clinical overlap between narcolepsy without cataplexy and idiopathic hypersomnia. Patients with features of narcolepsy who do not have definite cataplexy and patients with features of idiopathic hypersomnia must be assessed thoroughly because of the possibility that other sleep disorders are the cause of the symptoms.
+   </text>
+  </passage>
+ </document>
+ </collection>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9485590
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Accumulation of ppGpp in Streptococcus pyogenes and Streptococcus rattus following amino acid starvation.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    106
+   </offset>
+   <text>
+    We have re-examined the stringent response of Streptococcus rattus and Streptococcus pyogenes, two organisms that had originally been reported not to accumulate ppGpp following amino acid deprivation. We conclude that ppGpp does accumulate when S. rattus and S. pyogenes are deprived of isoleucine by mupirocin addition. The kinetics of ppGpp accumulation was faster in S. pyogenes compared with S. rattus. Cell fractionation and analysis of in vitro ppGpp synthesis showed that in S. pyogenes most activity was associated with the S-100 ribosomal pellet, whereas in S. rattus the S-100 soluble fraction contained greater activity. The addition of 20% methanol or salt-washed ribosomes to the assay mixture did not stimulate the in vitro (p)ppGpp synthesis activity of fractions isolated from S. rattus or S. pyogenes. Western blot analysis of whole-cell extracts with anti-RelA antibody demonstrated that neither organism cross-reacted under conditions that detected RelA in E. coli CF1648. However, cross-reaction with anti-RelSeq antibody was observed in S. pyogenes but not S. rattus, suggesting that ppGpp synthesis is carried out by a putative SpoT protein in S. pyogenes and by a functionally unknown protein in S. rattus.
+   </text>
+  </passage>
+ </document>
+ </collection>

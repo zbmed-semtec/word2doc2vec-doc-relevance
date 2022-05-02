@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   12453081
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    A 6-year clinical and MRI follow-up study of patients with relapsing-remitting multiple sclerosis treated with Interferon-beta.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    128
+   </offset>
+   <text>
+    There are few long-term clinical and magnetic resonance imaging (MRI) data on patients treated with interferon-beta (IFN-beta) for relapsing-remitting multiple sclerosis (RRMS). The aim of this study was to provide clinical and MRI data on 68 patients with RRMS treated over a 6-year period and to investigate whether a baseline MRI predicts their long-term clinical and MRI outcome. Six MRI scans were performed monthly before treatment and a further 13 scans were performed during treatment with IFN-beta, the last of which 6 years after commencement of treatment. The relapse rate, disability as measured by the Expanded Disability Status Scale (EDSS), and MRI parameters, including Gd-enhancing lesion load (Gd-LL), T2 hyperintense lesion load (T2-LL) T1 hypointense lesion load (T1-LL) and supratentorial brain volume (SBV) were measured throughout the study. The mean annual relapse rate over the 6 years was 0.52 (SD 0.67), which is significantly lower (68.6%) than the mean annual relapse rate of 1.6 observed during the 2-year period before the commencement of treatment (P &lt; 0.01). The median EDSS score increased from 2 to 2.5, remaining stable in 60% of the patients. From the baseline scan to the final scan, there was a median increase of 7% in the T2-LL and 23.9% in the T1-LL, whilst SBV decreased by 2.7%. The increase in the EDSS over the course of the study was significantly correlated with a reduction in brain volume (r = 0.46, P = 0.001). Greater brain damage at baseline, as measured by both T2-LL and T1-LL, was significantly associated with an increase in disability over the 6 years (r = 0.44, P = 0.0009; r = 0.50, P = 0.0007, respectively). This study shows a sustained effect of IFN-beta on the relapse rate, which is lower than during the 2 years before treatment commencement. More than half the patients showed an improvement or stabilization in the EDSS score. The increment in disability was correlated with the development of brain atrophy but not with increases in lesion burden. Finally, the finding that the extent of lesion burden at the baseline was a strong predictor of increasing disability suggests that IFN-beta treatment might have a moderate effect in modifying the multiple sclerosis (MS) disease course over 6 years unless preventive treatment is started early.
+   </text>
+  </passage>
+ </document>
+ </collection>

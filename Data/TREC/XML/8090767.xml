@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   8090767
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    DNA polymerase delta is required for base excision repair of DNA methylation damage in Saccharomyces cerevisiae.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    113
+   </offset>
+   <text>
+    We present evidence that DNA polymerase delta of Saccharomyces cerevisiae, an enzyme that is essential for viability and chromosomal replication, is also required for base excision repair of exogenous DNA methylation damage. The large catalytic subunit of DNA polymerase delta is encoded by the CDC2(POL3) gene. We find that the mutant allele cdc2-2 confers sensitivity to killing by methyl methanesulfonate (MMS) but allows wild-type levels of UV survival. MMS survival of haploid cdc2-2 strains is lower than wild type at the permissive growth temperature of 20 degrees C. Survival is further decreased relative to wild type by treatment with MMS at 36 degrees C, a nonpermissive temperature for growth of mutant cells. A second DNA polymerase delta allele, cdc2-1, also confers a temperature-sensitive defect in MMS survival while allowing nearly wild-type levels of UV survival. These observations provide an in vivo genetic demonstration that a specific eukaryotic DNA polymerase is required for survival of exogenous methylation damage. MMS sensitivity of a cdc2-2 mutant at 20 degrees C is complemented by expression of mammalian DNA polymerase beta, an enzyme that fills single-strand gaps in duplex DNA in vitro and whose only known catalytic activity is polymerization of deoxyribonucleotides. We conclude, therefore, that the MMS survival deficit in cdc2-2 cells is caused by failure of mutant DNA polymerase delta to fill single-strand gaps arising in base excision repair of methylation damage. We discuss our results in light of current concepts of the physiologic roles of DNA polymerases delta and epsilon in DNA replication and repair.
+   </text>
+  </passage>
+ </document>
+ </collection>

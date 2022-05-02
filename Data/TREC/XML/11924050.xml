@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11924050
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [Immunological aspects of narcolepsy].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    39
+   </offset>
+   <text>
+    Since the discovery of an almost 100 p. cent association of human narcolepsy with the HLA gene DQB1*0602, research has been focused on autoimmune mechanisms. Epidemiological data (age of onset, triggering factors, association with multiple sclerosis) would lend support to this hypothesis. However it has remained largely impossible to demonstrate immune abnormalities in blood or CSF by means of usual techniques. The canine form of the disease was supposed to be also immunologically mediated, since a linkage with a human immunoglobulin-related gene had been demonstrated. This was eventually demonstrated to be a pseudo-linkage, the real cause being a mutation in the closely related hypocretin receptor gene. This recently discovered neuropeptide is clearly involved in some aspects of sleep regulation. Soon thereafter, hypocretin deficiency was found in human narcoleptics, due to a severe neuronal loss in the hypothalamus; gliosis having been evidenced, it may be considered as the evidence of a prior inflammatory reaction, possibly due to an immune attack.
+   </text>
+  </passage>
+ </document>
+ </collection>

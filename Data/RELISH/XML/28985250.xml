@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   28985250
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Interventions to prevent and reduce excessive alcohol consumption in older people: a systematic review and meta-analysis.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    122
+   </offset>
+   <text>
+    Background: harmful alcohol consumption is reported to be increasing in older people. To intervene and reduce associated risks, evidence currently available needs to be identified. Methods: two systematic reviews in older populations (55+ years): (1) Interventions to prevent or reduce excessive alcohol consumption; (2) Interventions as (1) also reporting cognitive and dementia outcomes. Comprehensive database searches from 2000 to November 2016 for studies in English, from OECD countries. Alcohol dependence treatment excluded. Data were synthesised narratively and using meta-analysis. Risk of bias was assessed using NICE methodology. Reviews are reported according to PRISMA. Results: thirteen studies were identified, but none with cognition or dementia outcomes. Three related to primary prevention; 10 targeted harmful or hazardous older drinkers. A complex range of interventions, intensity and delivery was found. There was an overall intervention effect for 3- and 6-month outcomes combined (8 studies; 3,591 participants; pooled standard mean difference (SMD) -0.18 (95% CI -0.28, -0.07) and 12 months (6 studies; 2,788 participants SMD -0.16 (95% CI -0.32, -0.01) but risk of bias for most studies was unclear with significant heterogeneity. Limited evidence (three studies) suggested more intensive interventions with personalised feedback, physician advice, educational materials, follow-up could be most effective. However, simple interventions including brief interventions, leaflets, alcohol assessments with advice to reduce drinking could also have a positive effect. Conclusions: alcohol interventions in older people may be effective but studies were at unclear or high risk of bias. Evidence gaps include primary prevention, cost-effectiveness, impact on cognitive and dementia outcomes.
+   </text>
+  </passage>
+ </document>
+ </collection>

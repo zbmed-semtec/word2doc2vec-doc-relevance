@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   29098610
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Reported Adverse Events with Painkillers: Data Mining of the US Food and Drug Administration Adverse Events Reporting System.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    126
+   </offset>
+   <text>
+    INTRODUCTION: One-third of adults in the USA experience chronic pain and use a variety of painkillers, such as nonsteroidal anti-inflammatory drugs (NSAIDs), acetaminophen, and opioids. However, some serious adverse events (AEs), such as cardiovascular incidents, overdose, and death, have been found to be related to painkillers. METHODS: We used 2015 and 2016 AE reports from the US FDA's Adverse Events Reporting System (FAERS) to conduct exploratory analysis on the demographics of those who reported painkiller-related AEs, examine the AEs most commonly associated with different types of painkillers, and identify potential safety signals. Summary descriptive statistics and proportional reporting ratios (PRRs) were performed. RESULTS: Out of over 2 million reports submitted to FAERS in 2015 and 2016, a total of 64,354 AE reports were associated with painkillers. Reports of opioid-associated AEs were more likely to be from males or younger patients (mean age 47.6 years). The highest numbers of AEs were reported for NSAID and opioid use, and the most commonly found AEs were related to drug ineffectiveness, administration issues, abuse, and overdose. Death was reported in 20.0% of the reports, and serious adverse reactions, including death, were reported in 67.0%; both adverse outcomes were highest among patients using opioids or combinations of painkillers and were associated with PRRs of 2.12 and 1.87, respectively. CONCLUSIONS: This study examined the AEs most commonly associated with varying classes of painkillers by mining the FAERS database. Our results and methods are relevant for future secondary analyses of big data and for understanding adverse outcomes related to painkillers.
+   </text>
+  </passage>
+ </document>
+ </collection>

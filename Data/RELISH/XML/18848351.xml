@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   18848351
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Lrp4 is a receptor for Agrin and forms a complex with MuSK.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    60
+   </offset>
+   <text>
+    Neuromuscular synapse formation requires a complex exchange of signals between motor neurons and skeletal muscle fibers, leading to the accumulation of postsynaptic proteins, including acetylcholine receptors in the muscle membrane and specialized release sites, or active zones in the presynaptic nerve terminal. MuSK, a receptor tyrosine kinase that is expressed in skeletal muscle, and Agrin, a motor neuron-derived ligand that stimulates MuSK phosphorylation, play critical roles in synaptic differentiation, as synapses do not form in their absence, and mutations in MuSK or downstream effectors are a major cause of a group of neuromuscular disorders, termed congenital myasthenic syndromes (CMS). How Agrin activates MuSK and stimulates synaptic differentiation is not known and remains a fundamental gap in our understanding of signaling at neuromuscular synapses. Here, we report that Lrp4, a member of the LDLR family, is a receptor for Agrin, forms a complex with MuSK, and mediates MuSK activation by Agrin.
+   </text>
+  </passage>
+ </document>
+ </collection>

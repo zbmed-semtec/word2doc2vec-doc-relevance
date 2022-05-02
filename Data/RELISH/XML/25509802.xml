@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   25509802
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [Rheumatic joint diseases in the elderly].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    43
+   </offset>
+   <text>
+    The most frequent rheumatic joint disease in the elderly is rheumatoid arthritis (RA). Recent advances in the treatment of RA improve prognosis, and gradually increase the elderly patients with RA. There are some differences in clinical features between the patients with elderly onset RA and young onset RA, such as systemic symptoms and distribution of affected joints. In addition, it is occasionally difficult to differentiate elderly onset RA from the other rheumatic diseases like polymyalgia rheumatica and RS3PE syndrome, pseudogout, and osteoarthritis. Since elderly patients tend to have more co-morbidity and co-existing diseases requiring treatment with other drugs, a risk/benefit profile must always be taken into consideration when choosing the treatment in elderly patients with rheumatic joint diseases.
+   </text>
+  </passage>
+ </document>
+ </collection>

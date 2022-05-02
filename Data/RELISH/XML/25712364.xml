@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   25712364
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Evolution of hepatitis C virus quasispecies during repeated treatment with the NS3/4A protease inhibitor telaprevir.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    117
+   </offset>
+   <text>
+    In treating hepatitis B virus (HBV) and human immunodeficiency virus (HIV) infections, the rapid reselection of resistance-associated variants (RAVs) is well known in patients with repeated exposure to the same class of antiviral agents. For chronic hepatitis C patients who have experienced virologic failure with direct-acting antiviral drugs, the potential for the reselection of persistent RAVs is unknown. Nine patients who received 14 days of telaprevir monotherapy were retreated with telaprevir-based triple therapy 4.3 to 5.7 years later. In four patients with virologic failure with both telaprevir-containing regimens, population-based and deep sequencing (454 GS-FLX) of the NS3 protease gene were performed before and at treatment failure (median coverage, 4,651 reads). Using deep sequencing, with a threshold of 1.0% for variant calling, no isolates were found harboring RAVs at the baseline time points. While population-based sequencing uncovered similar resistance patterns (V36M plus R155K for subtype 1a and V36A for subtype 1b) in all four patients after the first and second telaprevir treatments, deep sequencing analysis revealed a median of 7 (range, 4 to 23) nucleotide substitutions on the NS3 backbone of the resistant strains, together with large phylogenetic differences between viral quasispecies, making the survival of resistant isolates highly unlikely. In contrast, in a comparison of the two baseline time points, the median number of nucleotide exchanges in the wild-type isolates was only 3 (range, 2 to 8), reflecting the natural evolution of the NS3 gene. In patients with repeated direct antiviral treatment, a continuous evolution of HCV quasispecies was observed, with no clear evidence of persistence and reselection but strong signs of independent de novo generation of resistance. Antiviral therapy for chronic viral infections, like HIV, hepatitis B virus (HBV), or hepatitis C virus (HCV), faces several challenges. These viruses have evolved survival strategies and proliferate by escaping the host's immune system. The development of direct-acting antiviral agents is an important achievement in fighting these infections. Viral variants conferring resistance to direct antiviral drugs lead to treatment failure. For HIV/HBV, it is well known that viral variants associated with treatment failure will be archived and reselected rapidly during retreatment with the same drug/class of drugs. We explored the mechanisms and rules of how resistant variants are selected and potentially reselected during repeated direct antiviral therapies in chronically HCV-infected patients. Interestingly, in contrast to HIV and HBV, we could not prove long-term persistence and reselection of resistant variants in HCV patients who failed protease inhibitor-based therapy. This may have important implications for the potential to reuse direct-acting antivirals in patients who failed the initial direct antiviral treatment. (The phase IIIb study described in this paper is registered at ClinicalTrials.gov under registration number NCT01054573.).
+   </text>
+  </passage>
+ </document>
+ </collection>

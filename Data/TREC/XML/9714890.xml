@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9714890
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Highly efficient oligonucleotide transfer into intact yeast cells using square-wave pulse electroporation.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    107
+   </offset>
+   <text>
+    Here, we present a rapid and reproducible procedure based on square-wave pulse electroporation that allows efficient penetration of synthetic oligonucleotides into intact yeast cells. This procedure was successfully used to modify the yeast genome with small amounts of oligonucleotide.
+   </text>
+  </passage>
+ </document>
+ </collection>

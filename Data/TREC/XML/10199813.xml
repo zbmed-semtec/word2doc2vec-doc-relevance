@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   10199813
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    UTP inhibits Na+ absorption in wild-type and DeltaF508 CFTR-expressing human bronchial epithelia.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    98
+   </offset>
+   <text>
+    Ca2+-mediated agonists, including UTP, are being developed for therapeutic use in cystic fibrosis (CF) based on their ability to modulate alternative Cl- conductances. As CF is also characterized by hyperabsorption of Na+, we determined the effect of mucosal UTP on transepithelial Na+ transport in primary cultures of human bronchial epithelia (HBE). In symmetrical NaCl, UTP induced an initial increase in short-circuit current (Isc) followed by a sustained inhibition. To differentiate between effects on Na+ absorption and Cl- secretion, Isc was measured in the absence of mucosal and serosal Cl- (INa). Again, mucosal UTP induced an initial increase and then a sustained decrease that reduced amiloride-sensitive INa by 73%. The Ca2+-dependent agonists histamine, bradykinin, serosal UTP, and thapsigargin similarly induced sustained inhibition (62-84%) of INa. Mucosal UTP induced similar sustained inhibition (half-maximal inhibitory concentration 296 nM) of INa in primary cultures of human CF airway homozygous for the DeltaF508 mutation. BAPTA-AM blunted UTP-dependent inhibition of INa, but inhibitors of protein kinase C (PKC) and phospholipase A2 had no effect. Indeed, direct activation of PKC by phorbol 12-myristate 13-acetate failed to inhibit Na+ absorption. Apyrase, a tri- and diphosphatase, did not reverse inhibitory effects of UTP on INa, suggesting a long-term inhibitory effect of UTP that is independent of receptor occupancy. After establishment of a mucosa-to-serosa K+ concentration gradient and permeabilization of the mucosal membrane with nystatin, mucosal UTP induced an initial increase in K+ current followed by a sustained inhibition. We conclude that increasing cellular Ca2+ induces a long-term inhibition of transepithelial Na+ transport across normal and CF HBE at least partly due to downregulation of a basolateral membrane K+ conductance. Thus UTP may have a dual therapeutic effect in CF airway: 1) stimulation of a Cl- secretory response and 2) inhibition of Na+ transport.
+   </text>
+  </passage>
+ </document>
+ </collection>

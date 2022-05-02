@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   25425971
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    E7080 (lenvatinib), a multi-targeted tyrosine kinase inhibitor, demonstrates antitumor activities against colorectal cancer xenografts.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    136
+   </offset>
+   <text>
+    Clinical prognosis of metastasized colorectal carcinoma (CRC) is still not at desired levels and novel drugs are needed. Here, we focused on the multi-tyrosine kinase inhibitor E7080 (Lenvatinib) and assessed its therapeutic efficacy against human CRC cell lines in vitro and human CRC xenografts in vivo. The effect of E7080 on cell viability was examined on 10 human CRC cell lines and human endothelial cells (HUVEC). The inhibitory effect of E7080 on VEGF-induced angiogenesis was studied in an ex vivo mouse aortic ring angiogenesis assay. In addition, the efficacy of E7080 against xenografts derived from CRC cell lines and CRC patient resection specimens with mutated KRAS was investigated in vivo. A relatively low cytotoxic effect of E7080 on CRC cell viability was observed in vitro. Endothelial cells (HUVEC) were more susceptible to the incubation with E7080. This is in line with the observation that E7080 demonstrated an anti-angiogenic effect in a three-dimensional ex vivo mouse aortic ring angiogenesis assay. E7080 effectively disrupted CRC cell-mediated VEGF-stimulated growth of HUVEC in vitro. Daily in vivo treatment with E7080 (5 mg/kg) significantly delayed the growth of KRAS mutated CRC xenografts with decreased density of tumor-associated vessel formations and without tumor regression. This observation is in line with results that E7080 did not significantly reduce the number of Ki67-positive cells in CRC xenografts. The results suggest antiangiogenic activity of E7080 at a dosage that was well tolerated by nude mice. E7080 may provide therapeutic benefits in the treatment of CRC with mutated KRAS.
+   </text>
+  </passage>
+ </document>
+ </collection>

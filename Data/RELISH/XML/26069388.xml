@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   26069388
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Charge structure in volcanic plumes: a comparison of plume properties predicted by an integral plume model to observations of volcanic lightning during the 2010 eruption of Eyjafjallajökull, Iceland.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    201
+   </offset>
+   <text>
+    Observations of volcanic lightning made using a lightning mapping array during the 2010 eruption of Eyjafjallajökull allow the trajectory and growth of the volcanic plume to be determined. The lightning observations are compared with predictions of an integral model of volcanic plumes that includes descriptions of the interaction with wind and the effects of moisture. We show that the trajectory predicted by the integral model closely matches the observational data and the model well describes the growth of the plume downwind of the vent. Analysis of the lightning signals reveals information on the dominant charge structure within the volcanic plume. During the Eyjafjallajökull eruption both monopole and dipole charge structures were observed in the plume. By using the integral plume model, we propose the varying charge structure is connected to the availability of condensed water and low temperatures at high altitudes in the plume, suggesting ice formation may have contributed to the generation of a dipole charge structure via thunderstorm-style ice-based charging mechanisms, though overall this charging mechanism is believed to have had only a weak influence on the production of lightning.
+   </text>
+  </passage>
+ </document>
+ </collection>

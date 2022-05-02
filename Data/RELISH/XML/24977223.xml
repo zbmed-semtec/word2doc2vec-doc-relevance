@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   24977223
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Validity of cardiovascular risk prediction models in kidney transplant recipients.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    83
+   </offset>
+   <text>
+    BACKGROUND: Predicting cardiovascular risk is of great interest in renal transplant recipients since cardiovascular disease is the leading cause of mortality. OBJECTIVE: To conduct a systematic review to assess the validity of cardiovascular risk prediction models in this population. METHODS: Five databases were searched (MEDLINE, EMBASE, SCOPUS, CINAHL, and Web of Science) and cohort studies with at least one year of follow-up were included. Variables that described population characteristics, study design, and prognostic performance were extracted. The Quality in Prognostic Studies (QUIPS) tool was used to evaluate bias. RESULTS: Seven studies met the criteria for inclusion, of which, five investigated the Framingham risk score and three used a transplant-specific model. Sample sizes ranged from 344 to 23,575, and three studies lacked sufficient event rates to confidently reach conclusion. Four studies reported discrimination (as measured by c-statistic), which ranged from 0.701 to 0.75, while only one risk model was both internally and externally validated. CONCLUSION: The Framingham has underestimated cardiovascular events in renal transplant recipients, but these studies have not been robust. A risk prediction model has been externally validated at least on one occasion, but comprehensive validation in multiple cohorts and impact analysis are recommended before widespread clinical application is advocated.
+   </text>
+  </passage>
+ </document>
+ </collection>

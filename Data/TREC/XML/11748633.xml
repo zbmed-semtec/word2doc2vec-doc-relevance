@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11748633
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Intracellular trafficking of a tagged and functional mammalian olfactory receptor.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    83
+   </offset>
+   <text>
+    Tagged G-protein-coupled receptors (GPCRs) have been used to facilitate intracellular visualization of these receptors. We have used a combination of adenoviral vector gene transfer and tagged olfactory receptors to help visualize mammalian olfactory receptor proteins in the normal olfactory epithelium of rats, and in cell culture. Three recombinant adenoviral vectors were generated carrying variously tagged versions of rat olfactory receptor I7. The constructs include an N-terminal Flag epitope tag (Flag:I7), enhanced green fluorescent protein (EGFP) fusion protein (EGFP:I7), and a C-terminal EGFP fusion (I7:EGFP). These receptor constructs were assayed in rat olfactory sensory neurons (OSNs) and in a heterologous system (HEK 293 cell line) for protein localization and functional expression. Functional expression of the tagged receptor proteins was tested by electroolfactogram (EOG) recordings in the infected rat olfactory epithelium, and by calcium imaging in single cells. Our results demonstrate that the I7:EGFP fusion protein and Flag:I7 are functionally expressed in OSNs while the EGFP:I7 fusion is not, probably due to inappropriate processing of the protein in the cells. These data suggest that a small epitope tag (Flag) at the N-terminus, or EGFP located at the C-terminus of the receptor, does not affect ligand binding or downstream signaling. In addition, both functional fusion proteins (Flag:I7 and I7:EGFP) are properly targeted to the plasma membrane of HEK 293 cells.
+   </text>
+  </passage>
+ </document>
+ </collection>

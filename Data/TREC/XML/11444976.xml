@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11444976
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Multiple roles of the conserved key residue arginine 209 in neuronal nicotinic receptors.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    90
+   </offset>
+   <text>
+    We have examined the role of a highly conserved arginine (R209), which flanks the M1 transmembrane segment of nAChRs, in the biogenesis and function of neuronal nAChRs. Point mutations revealed that, in alphaBgtx-sensitive neuronal alpha7 nAChRs, the conserved arginine is required for the transport of assembled receptors to the cell surface. By contrast, R209 does not play any role in the transport of assembled alpha-Bgtx-insensitive neuronal alpha3beta4 nAChRs to the cell surface. However, a basic residue at this position of alpha3 and beta4 subunits is necessary for either synthesis, folding, or assembly of alpha3beta4 receptors. Moreover, electrophysiological experiments revealed that in alpha3beta4 receptors the conserved arginine of the alpha3 subunit is involved in either coupling agonist binding to the channel or regulating single channel kinetics.
+   </text>
+  </passage>
+ </document>
+ </collection>

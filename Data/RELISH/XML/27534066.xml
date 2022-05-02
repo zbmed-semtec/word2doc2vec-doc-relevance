@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   27534066
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    [Using mFISH and mBAND for Bioindication of Internal α-Radiation].
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    71
+   </offset>
+   <text>
+    This study was aimed to compare mFISH and mBAND techniques in assessment of the yield of chromosomal aberrations induced by high-LET ionizing radiation. The study group included Mayak workers (46 individuals), for whom the yield of chromosomal aberrations was assessed using two methods: mFISH and mBAND. It was shown that both methods are applicable for biological indication of internal α-radiation exposure. Nevertheless, in case when the source of ionizing radiation is unknown or in terms of a mixed exposure, mFISH appeared as more informative technique that allows identification of markers both external γ-rays (translocations) and internal α-radiation (complex chromosomal rearrangements).
+   </text>
+  </passage>
+ </document>
+ </collection>

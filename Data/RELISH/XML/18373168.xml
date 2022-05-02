@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   18373168
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Hepatitis B caused by a hepatitis B surface antigen escape mutant.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    67
+   </offset>
+   <text>
+    Amino acid substitutions within the S gene involving the major antigenic a determinant of the hepatitis B virus (HBV) surface antigen (HBsAg) have been detected in cases of failure of immunization against the virus. Our report showed development of clinical hepatitis in presence of antibody to HBsAg in a healthy individual. A single amino acid substitution (G145R) within the a determinant of the HBsAg was determined by sequencing of the isolated HBV strain. Lamivudine treatment efficiently cleared the peripheral HBV DNA, HBsAg, and hepatitis B e antigen. In conclusion, the immune escape mutant in the S gene can cause hepatitis despite pre-existing naturally acquired immunity.
+   </text>
+  </passage>
+ </document>
+ </collection>

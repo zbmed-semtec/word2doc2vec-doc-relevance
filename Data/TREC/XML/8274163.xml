@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   8274163
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Role of flavin-dependent monooxygenases and cytochrome P450 enzymes in the sulfoxidation of S-methyl N,N-diethylthiolcarbamate.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    128
+   </offset>
+   <text>
+    Disulfiram is bioactivated to S-methyl N,N-diethylthiolcarbamate sulfoxide (DETC-MeSO), the metabolite proposed to be responsible for the action of disulfiram as an aldehyde dehydrogenase inhibitor. This bioactivation process includes a reduction, an S-methylation, and two successive oxidations. Sulfur-containing functional groups are substrates for cytochrome P450 enzymes or flavin-containing monooxygenases (FMO). In the present study, we investigated the contribution of these monooxygenases to the formation of DETC-MeSO from its immediate precursor S-methyl N,N-diethylthiolcarbamate (DETC-Me). Liver microsomes obtained from mature male rats were incubated with DETC-Me. The formation of DETC-MeSO was blocked completely by solubilization of the microsomes with the detergent Emulgen 911, or by the presence of the cytochrome P450 inhibitor 1-benzylimidazole. However, thermal-inactivation of FMO resulted in only a partial loss in DETC-MeSO formation. Liver microsomes from phenobarbital-treated rats showed a 4- to 5-fold increase in the rate of formation of DETC-MeSO, compared with controls. Liver microsomes from pyrazole-treated rats showed a 50% decrease in the sulfoxidation of DETC-Me compared with controls. In a purified reconstituted system, cytochrome P450 2B1 (CYP2B1) catalyzed the formation of DETC-MeSO at a rate of 51 nmol DETC-MeSO formed/min/nmol cytochrome P450. Antibodies to CYP2B1 caused a 60% inhibition of DETC-MeSO formation by liver microsomes from phenobarbital-treated rats. These results suggest that in male rat liver microsomes, cytochrome P450 plays a major role in catalyzing the sulfoxidation of DETC-Me, whereas FMO plays a minor role (&lt; 10%). Also, in liver microsomes from phenobarbital-treated rats, CYP2B1 is the major catalyst for the sulfoxidation of DETC-Me.
+   </text>
+  </passage>
+ </document>
+ </collection>

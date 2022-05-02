@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   19029951
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Evaluation of the novel mitotic modulator ON 01910.Na in pancreatic cancer and preclinical development of an ex vivo predictive assay.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    135
+   </offset>
+   <text>
+    The pupose of this study was to evaluate the activity of ON 01910.Na, a mitotic inhibitor, in in vitro and in vivo models of pancreatic cancer and to discover biomarkers predictive of efficacy. Successive in vitro and in vivo models were used; these included cell line-derived and patient-derived tumors from our PancXenoBank, a live collection of freshly generated pancreatic cancer xenografts. ON 01910.Na showed equivalent activity to gemcitabine against pancreatic cancer cell lines in vitro. The activity of the agent correlated with suppression of phospho-CDC25C and cyclin B1. These markers were optimized for a fine-needle aspirate ex vivo rapid assay. Cyclin B1 mRNA evaluation yielded the most optimal combination of accuracy and reproducibility. Next, nine patient-derived tumors from the PancXenoBank were profiled using the assay developed in cell lines and treated with ON01910.Na for 28 days. Two cases were cataloged as potential responders and seven as resistants. There was a correlation between the ex vivo assay and sensitivity to the tested agent, as the two cases prospectively identified as sensitive met prespecified criteria for response. Of the seven tumors of predictive resistant, only one was found to be sensitive to ON 01910.Na. In addition, there was a good correlation between cyclin B1 downregulation ex vivo and changes in cyclin B1 protein post-treatment. The novel mitotic inhibitor, ON 01910.Na, showed activity in preclinical model of pancreatic cancer. A rapid assay was rationally developed that not only identified cases sensitive to ON 01910.Na, but also anticipated the pharmacodynamic events occurring after in vivo exposure.
+   </text>
+  </passage>
+ </document>
+ </collection>

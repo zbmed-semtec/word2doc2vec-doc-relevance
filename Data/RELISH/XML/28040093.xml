@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   28040093
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Diagnosis and clinical management of duplications and deletions.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    65
+   </offset>
+   <text>
+    Chromosome deletions and duplications-copy number variations (CNVs)-are a major contribution to the genome variability and can be either pathogenic or not. A particular class, the microdeletions and microduplications, which alter &lt;5 Mb, have been extensively associated with developmental delay and intellectual disability. Although their prevalence in pregnancies and newborn is relatively low, their estimates in preimplantation embryos are poorly defined. The introduction of novel technologies for preimplantation genetic diagnosis of aneuploidies (PGD-A) caused new possibilities and challenges associated with diagnosis of subchromosomal CNVs. Both technical aspects of performing genomewide microarray or next generation sequencing analysis on single cells and interpretation issues are subject of debate. The latter include the reliability of detection of CNVs from embryonic biopsies, their clinical classification based on reproductive outcomes, as well as how before and after test counseling should be organized. It is also important to consider that the current resolution of these technologies from single cells is usually &gt;10 Mb, thus ruling out the possibility to diagnose the most important recurrent microdeletion and microduplication syndromes. Furthermore, at present we face with a lack of well-designed studies addressing the actual resolution and accuracy of CNVs detection in PGD-A and no reference databases is available to evaluate their pathogenicity. Accordingly, it seems reasonable at the moment to avoid the reporting of subchromosomal CNVs in PGD-A. However, although these issues require proper handling, they should not lead us away from providing an improved preimplantation genetic diagnosis.
+   </text>
+  </passage>
+ </document>
+ </collection>

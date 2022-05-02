@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   20709701
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Large solitary fibrous tumor with overexpression of insulin-like growth factor-2.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    82
+   </offset>
+   <text>
+    We present the case of a 66-year-old woman in whom a large solitary fibrous tumor (SFT) in the right thoracic cavity caused intermittent symptoms of hypoglycemia. A diagnosis was made of non-islet cell tumor hypoglycemia on the basis of the presence of hypoglycemia requiring continuous glucose infusion, elevated serum insulin-like growth factor-2 (IGF-2), and a large well-defined tumor in the right thoracic cavity. The patient underwent complete resection of the tumor. Histological examination revealed spindle tumor cells with a hemangiopericytoma-like vascular pattern. Mitotic figures and necrotic areas were rare, and cellular atypia and nuclear pleomorphism were mild. Under immunohistochemical examination, the tumor cells were positive for CD34. Overexpression of IGF-2 mRNA in the tumor was detected by reverse-transcription polymerase-chain reaction. The diagnosis of SFT with IGF-2 production was confirmed. Immediately after surgery, her serum glucose level was normalized (without the need for glucose infusion) and serum IGF-2 level was decreased. Two years after surgery, the patient remains alive and well, with no signs of recurrence or hypoglycemia.
+   </text>
+  </passage>
+ </document>
+ </collection>

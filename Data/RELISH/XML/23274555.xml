@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   23274555
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Ensuring the reliability of stable isotope ratio data--beyond the principle of identical treatment.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    100
+   </offset>
+   <text>
+    The need for inter-laboratory comparability is crucial to facilitate the globalisation of scientific networks and the development of international databases to support scientific and criminal investigations. This article considers what lessons can be learned from a series of inter-laboratory comparison exercises organised by the Forensic Isotope Ratio Mass Spectrometry (FIRMS) network in terms of reference materials (RMs), the management of data quality, and technical limitations. The results showed that within-laboratory precision (repeatability) was generally good but between-laboratory accuracy (reproducibility) called for improvements. This review considers how stable isotope laboratories can establish a system of quality control (QC) and quality assurance (QA), emphasising issues of repeatability and reproducibility. For results to be comparable between laboratories, measurements must be traceable to the international δ-scales and, because isotope ratio measurements are reported relative to standards, a key aspect is the correct selection, calibration, and use of international and in-house RMs. The authors identify four principles which promote good laboratory practice. The principle of identical treatment by which samples and RMs are processed in an identical manner and which incorporates three further principles; the principle of identical correction (by which necessary corrections are identified and evenly applied), the principle of identical scaling (by which data are shifted and stretched to the international δ-scales), and the principle of error detection by which QC and QA results are monitored and acted upon. To achieve both good repeatability and good reproducibility it is essential to obtain RMs with internationally agreed δ-values. These RMs will act as the basis for QC and can be used to calibrate further in-house QC RMs tailored to the activities of specific laboratories. In-house QA standards must also be developed to ensure that QC-based calibrations and corrections lead to accurate results for samples. The δ-values assigned to RMs must be recorded and reported with all data. Reference materials must be used to determine what corrections are necessary for measured data. Each analytical sequence of samples must include both QC and QA materials which are subject to identical treatment during measurement and data processing. Results for these materials must be plotted, monitored, and acted upon. Periodically international RMs should be analysed as an in-house proficiency test to demonstrate results are accurate.
+   </text>
+  </passage>
+ </document>
+ </collection>

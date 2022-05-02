@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   28520490
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Disparities in Disability by Educational Attainment Across US States.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    70
+   </offset>
+   <text>
+    OBJECTIVES: To examine how disparities in adult disability by educational attainment vary across US states. METHODS: We used the nationally representative data of more than 6 million adults aged 45 to 89 years in the 2010-2014 American Community Survey. We defined disability as difficulty with activities of daily living. We categorized education as low (less than high school), mid (high school or some college), or high (bachelor's or higher). We estimated age-standardized disability prevalence by educational attainment and state. We assessed whether the variation in disability across states occurs primarily among low-educated adults and whether it reflects the socioeconomic resources of low-educated adults and their surrounding contexts. RESULTS: Disparities in disability by education vary markedly across states-from a 20 percentage point disparity in Massachusetts to a 12-point disparity in Wyoming. Disparities vary across states mainly because the prevalence of disability among low-educated adults varies across states. Personal and contextual socioeconomic resources of low-educated adults account for 29% of the variation. CONCLUSIONS: Efforts to reduce disparities in disability by education should consider state and local strategies that reduce poverty among low-educated adults and their surrounding contexts.
+   </text>
+  </passage>
+ </document>
+ </collection>

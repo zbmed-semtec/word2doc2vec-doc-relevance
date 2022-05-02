@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   10813819
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    BiGGER: a new (soft) docking algorithm for predicting protein interactions.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    76
+   </offset>
+   <text>
+    A new computationally efficient and automated "soft docking" algorithm is described to assist the prediction of the mode of binding between two proteins, using the three-dimensional structures of the unbound molecules. The method is implemented in a software package called BiGGER (Bimolecular Complex Generation with Global Evaluation and Ranking) and works in two sequential steps: first, the complete 6-dimensional binding spaces of both molecules is systematically searched. A population of candidate protein-protein docked geometries is thus generated and selected on the basis of the geometric complementarity and amino acid pairwise affinities between the two molecular surfaces. Most of the conformational changes observed during protein association are treated in an implicit way and test results are equally satisfactory, regardless of starting from the bound or the unbound forms of known structures of the interacting proteins. In contrast to other methods, the entire molecular surfaces are searched during the simulation, using absolutely no additional information regarding the binding sites. In a second step, an interaction scoring function is used to rank the putative docked structures. The function incorporates interaction terms that are thought to be relevant to the stabilization of protein complexes. These include: geometric complementarity of the surfaces, explicit electrostatic interactions, desolvation energy, and pairwise propensities of the amino acid side chains to contact across the molecular interface. The relative functional contribution of each of these interaction terms to the global scoring function has been empirically adjusted through a neural network optimizer using a learning set of 25 protein-protein complexes of known crystallographic structures. In 22 out of 25 protein-protein complexes tested, near-native docked geometries were found with C(alpha) RMS deviations &lt; or =4.0 A from the experimental structures, of which 14 were found within the 20 top ranking solutions. The program works on widely available personal computers and takes 2 to 8 hours of CPU time to run any of the docking tests herein presented. Finally, the value and limitations of the method for the study of macromolecular interactions, not yet revealed by experimental techniques, are discussed.
+   </text>
+  </passage>
+ </document>
+ </collection>

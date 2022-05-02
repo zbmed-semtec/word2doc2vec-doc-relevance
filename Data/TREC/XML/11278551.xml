@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11278551
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Characterization of a rat neuronal nicotinic acetylcholine receptor alpha7 promoter.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    85
+   </offset>
+   <text>
+    Neuronal nicotinic acetylcholine receptors (nAChRs) containing the alpha7 subunit are expressed in the central nervous system, autonomic nervous system, retina, adrenal medulla, and PC12 cells. alpha7 nAChRs have been implicated in several important biological activities apart from synaptic transmission such as mediating neurite growth and presynaptic control of neurotransmitter release. A 178-base pair promoter was sufficient to drive high level expression of the alpha7 gene in PC12 cells. The alpha7 promoter was also cell-specific, expressing in PC12 cells but not in L6 rat muscle cells. Within our minimal rat alpha7 nAChR promoter we identified two sequences important for basal level expression. Mutation of a GC-rich sequence at -172 relative to the translational start site led to an increase in activity of the promoter, indicating the presence of a negative regulatory element. Upstream stimulatory factor-1 acted to regulate alpha7 expression positively by binding to an E-box at -116. A site directly adjacent to the upstream stimulatory factor-1 binding site was shown to bind Egr-1. Sp1 and Sp3 binding also occurred downstream from or overlapping the Egr-1 binding site in the rat alpha7 promoter. Several transcription factors interact in close proximity to control expression of the rat alpha7 nicotinic receptor gene.
+   </text>
+  </passage>
+ </document>
+ </collection>

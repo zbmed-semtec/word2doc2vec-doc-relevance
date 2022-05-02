@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   27166193
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Repression of TCF3/E2A contributes to Hodgkin lymphomagenesis.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    63
+   </offset>
+   <text>
+    Although Hodgkin and Reed-Sternberg (HRS) cells of classical Hodgkin lymphoma (cHL) derived from germinal or post germinal B cells, they have lost the B cell phenotype in the process of lymphomagenesis. The phenomenon can be at least partially explained by repression of B-cell-specific transcription factors including TCF3, early B-cell factor 1 (EBF1), SPI1/PU.1, and FOXO1, which are down-regulated by genetic and epigenetic mechanisms. The unique phenotype has been suspected to be advantageous for survival of HRS cells. Ectopic expression of some of these transcription factors (EBF1, PU.1, FOXO1) indeed impaired survival of cHL cells. Here we show that forced expression of TCF3 causes cell death and cell cycle arrest in cHL cell lines. Mechanistically, TCF3 overexpression modulated expression of multiple pro-apoptotic genes including BIK, APAF1, FASLG, BOK, and TNFRSF10A/DR4. We conclude that TCF3 inactivation contributes not only to extinguishing of B cell phenotype but also to cHL oncogenesis.
+   </text>
+  </passage>
+ </document>
+ </collection>

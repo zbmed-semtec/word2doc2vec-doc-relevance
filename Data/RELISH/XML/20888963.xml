@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   20888963
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Single particle analysis at high resolution.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    45
+   </offset>
+   <text>
+    Electron cryomicroscopy (cryo-EM) and single particle analysis is emerging as a powerful technique for determining the 3D structure of large biomolecules and biomolecular assemblies in close to their native solution environment. Over the last decade, this technology has improved, first to sub-nanometer resolution, and more recently beyond 0.5 nm resolution. Achieving sub-nanometer resolution is now readily approachable on mid-range microscopes with straightforward data processing, so long as the target specimen meets some basic requirements. Achieving resolutions beyond 0.5 nm currently requires a high-end microscope and careful data acquisition and processing, with much more stringent specimen requirements. This chapter will review and discuss the methodologies for determining high-resolution cryo-EM structures of nonvirus particles to sub-nanometer resolution and beyond, with a particular focus on the reconstruction strategy implemented in the EMAN software suite.
+   </text>
+  </passage>
+ </document>
+ </collection>

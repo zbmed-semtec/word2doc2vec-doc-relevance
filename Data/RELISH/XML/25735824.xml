@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   25735824
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Completing bacterial genome assemblies: strategy and performance comparisons.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    78
+   </offset>
+   <text>
+    Determining the genomic sequences of microorganisms is the basis and prerequisite for understanding their biology and functional characterization. While the advent of low-cost, extremely high-throughput second-generation sequencing technologies and the parallel development of assembly algorithms have generated rapid and cost-effective genome assemblies, such assemblies are often unfinished, fragmented draft genomes as a result of short read lengths and long repeats present in multiple copies. Third-generation, PacBio sequencing technologies circumvented this problem by greatly increasing read length. Hybrid approaches including ALLPATHS-LG, PacBio corrected reads pipeline, SPAdes, and SSPACE-LongRead, and non-hybrid approaches--hierarchical genome-assembly process (HGAP) and PacBio corrected reads pipeline via self-correction--have therefore been proposed to utilize the PacBio long reads that can span many thousands of bases to facilitate the assembly of complete microbial genomes. However, standardized procedures that aim at evaluating and comparing these approaches are currently insufficient. To address the issue, we herein provide a comprehensive comparison by collecting datasets for the comparative assessment on the above-mentioned five assemblers. In addition to offering explicit and beneficial recommendations to practitioners, this study aims to aid in the design of a paradigm positioned to complete bacterial genome assembly.
+   </text>
+  </passage>
+ </document>
+ </collection>

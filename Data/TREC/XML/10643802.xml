@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   10643802
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Is the presenilin-1 E318G missense mutation a risk factor for Alzheimer's disease?
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    83
+   </offset>
+   <text>
+    Nearly all of the presenilin-1 (PSEN-1) mutations are missense mutations leading to Alzheimer's disease (AD). The role of the mutation E318G (a substitution of glutamic acid to glycine) in the PSEN-1 is controversial. It has been found both in AD patients and in non-demented control individuals. Using the polymerase chain reaction and the restriction fragment length polymorphism method, we screened for E318G mutation in a total of 16 familial (FAD) cases, in 64 sporadic neuropathologically confirmed AD cases and in 270 non-demented controls including 35 neuropathologically confirmed individuals. We detected the E318G mutation in four FAD cases, seven sporadic AD cases and 10 control individuals with highly varying onset-ages. Odds ratios for carrying the mutation were 7.6 and 3 in FAD and sporadic AD cases, respectively. Our results suggest that this mutation could be a risk factor in the Finnish FAD and sporadic AD population. It may be in linkage disequilibrium with a pathogenic change somewhere else in the PSEN-1 gene or in close proximity to the PSEN-1 gene.
+   </text>
+  </passage>
+ </document>
+ </collection>

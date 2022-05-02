@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   25547119
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Chondroitin sulfate proteoglycan 4 functions as the cellular receptor for Clostridium difficile toxin B.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    105
+   </offset>
+   <text>
+    As a gram-positive, spore-forming anaerobic bacillus, Clostridium difficile (C. difficile) is responsible for severe and fatal pseudomembranous colitis, and poses the most urgent antibiotic resistance threat worldwide. Epidemic C. difficile is the leading cause of antibiotic-associated diarrhoea globally, especially diarrhoea due to the emergence of hypervirulent strains associated with high mortality and morbidity. TcdB, one of the key virulence factors secreted by this bacterium, enters host cells through a poorly understood mechanism to elicit its pathogenic effect. Here we report the first identification of the TcdB cellular receptor, chondroitin sulfate proteoglycan 4 (CSPG4). CSPG4 was initially isolated from a whole-genome human shRNAmir library screening, and its role was confirmed by both TALEN- and CRISPR/Cas9-mediated gene knockout in human cells. CSPG4 is critical for TcdB binding to the cell surface, inducing cytoskeleton disruption and cell death. A direct interaction between the N-terminus of CSPG4 and the C-terminus of TcdB was confirmed, and the soluble peptide of the toxin-binding domain of CSPG4 could protect cells from the action of TcdB. Notably, the complete loss of CSPG4/NG2 decreased TcdB-triggered interleukin-8 induction in mice without significantly affecting animal mortality. Based on both the in vitro and in vivo studies, we propose a dual-receptor model for TcdB endocytosis. The discovery of the first TcdB receptor reveals a previously unsuspected role for CSPG4 and provides a new therapeutic target for the treatment of C. difficile infection.
+   </text>
+  </passage>
+ </document>
+ </collection>

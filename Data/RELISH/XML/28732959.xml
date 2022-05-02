@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   28732959
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Ultrasonic-assisted continuous methanolysis of Jatropha curcas oil in the appearance of biodiesel used as an intermediate solvent.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    131
+   </offset>
+   <text>
+    A environmental friendly system for fast transesterification of Jatropha curcas oil was developed for the production of biodiesel using an ultrasonic-assisted continuous tank reactor in the presence of fatty acid methyl ester (FAMEs) used as a green (intermediate) solvent with potassium hydroxide used as a catalyst. This research provide a new biodiesel production process, the optimal condition for the reaction were established: reaction temperature 25°C oil to methanol molar ratio was 1:5, catalyst concentration 0.75wt% of oil, solvent concentration 7.5%, flow rate 241.68±0.80ml/min, ultrasonic amplitude 60% and ultrasonic cycles 0.7s, transesterification was completed within 1.09min (residence time). The purity and conversion of biodiesel was 98.75±0.50% analyzed by the reverse phase HPLC method.
+   </text>
+  </passage>
+ </document>
+</collection>

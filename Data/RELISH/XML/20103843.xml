@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   20103843
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Two evolutionarily conserved essential beta-barrel proteins in the chloroplast outer envelope membrane.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    104
+   </offset>
+   <text>
+    Chloroplasts are organelles specific to photosynthetic eukaryotes that support the lives of most organisms on earth. Chloroplasts were derived from an ancient cyanobacterium by endosymbiosis, and one characteristic shared between them and extant cyanobacteria is the presence of beta-barrel proteins in the outer membrane. These integral membrane proteins are also found in the outer membranes of proteobacteria and mitochondria. In particular, a group of homologous beta-barrel proteins called BamA homologs are present in all Gram-negative bacteria and the endosymbiotic organelles, i.e., chloroplasts and mitochondria. It was recently revealed that, in both proteobacteria and mitochondria, there is a single essential BamA homolog that mediates beta-barrel protein assembly. In a chloroplast, there are two distinct BamA homologs, Toc75 and OEP80, which diverged early in the evolution of chloroplasts from their common ancestor with extant cyanobacteria. Recent genetic studies demonstrated that each of these proteins is indispensable for viability of plants although neither has been shown to be involved in beta-barrel protein assembly. Toc75 catalyzes import of nuclear-encoded precursor proteins, a process that is not required for bacteria, whereas the molecular function of OEP80 remains elusive. Establishment of a protein import apparatus was required to facilitate the transfer of genes from the endosymbiont to the host cell nucleus. Hence, we propose that the gene duplication giving rise to the two essential BamA homologs was a prerequisite for the successful conversion of the cyanobacterial endosymbiont into the chloroplast. Consequently, continued study of these two chloroplast proteins should advance our understanding of endosymbiosis and evolutionarily conserved proteins in general.
+   </text>
+  </passage>
+ </document>
+ </collection>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   11118639
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Oligomerization properties of the acidic ribosomal P-proteins from Saccharomyces cerevisiae: effect of P1A protein phosphorylation on the formation of the P1A-P2B hetero-complex.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    179
+   </offset>
+   <text>
+    Acidic ribosomal P-proteins form, in all eukaryotic cells, a lateral protuberance, the so-called 'stalk', which is directly involved in translational activity of the ribosomes. In Saccharomyces cerevisiae cells, there are four distinct P-proteins: P1A, P1B, P2A and P2B. In spite of the high level of their structural homology, they are not completely equivalent and may perform different functions. As yet, the protein-protein interactions between yeast P-proteins have not been fully defined. In this paper, the interplay between yeast P-proteins has been investigated by means of a two-hybrid system, chemical cross-linking and gel filtration. The data presented herein show that all P-proteins are able to form homo-oligomeric complexes. By analyzing hetero-interactions, we were able to detect strong interactions between P1A and P2B proteins. Additionally, the pair of P1B and P2A proteins is also able to form a hetero-complex, though at a very low efficiency. All P-proteins are phosphorylated by numerous protein kinases. Using the multifunctional protein kinase CK II, we have shown that incorporation of phosphate into P1A protein can exert its effect on the hetero-oligomerization process, namely by preventing the formation of the hetero-oligomer P1A-P/P2B. These findings are the first to show differences in the oligomerization behavior of the yeast P-proteins; moreover, they emphasize a significant impact of the phosphorylation on the formations of P-protein complex.
+   </text>
+  </passage>
+ </document>
+ </collection>

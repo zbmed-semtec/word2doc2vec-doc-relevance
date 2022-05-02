@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9923543
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Inability to escalate vinorelbine dose intensity using a daily x3 schedule with and without filgrastim in patients with metastatic breast cancer.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    146
+   </offset>
+   <text>
+    PURPOSE: Vinorelbine (Navelbine) is a semi-synthetic vinca alkaloid with documented activity in breast cancer. The major dose-limiting toxicity (DLT) when given weekly is myelosuppression with minimal neurologic toxicity. This phase I study attempted to define the maximally tolerated dose (MTD) and the DLT of vinorelbine on a daily x3 schedule with and without filgrastim support. METHODS: A total of 19 patients with stage IV breast cancer were enrolled in separate studies at Duke University Medical Center (DUMC) and the Dana-Farber Cancer Institute (DFCI). Eligible patients could have received up to two prior chemotherapy regimens in the metastatic setting and had to have an ANC &gt; 1500/mm2, PLT &gt; 100000 m3, creatinine &lt; 2.0 mg/dl, bilirubin &lt; 2.0 mg/dL, SGOT not more than three times normal, and performance status 0-1. Vinorelbine was administered using a daily x3 schedule every 3 weeks. The protocols were designed to study dose escalation with and without growth factor support. At DUMC, in the initial phase of the study, the starting dose was 15 mg/m2 per day and dose escalations of 5 mg/m2 were planned until DLT developed and the MTD was defined. DLT was defined as granulocytopenia &lt; 500/mm3 for &gt; 7 days, grade IV thrombocytopenia, febrile neutropenia, or grade III or greater nonhematologic toxicity. In the second phase of the study, growth factor support was given with vinorelbine at the MTD. Filgrastim at a dose of 5 microg/kg was started on day 4 of the 21-day cycle and was continued until the neutrophil count exceeded 10000 cells/ mm3. At DFCI, all patients received growth factor starting on day 4 and the starting dose of vinorelbine was 25 mg/m2. RESULTS: At DUMC, DLT was seen at 20 mg/m2 in three of three patients and included febrile neutropenia, grade IV neutropenia &gt; 7 days, grade III neurotoxicity, and grade III vomiting. Despite the addition of filgrastim, DLT was again seen at 20 mg/m2 and included grade III neurotoxicity (jaw pain, abdominal pain, constipation, ileus) and grade IV mucositis. Three patients at DFCI were treated with vinorelbine at a dose of 25 mg/m2 with growth factor support, and two developed DLT including febrile neutropenia, neutropenia &gt; 7 days, and grade III stomatitis. CONCLUSIONS: Our effort to escalate the dose intensity of vinorelbine on this schedule was not successful and was complicated by hematologic and nonhematologic toxicity. A daily x3 schedule of vinorelbine should not be pursued as an alternative treatment regimen in patients with previously treated metastatic breast cancer.
+   </text>
+  </passage>
+ </document>
+ </collection>

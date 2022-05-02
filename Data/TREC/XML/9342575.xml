@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   9342575
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Prion diseases (transmissible spongiform encephalopathies): a review.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    70
+   </offset>
+   <text>
+    Bovine spongiform encephalopathy (BSE), or "mad cow disease", as well as Creutzfeldt-Jakob-Disease in humans, have recently been attracting public attention. The European Society of Gastrointestinal Endoscopy (ESGE) has issued guidelines on the topic (Endoscopy 1997; 29: 203-4), which were accompanied by a review article by T. Ponchon ("Transmission of hepatitis C and prion diseases through digestive endoscopy: evaluation of risk and recommended practices", Endoscopy 1997; 29: 199-202) dealing with the potential transmission of BSE and hepatitis C through gastrointestinal endoscopy. The following article on prion diseases in general provides a more in-depth overview of these disorders and their epidemiology and pathophysiology.
+   </text>
+  </passage>
+ </document>
+ </collection>

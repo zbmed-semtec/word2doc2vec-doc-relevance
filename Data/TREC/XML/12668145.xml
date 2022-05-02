@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   12668145
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    More severe neurologic deficits in SJL/J male than female mice following Theiler's virus-induced CNS demyelination.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    116
+   </offset>
+   <text>
+    Although multiple sclerosis (MS) is more prevalent in women than men, male MS patients develop more severe clinical symptoms and deteriorate faster than female patients. We investigated the differences in CNS demyelinating disease between SJL/J male and female mice following Theiler's murine encephalomyelitis virus (TMEV) infection. Infected female mice had consistently higher serum levels of virus-specific IgG at 14 and 21 days and and 7 months postinfection, which resulted in less infectious virus in CNS. All male mice infected for 6 to 7 months developed paralysis, with 50% displaying bilateral posterior limb paralysis, whereas 77% of age-matched female mice were paralyzed, all displaying unilateral posterior limb paralysis. Male mice infected for 6 to 7 months performed up to threefold fewer spontaneous horizontal and vertical movements (activity box test) compared to infected age-matched females. In addition, infected male mice performed the coordination and balance (Rotarod) test at 27 +/- 4% of the expected level (expressed as a percentage of that of uninfected age-matched mice), whereas infected female mice performed at 41 +/- 5% of the expected level. Male mice had a small increase in the extent of spinal cord white matter demyelination analyzed at both 45 days and between 6 and 7 months postinfection. For individual male and female mice, the extent of demyelination had a negative linear relationship with the neurologic performances. The emergence of a disease paradigm similar to MS supports using the TMEV model to investigate molecular and genetic factors responsible for the gender dimorphism in MS and other autoimmune diseases.
+   </text>
+  </passage>
+ </document>
+ </collection>

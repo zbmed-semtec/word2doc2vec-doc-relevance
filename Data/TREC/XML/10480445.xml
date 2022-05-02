@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   10480445
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Regulators of apoptosis in human breast cancer.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    48
+   </offset>
+   <text>
+    OBJECTIVES: Apoptosis or programmed cell death represents a mechanism by which tumor cells with DNA damage can be deleted. Bcl-2 and p53 gene products have been both linked to apoptosis. Bcl-2 plays a role as an inhibitor of apoptosis that may extend the viability of cells containing genetic alterations and facilitate tumor progression. Mutant p53 has a similar effect. The purpose of this study was to investigate expression of bcl-2 in 70 malignant and 30 benign breast lesions using different methods (enzyme immunoassay, immunodot blot, Western blot) and to compare it with the established clinicopathological prognostic factors (age, tumor size, type, grade, lymph node status) and some molecular genetic markers in breast cancer. RESULTS: bcl-2 and mutant p53 were highly expressed in breast cancer than benign breast lesions and aneuploidy was more frequently detected in malignant breast samples. No correlation could be observed between bcl-2 expression and node status, tumor size, differentiation, type, age at excision or mutant p53 expression. However, a strong positive associations were seen between bcl-2 and estrogen receptors (ER), DNA aneuploidy. Eighty-five percent of bcl-2 positive tumors were ER positive and 65% were aneuploid, while in bcl-2 negative tumors only 28% were ER positive and 37% were aneuploid. CONCLUSIONS: The association seen between bcl-2 and ER raises the possibility that bcl-2 is an ER-regulated gene which suggests a potential important role for bcl-2 as a modulator of response to hormonal therapy in breast cancer. Monitoring hormonal therapy can easily be done by bcl-2 quantitative EIA method.
+   </text>
+  </passage>
+ </document>
+ </collection>

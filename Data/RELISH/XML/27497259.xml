@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   27497259
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Drug repositioning in SLE: crowd-sourcing, literature-mining and Big Data analysis.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    84
+   </offset>
+   <text>
+    Lupus patients are in need of modern drugs to treat specific manifestations of their disease effectively and safely. In the past half century, only one new treatment has been approved by the US Food and Drug Administration (FDA) for systemic lupus erythematosus (SLE). In 2014-2015, the FDA approved 71 new drugs, only one of which targeted a rheumatic disease and none of which was approved for use in SLE. Repositioning/repurposing drugs approved for other diseases using multiple approaches is one possible means to find new treatment options for lupus patients. "Big Data" analysis approaches this challenge from an unbiased standpoint whereas literature mining and crowd sourcing for candidates assessed by the CoLTs (Combined Lupus Treatment Scoring) system provide a hypothesis-based approach to rank potential therapeutic candidates for possible clinical application. Both approaches mitigate risk since the candidates assessed have largely been extensively tested in clinical trials for other indications. The usefulness of a multi-pronged approach to drug repositioning in lupus is highlighted by orthogonal confirmation of hypothesis-based drug repositioning predictions by "Big Data" analysis of differentially expressed genes from lupus patient samples. The goal is to identify novel therapies that have the potential to affect disease processes specifically. Involvement of SLE patients and the scientists that study this disease in thinking about new drugs that may be effective in lupus though crowd-sourcing sites such as LRxL-STAT (www.linkedin.com/in/lrxlstat) is important in stimulating the momentum needed to test these novel drug targets for efficacy in lupus rapidly in small, proof-of-concept trials conducted by LuCIN, the Lupus Clinical Investigators Network (www.linkedin.com/in/lucinstat).
+   </text>
+  </passage>
+ </document>
+ </collection>

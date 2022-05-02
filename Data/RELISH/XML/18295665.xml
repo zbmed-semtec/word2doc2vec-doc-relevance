@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   18295665
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Acquired biclonal chromosome X aberrations without autosomal chromosomal anomalies in acute myeloid leukemia.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    110
+   </offset>
+   <text>
+    Acquired clonal chromosome X aberrations, whether numerical or structural, as the sole chromosomal anomaly in acute myeloid leukemia (AML) are very uncommon. The scarcity of nonconstitutional chromosome X aberrations detected in AML has prevented any meaningful evaluation of their prognostic significance. In this report, we describe the case of a patient with AML who had the unusual acquired karyotype of 45,X/-X,46,X,i(X)(q10) on presentation and 45,X,-X,add(19)(p13.3) on relapse. We also briefly review the literature on acquired numerical and structural chromosome X aberrations as the sole chromosomal anomaly in AML. This case adds to the sparse body of literature regarding chromosome X aberrations in AML. More case reports are needed to further elucidate the importance of such aberrations.
+   </text>
+  </passage>
+ </document>
+ </collection>

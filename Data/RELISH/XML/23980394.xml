@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   23980394
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Hominin evolution and gene flow in the Pleistocene Africa.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    59
+   </offset>
+   <text>
+    Africa demonstrates a complex process of the hominin evolution with a series of adaptive radiations during several millions of years that led to diverse morphological forms. Recently, Hammer et al. (2011) and Harvati et al. (2011) provided integrated morphological and genetic evidence of interbreeding between modern humans and unknown archaic hominins in Africa as recently as 35,000 years ago. However, a genetic evidence of hybridization between hominin lineages during the Lower and Middle Pleistocene epochs is unknown and the direct retrieval of DNA from extinct lineages of African hominins remains elusive. The availability of both nuclear and mitochondrial genome sequences from modern humans, Neanderthals, and Denisovans allows collecting nuclear DNA sequences of mitochondrial origin (numts) inserted into the nuclear genome of the ancestral hominin lineages and drawing conclusions about the hominin evolution in the remote past. The mtDNA and numt analysis uncovered a deep division of mtDNA lineages that existed in African hominins in the Middle Pleistocene. The first cluster included the human and Neanderthal-like mtDNA sequences while the second consisted of DNA sequences that are known today as mtAncestor-1, a nuclear fossil of the mtDNA, and the Denisova mtDNA isolated from a bone and a tooth found in southern Siberia. The two groups initially diverged 610,000-1,110,000 years ago. Approximately 220,000 years after the primary split, the Denisova - mtAncestor-1 mtDNA lineages mixed with the mtDNA pool of an ancestral population of Neanderthals and modern humans. This admixture after the profound division is demonstrated by the transposition of the Denisova-like mtDNA sequence into the nuclear genome of an ancestor of Neanderthals and modern humans. This finding suggests the matrilineal genetic structure among the Middle Pleistocene hominins as well as the existence of gene flow between African hominin lineages. Through paleogenomic analyses, it is impossible to exclude the theory that population structure and gene flow in African hominins influenced the admixture pattern observed in the nuclear genomes of non-Africans.
+   </text>
+  </passage>
+ </document>
+ </collection>

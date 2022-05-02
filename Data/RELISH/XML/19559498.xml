@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   19559498
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Comparison of squamous cell carcinoma and adenocarcinoma of the lung by metabolomic analysis of tissue-serum pairs.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    116
+   </offset>
+   <text>
+    The prospect of establishing serum metabolomic profiles offers great clinical significance for its potential to detect human lung cancers at clinically asymptomatic stages. Patients with suspicious serum metabolomic profiles may undergo advanced radiological tests that are too expensive to be employed as screening tools for the mass population. As the first step to establishing such profiles, this study investigates correlations between tissue and serum metabolomic profiles for squamous cell carcinoma (SCC) and adenocarcinoma (AC) in the lungs of humans. Tissue and serum paired samples from 14 patients (five SCCs and nine ACs), and seven serum samples from healthy controls were analyzed with high-resolution magic angle spinning proton magnetic resonance spectroscopy (HRMAS (1)HMRS). Tissue samples were subjected to quantitative histological pathology analyses after MRS. Based on pathology results, tissue metabolomic profiles for the evaluated cancer types were established using principal component and canonical analyses on measurable metabolites. The parameters used to construct tissue cancer profiles were then tested with serum spectroscopic results for their ability to differentiate between cancer types and identify cancer from controls. In addition, serum spectroscopic results were also analyzed independent of tissue data. Our results strongly indicate the potential of serum MR spectroscopy to achieve the task of differentiating between the tested human lung cancer types and from controls.
+   </text>
+  </passage>
+ </document>
+ </collection>

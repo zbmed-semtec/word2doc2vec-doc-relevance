@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   8290098
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Cognitive deficits of men and women with Alzheimer's disease.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    62
+   </offset>
+   <text>
+    We performed two studies of cognitive abilities among men and women who met clinical criteria for Alzheimer's disease (AD). Among 46 AD patients, performance of women on a composite neuropsychological battery was more impaired than that of men when the potentially confounding effects of demographic variables were controlled; the largest group differences were due to significantly worse performance by women with AD on a naming task. Based on these initial findings, we next analyzed an independent data set of 647 demented subjects enrolled in the multicenter Consortium to Establish a Registry for Alzheimer's Disease, hypothesizing that the naming performance of women with AD would be significantly worse than that of men with this illness. Analyses controlling for demographic variables, or separately controlling for dementia severity, confirmed that women with AD performed significantly less well on the naming task and on verbal fluency. Women also performed less well on delayed recall, but there were no significant differences on other tasks. Factor analysis confirmed significant differences on a language factor, implying that men retain verbal skills better than women do during the initial stages of AD. Elderly nondemented women performed as well as or better than nondemented men on all comparisons. We conclude that there are modest differences in how men and women with AD perform on cognitive tasks and that differences may be discrete rather than global in nature.
+   </text>
+  </passage>
+ </document>
+ </collection>

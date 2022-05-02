@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<collection>
+ <document>
+  <id>
+   29606789
+  </id>
+  <passage>
+   <infon key="type">
+    title
+   </infon>
+   <offset>
+    0
+   </offset>
+   <text>
+    Generalizations of the short pulse equation.
+   </text>
+  </passage>
+  <passage>
+   <infon key="type">
+    abstract
+   </infon>
+   <offset>
+    45
+   </offset>
+   <text>
+    We classify integrable scalar polynomial partial differential equations of second order generalizing the short pulse equation.
+   </text>
+  </passage>
+ </document>
+ </collection>
