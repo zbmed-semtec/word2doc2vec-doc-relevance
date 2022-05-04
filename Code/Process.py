@@ -81,6 +81,45 @@ def prepareFromXML(directoryPath=None):
                                 titles.append(root[0][1][2].text)
                                 abstracts.append(root[0][2][2].text)
 
+def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTREC, filepathOut):
+        '''
+        Generates a word2vec model from all RELISH and TREC sentences using gensim and saves it as a .model file.
+        
+        Input:  titlesRELISH    ->  list: A two dimensional list of all RELISH titles and its words (string).
+                titlesTREC      ->  list: A two dimensional list of all TREC titles and its words (string).
+                abstractsRELISH ->  list: A two dimensional list of all RELISH abstracts and its words (string).
+                abstractsTREC   ->  list: A two dimensional list of all TREC abstracts and its words (string).
+                filepathOut     ->  string: The filepath for the resulting word2vec model file.
+        '''
+        if not isinstance(titlesRELISH, list):
+                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                sys.exit("titlesRELISH needs to be of type list")
+        elif not isinstance(titlesTREC, list):
+                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                sys.exit("titlesTREC needs to be of type list")
+        elif not isinstance(abstractsRELISH, list):
+                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                sys.exit("abstractsRELISH needs to be of type list")
+        elif not isinstance(abstractsTREC, list):
+                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                sys.exit("abstractsTREC needs to be of type list")
+        elif not isinstance(filepathOut, str):
+                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                sys.exit("filepathOut needs to be of type string")
+        else:
+                from gensim.models import Word2Vec
+                sentenceList = []
+                for sentence in titlesRELISH:
+                        sentenceList.append(sentence)
+                for sentence in titlesTREC:
+                        sentenceList.append(sentence)
+                for sentence in abstractsRELISH:
+                        sentenceList.append(sentence)
+                for sentence in abstractsTREC:
+                        sentenceList.append(sentence)
+                model = Word2Vec(sentences=sentenceList, vector_size=200, window=5, min_count=1, workers=4)
+                model.save(filepathOut)
+
 def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, wordEmbeddingsVectors=None, wordEmbeddingsTerms=None, distributionTitle=1, distributionAbstract=4):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
@@ -101,13 +140,13 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
         '''
         if not isinstance(pmids, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
-                sys.exit("pmids needs to be of type string")
+                sys.exit("pmids needs to be of type list")
         elif not isinstance(titles, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
-                sys.exit("titles needs to be of type string")
+                sys.exit("titles needs to be of type list")
         elif not isinstance(abstracts, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
-                sys.exit("abstracts needs to be of type string")
+                sys.exit("abstracts needs to be of type list")
         elif not isinstance(directoryOut, str):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("directoryOut needs to be of type string")
