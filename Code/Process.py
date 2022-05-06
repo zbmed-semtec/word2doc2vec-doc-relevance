@@ -138,10 +138,10 @@ def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTR
                         sentenceList.append(sentence)
                 for sentence in abstractsTREC:
                         sentenceList.append(sentence)
-                model = Word2Vec(sentences=sentenceList, vector_size=200, window=5, min_count=1, workers=4)
+                model = Word2Vec(sentences=sentenceList, vector_size=200, epochs=5, window=5, min_count=1, workers=4)
                 model.save(filepathOut)
 
-def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, wordEmbeddingsVectors=None, wordEmbeddingsTerms=None, distributionTitle=1, distributionAbstract=4):
+def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None, distributionTitle=1, distributionAbstract=4):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
@@ -156,8 +156,7 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 directoryOut            ->  string: The filepath of the output directory of all .npy embeddings.
                 distributionTitle       ->  int: The distribution of title for the final document embedding.
                 distributionAbstract    ->  int: The distribution of the abstract for the final document embedding.
-                wordEmbeddingsVectors   ->  string: The filepath of additional word2vec embeddings.
-                wordEmbeddingsTerms     ->  string: The filepath of the associating plaintext terms of the embeddings.
+                gensimModelPath         ->  string: The filepath of the custom gensimModel.
         '''
         if not isinstance(pmids, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
@@ -180,21 +179,14 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
         else:
                 import numpy as np
                 import gensim.downloader as api
-                wordList = []
-                embeddingList = []
-                if isinstance(wordEmbeddingsVectors, str) and isinstance(wordEmbeddingsTerms, str):
-                        with open(wordEmbeddingsTerms, "r") as words:
-                                for line in words:
-                                        word = line.strip()
-                                        wordList.append(word)
-                        with open(wordEmbeddingsVectors, "r") as vectors:
-                                for line in vectors:
-                                        currentVector = []
-                                        for dimension in line.split():
-                                                currentVector.append(float(dimension))
-                                        embeddingList.append(currentVector)
+                import gensim.models as model
+                word_vectors = None
+                hasCustomModel = isinstance(gensimModelPath, str)
+                if hasCustomModel:
+                        word_vectors = model.Word2Vec.load(gensimModelPath)
+                else:
+                        word_vectors = api.load('glove-wiki-gigaword-200')
                 missingWords = 0
-                word_vectors = api.load('glove-wiki-gigaword-200')
                 iteration = 0
                 documentEmbeddings = []
                 while (iteration < len(pmids)):
@@ -203,18 +195,16 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                         embeddingsAbstract = []
                         for word in titles[iteration]:
                                 try:
-                                        if(wordEmbeddingsVectors != None):
-                                                index = wordList.index(word)
-                                                embeddingsTitle.append(embeddingList[index])
+                                        if(hasCustomModel):
+                                                embeddingsTitle.append(word_vectors.wv[word])
                                         else:
                                                 embeddingsTitle.append(word_vectors[word])
                                 except:
                                         missingWords += 1
                         for word in abstracts[iteration]:
                                 try:
-                                        if(wordEmbeddingsVectors != None):
-                                                index = wordList.index(word)
-                                                embeddingsAbstract.append(embeddingList[index])
+                                        if(hasCustomModel):
+                                                embeddingsAbstract.append(word_vectors.wv[word])
                                         else:
                                                 embeddingsAbstract.append(word_vectors[word])
                                 except:
