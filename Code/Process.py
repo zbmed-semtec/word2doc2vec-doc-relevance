@@ -147,8 +147,8 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
         The final document embedding consists of the following distirbution: finalDoc = (distributionTitle * embeddingTitle + distributionAbstract * embeddingAbstract) / (distributionTitle + distributionAbstract)
 
-        Both of the filepaths for word embeddings are optional and intended for additional resources to include domain-specific embeddings into the project,
-        those will be preffered over the 'glove-wiki-gigaword-200' gensim model, should an embedding not be present in the given list of embeddings, those words will be ignored.
+        The filepath for the gensim model is optional and intended for a domain specific model or one that was trained on the RELISH and TREC data set directly,
+        which will be preffered over the 'glove-wiki-gigaword-200' gensim model, should an embedding not be present in the given list of embeddings, those words will be ignored.
         
         Input:  pmids                   ->  list: The list of all pmids (string) which are processed.
                 titles                  ->  list: The list of all titles (string) which are processed.
