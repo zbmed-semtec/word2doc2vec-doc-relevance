@@ -19,11 +19,12 @@ def prepareFromTSV(filepathIn=None):
                 sys.exit("filepathIn needs to be of type string")
         else:
                 import csv
+                import re
                 from nltk import download
                 from nltk.corpus import stopwords
                 download('stopwords')
                 stop_words = stopwords.words('english')
-                excluded_special_characters = [".", ",", ":", ";", "\'", "\"", "[", "(", "]", ")", "{", "}"]
+                pattern = '.*[a-zA-Z\d].*' #Include all words which contain at least one letter or number.
 
                 pmids = []
                 titles = []
@@ -39,12 +40,12 @@ def prepareFromTSV(filepathIn=None):
                                         abstract = line[2].lower().split()
                                         iteration = 0
                                         while(iteration < len(title)):
-                                                word = "".join([c for c in title[iteration] if c not in excluded_special_characters])
+                                                word = "".join([c for c in title[iteration] if re.match(pattern, c)])
                                                 title[iteration] = word
                                                 iteration += 1
                                         iteration = 0
                                         while(iteration < len(abstract)):
-                                                word = "".join([c for c in abstract[iteration] if c not in excluded_special_characters])
+                                                word = "".join([c for c in abstract[iteration] if re.match(pattern, c)])
                                                 abstract[iteration] = word
                                                 iteration += 1
                                         titles.append([w for w in title if w not in stop_words])
@@ -75,7 +76,7 @@ def prepareFromXML(directoryPath=None):
                 from nltk.corpus import stopwords
                 download('stopwords')
                 stop_words = stopwords.words('english')
-                excluded_special_characters = [".", ",", ":", ";", "\'", "\"", "[", "(", "]", ")", "{", "}"]
+                pattern = '.*[a-zA-Z\d].*' #Include all words which contain at least one letter or number.
 
                 pmids = []
                 titles = []
@@ -89,14 +90,14 @@ def prepareFromXML(directoryPath=None):
                                 abstracts.append(root[0][2][2].text)
                 for title in titles:
                         while(iteration < len(title)):
-                                word = "".join([c for c in title[iteration] if c not in excluded_special_characters])
+                                word = "".join([c for c in title[iteration] if re.match(pattern, c)])
                                 title[iteration] = word
                                 iteration += 1
                         iteration = 0
                         titles.append([w for w in title if w not in stop_words])
                 for abstract in abstracts:
                         while(iteration < len(abstract)):
-                                word = "".join([c for c in abstract[iteration] if c not in excluded_special_characters])
+                                word = "".join([c for c in abstract[iteration] if re.match(pattern, c)])
                                 abstract[iteration] = word
                                 iteration += 1
                         abstracts.append([w for w in abstract if w not in stop_words])
