@@ -24,7 +24,7 @@ def prepareFromTSV(filepathIn=None):
                 from nltk.corpus import stopwords
                 download('stopwords')
                 stop_words = stopwords.words('english')
-                pattern = '.*[a-zA-Z\d].*' #Include all words which contain at least one letter or number.
+                pattern = '.*[a-zA-Z\d]{2,}.*' #Include all words which contain at least two letters or numbers.
 
                 pmids = []
                 titles = []
