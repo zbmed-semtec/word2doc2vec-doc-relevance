@@ -24,7 +24,9 @@ def prepareFromTSV(filepathIn=None):
                 from nltk.corpus import stopwords
                 download('stopwords')
                 stop_words = stopwords.words('english')
-                pattern = '.*[a-zA-Z\d]{2,}.*' #Include all words which contain at least two letters or numbers.
+                stop_words.append(['background', 'objective'])
+                word_pattern = '.*[a-zA-Z\d]{2,}.*' #Include all words which contain at least two letters or numbers.
+                letters_pattern = '.*[^.,:;!?].*' #Exclude those special characters from words.
 
                 pmids = []
                 titles = []
@@ -40,16 +42,18 @@ def prepareFromTSV(filepathIn=None):
                                         abstract = line[2].lower().split()
                                         iteration = 0
                                         while(iteration < len(title)):
-                                                word = "".join([c for c in title[iteration] if re.match(pattern, c)])
+                                                word = "".join([c for c in title[iteration] if re.match(letters_pattern, c)])
                                                 title[iteration] = word
                                                 iteration += 1
                                         iteration = 0
                                         while(iteration < len(abstract)):
-                                                word = "".join([c for c in abstract[iteration] if re.match(pattern, c)])
+                                                word = "".join([c for c in abstract[iteration] if re.match(letters_pattern, c)])
                                                 abstract[iteration] = word
                                                 iteration += 1
-                                        titles.append([w for w in title if w not in stop_words])
-                                        abstracts.append([w for w in abstract if w not in stop_words])
+                                        reTitle = [w for w in title if re.match(word_pattern, w)]
+                                        reAbstract = [w for w in abstract if re.match(word_pattern, w)]
+                                        titles.append([w for w in reTitle if w not in stop_words])
+                                        abstracts.append([w for w in reAbstract if w not in stop_words])
                                         pmids.append(line[0])
                 return(pmids, titles, abstracts)
 
@@ -70,13 +74,16 @@ def prepareFromXML(directoryPath=None):
                 logging.alert("Wrong parameter type for prepareFromXML.")
                 sys.exit("directoryPath needs to be of type string")
         else:
+                import re
                 import os
                 import xml.etree.ElementTree as et
                 from nltk import download
                 from nltk.corpus import stopwords
                 download('stopwords')
                 stop_words = stopwords.words('english')
-                pattern = '.*[a-zA-Z\d].*' #Include all words which contain at least one letter or number.
+                stop_words.append(['background', 'objective'])
+                word_pattern = '.*[a-zA-Z\d]{2,}.*' #Include all words which contain at least two letters or numbers.
+                letters_pattern = '.*[^.,:;!?].*' #Exclude those special characters from words.
 
                 pmids = []
                 titles = []
@@ -90,17 +97,19 @@ def prepareFromXML(directoryPath=None):
                                 abstracts.append(root[0][2][2].text)
                 for title in titles:
                         while(iteration < len(title)):
-                                word = "".join([c for c in title[iteration] if re.match(pattern, c)])
+                                word = "".join([c for c in title[iteration] if re.match(letters_pattern, c)])
                                 title[iteration] = word
                                 iteration += 1
                         iteration = 0
-                        titles.append([w for w in title if w not in stop_words])
+                        reTitle = [w for w in title if re.match(word_pattern, w)]
+                        titles.append([w for w in reTitle if w not in stop_words])
                 for abstract in abstracts:
                         while(iteration < len(abstract)):
-                                word = "".join([c for c in abstract[iteration] if re.match(pattern, c)])
+                                word = "".join([c for c in abstract[iteration] if re.match(letters_pattern, c)])
                                 abstract[iteration] = word
                                 iteration += 1
-                        abstracts.append([w for w in abstract if w not in stop_words])
+                        reAbstract = [w for w in abstract if re.match(word_pattern, w)]
+                        abstracts.append([w for w in reAbstract if w not in stop_words])
                 return pmids, titles, abstracts
 
 def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTREC, filepathOut):
