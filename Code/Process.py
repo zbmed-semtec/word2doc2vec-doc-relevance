@@ -3,16 +3,21 @@ import logging
 
 def prepareFromTSV(filepathIn=None):
         '''
-        Retrieves and formats data from the RELISH and TREC tsv files.
+        Retrieves data from RELISH and TREC tsv files, separating each column into their own respective list.
 
-        To retrieve the correct word embeddings from word2vec modules, the spelling should be in lowercase letters only and all the stopwords need to be omitted.
-        Once the input text has been processed, a list of all the words included in the title and abstract get returned.
-        
-        Input:  filepathIn      ->  string: The filepath of the RELISH or TREC input tsv file.
+        Parameters
+        ----------
+        filepathIn: str
+                The filepath of the RELISH or TREC input tsv file.
 
-        Output: pmids           ->  list: A list of all pubmed ids (string) associated to the paper.
-                titles          ->  list: A list of all words (string) within the title.
-                abstrats        ->  list: A list of all words (string) within the abstract.
+        Returns
+        -------
+        list of str
+                All pubmed ids associated to the paper.
+        list of str
+                All words within the title.
+        list of str
+                All words within the abstract.
         '''
         if not isinstance(filepathIn, str):
                 logging.alert("Wrong parameter type for prepareFromTSV.")
@@ -59,16 +64,21 @@ def prepareFromTSV(filepathIn=None):
 
 def prepareFromXML(directoryPath=None):
         '''
-        Retrieves and formats data from the RELISH and TREC xml files.
+        Retrieves data from RELISH and TREC xml files, separating each column into their own respective list.
 
-        To retrieve the correct word embeddings from word2vec modules, the spelling should be in lowercase letters only and all the stopwords need to be omitted.
-        Once the input text has been processed, a list of all the words included in the title and abstract get returned.
-        
-        Input:  directoryPath   ->  string: The directory path of the RELISH or TREC input xml directory.
+        Parameters
+        ----------
+        filepathIn: str
+                The directory path of the RELISH or TREC input xml directory.
 
-        Output: pmids           ->  list: A list of all pubmed ids (string) associated to the paper.
-                titles          ->  list: A list of all words (string) within the title.
-                abstracts        ->  list: A list of all words (string) within the abstract.
+        Returns
+        -------
+        list of str
+                All pubmed ids associated to the paper.
+        list of str
+                All words within the title.
+        list of str
+                All words within the abstract.
         '''
         if not isinstance(directoryPath, str):
                 logging.alert("Wrong parameter type for prepareFromXML.")
@@ -115,12 +125,19 @@ def prepareFromXML(directoryPath=None):
 def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTREC, filepathOut):
         '''
         Generates a word2vec model from all RELISH and TREC sentences using gensim and saves it as a .model file.
-        
-        Input:  titlesRELISH    ->  list: A two dimensional list of all RELISH titles and its words (string).
-                titlesTREC      ->  list: A two dimensional list of all TREC titles and its words (string).
-                abstractsRELISH ->  list: A two dimensional list of all RELISH abstracts and its words (string).
-                abstractsTREC   ->  list: A two dimensional list of all TREC abstracts and its words (string).
-                filepathOut     ->  string: The filepath for the resulting word2vec model file.
+
+        Parameters
+        ----------
+        titlesRELISH: list of str
+                A two dimensional list of all RELISH titles and its words.
+        titlesTREC: list of str
+                A two dimensional list of all TREC titles and its words.
+        abstractsRELISH: list of str
+                A two dimensional list of all RELISH abstracts and its words.
+        filepathOut: list of str
+                A two dimensional list of all TREC abstracts and its words.
+        titlesRELISH: str
+                The filepath for the resulting word2vec model file.
         '''
         if not isinstance(titlesRELISH, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
@@ -151,22 +168,30 @@ def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTR
                 model = Word2Vec(sentences=sentenceList, vector_size=200, epochs=5, window=5, min_count=1, workers=4)
                 model.save(filepathOut)
 
-def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None, distributionTitle=1, distributionAbstract=4):
+def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None, distributionTitle=1, distributionAbstract=1):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
-        The final document embedding consists of the following distirbution: finalDoc = (distributionTitle * embeddingTitle + distributionAbstract * embeddingAbstract) / (distributionTitle + distributionAbstract)
-
-        The filepath for the gensim model is optional and intended for a domain specific model or one that was trained on the RELISH and TREC data set directly,
-        which will be preffered over the 'glove-wiki-gigaword-200' gensim model, should an embedding not be present in the given list of embeddings, those words will be ignored.
+        The final document embedding consists of the following distirbution:
+        finalDoc = (distributionTitle * embeddingTitle + distributionAbstract * embeddingAbstract) / (distributionTitle + distributionAbstract)
+        If no gensim model is given, the 'glove-wiki-gigaword-200' gensim model is used.
         
-        Input:  pmids                   ->  list: The list of all pmids (string) which are processed.
-                titles                  ->  list: The list of all titles (string) which are processed.
-                abstracts               ->  list: The list of all abstracts (string) which are processed.
-                directoryOut            ->  string: The filepath of the output directory of all .npy embeddings.
-                distributionTitle       ->  int: The distribution of title for the final document embedding.
-                distributionAbstract    ->  int: The distribution of the abstract for the final document embedding.
-                gensimModelPath         ->  string: The filepath of the custom gensimModel.
+        Parameters
+        ----------
+        pmids: list of str
+                The list of all pmids which are processed.
+        titles: list of str
+                The list of all titles which are processed.
+        abstracts: list of str
+                The list of all abstracts which are processed.
+        directoryOut: str
+                The filepath of the output directory of all .npy embeddings.
+        gensimModelPath: str (optional)
+                The filepath of the custom gensimModel.
+        distributionTitle: int (optional)
+                The distribution of title for the final document embedding.
+        distributionAbstract: int (optional)
+                The distribution of the abstract for the final document embedding.
         '''
         if not isinstance(pmids, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
