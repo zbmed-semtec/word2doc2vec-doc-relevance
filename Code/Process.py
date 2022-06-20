@@ -3,12 +3,12 @@ import logging
 
 def prepareFromTSV(filepathIn=None):
         '''
-        Retrieves data from RELISH and TREC tsv files, separating each column into their own respective list.
+        Retrieves data from RELISH and TREC npy files, separating each column into their own respective list.
 
         Parameters
         ----------
         filepathIn: str
-                The filepath of the RELISH or TREC input tsv file.
+                The filepath of the RELISH or TREC input npy file.
 
         Returns
         -------
@@ -23,104 +23,16 @@ def prepareFromTSV(filepathIn=None):
                 logging.alert("Wrong parameter type for prepareFromTSV.")
                 sys.exit("filepathIn needs to be of type string")
         else:
-                import csv
-                import re
-                from nltk import download
-                from nltk.corpus import stopwords
-                download('stopwords')
-                stop_words = stopwords.words('english')
-                stop_words.append(['background', 'objective'])
-                word_pattern = '.*[a-zA-Z\d]{2,}.*' #Include all words which contain at least two letters or numbers.
-                letters_pattern = '.*[^.,:;!?].*' #Exclude those special characters from words.
-
+                import numpy as np
+                doc = np.load(filepathIn, allow_pickle=True)
                 pmids = []
                 titles = []
                 abstracts = []
-                with open(filepathIn) as input:
-                        inputFile = csv.reader(input, delimiter="\t")
-                        headerline = True
-                        for line in inputFile:
-                                if(headerline):
-                                        headerline = False
-                                else:
-                                        title = line[1].lower().split()
-                                        abstract = line[2].lower().split()
-                                        iteration = 0
-                                        while(iteration < len(title)):
-                                                word = "".join([c for c in title[iteration] if re.match(letters_pattern, c)])
-                                                title[iteration] = word
-                                                iteration += 1
-                                        iteration = 0
-                                        while(iteration < len(abstract)):
-                                                word = "".join([c for c in abstract[iteration] if re.match(letters_pattern, c)])
-                                                abstract[iteration] = word
-                                                iteration += 1
-                                        reTitle = [w for w in title if re.match(word_pattern, w)]
-                                        reAbstract = [w for w in abstract if re.match(word_pattern, w)]
-                                        titles.append([w for w in reTitle if w not in stop_words])
-                                        abstracts.append([w for w in reAbstract if w not in stop_words])
-                                        pmids.append(line[0])
-                return(pmids, titles, abstracts)
-
-def prepareFromXML(directoryPath=None):
-        '''
-        Retrieves data from RELISH and TREC xml files, separating each column into their own respective list.
-
-        Parameters
-        ----------
-        filepathIn: str
-                The directory path of the RELISH or TREC input xml directory.
-
-        Returns
-        -------
-        list of str
-                All pubmed ids associated to the paper.
-        list of str
-                All words within the title.
-        list of str
-                All words within the abstract.
-        '''
-        if not isinstance(directoryPath, str):
-                logging.alert("Wrong parameter type for prepareFromXML.")
-                sys.exit("directoryPath needs to be of type string")
-        else:
-                import re
-                import os
-                import xml.etree.ElementTree as et
-                from nltk import download
-                from nltk.corpus import stopwords
-                download('stopwords')
-                stop_words = stopwords.words('english')
-                stop_words.append(['background', 'objective'])
-                word_pattern = '.*[a-zA-Z\d]{2,}.*' #Include all words which contain at least two letters or numbers.
-                letters_pattern = '.*[^.,:;!?].*' #Exclude those special characters from words.
-
-                pmids = []
-                titles = []
-                abstracts = []
-                for file in os.listdir(directoryPath):
-                        if(file != '.DS_Store'):
-                                xmlTree = et.parse(os.path.join(directoryPath, file))
-                                root = xmlTree.getroot()
-                                pmids.append(root[0][0].text)
-                                titles.append(root[0][1][2].text)
-                                abstracts.append(root[0][2][2].text)
-                for title in titles:
-                        while(iteration < len(title)):
-                                word = "".join([c for c in title[iteration] if re.match(letters_pattern, c)])
-                                title[iteration] = word
-                                iteration += 1
-                        iteration = 0
-                        reTitle = [w for w in title if re.match(word_pattern, w)]
-                        titles.append([w for w in reTitle if w not in stop_words])
-                for abstract in abstracts:
-                        while(iteration < len(abstract)):
-                                word = "".join([c for c in abstract[iteration] if re.match(letters_pattern, c)])
-                                abstract[iteration] = word
-                                iteration += 1
-                        reAbstract = [w for w in abstract if re.match(word_pattern, w)]
-                        abstracts.append([w for w in reAbstract if w not in stop_words])
-                return pmids, titles, abstracts
+                for line in doc:
+                        pmids.append(np.ndarray.tolist(line[0]))
+                        titles.append(np.ndarray.tolist(line[1]))
+                        abstracts.append(np.ndarray.tolist(line[2]))
+                return (pmids, titles, abstracts)
 
 def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTREC, filepathOut):
         '''
