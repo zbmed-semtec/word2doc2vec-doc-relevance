@@ -69,9 +69,6 @@ def generateWord2VecModel(abstractsRELISH, titlesRELISH, filepathOut):
 def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
-        The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
-        The final document embedding consists of the following distirbution:
-        finalDoc = (distributionTitle * embeddingTitle + distributionAbstract * embeddingAbstract) / (distributionTitle + distributionAbstract)
         If no gensim model is given, the 'glove-wiki-gigaword-200' gensim model is used.
         
         Parameters
