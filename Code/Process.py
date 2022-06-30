@@ -66,7 +66,7 @@ def generateWord2VecModel(abstractsRELISH, titlesRELISH, filepathOut):
                 model = Word2Vec(sentences=sentenceList, vector_size=200, epochs=5, window=5, min_count=1, workers=4)
                 model.save(filepathOut)
 
-def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None, distributionTitle=1, distributionAbstract=1):
+def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None):
         '''
         Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
         The title and abstract are calculated individually and will get averaged out by a given distribution where the default setting is 1:4 for titles.
@@ -86,10 +86,6 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 The filepath of the output directory of all .npy embeddings.
         gensimModelPath: str (optional)
                 The filepath of the custom gensimModel.
-        distributionTitle: int (optional)
-                The distribution of title for the final document embedding.
-        distributionAbstract: int (optional)
-                The distribution of the abstract for the final document embedding.
         '''
         if not isinstance(pmids, list):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
@@ -103,12 +99,6 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
         elif not isinstance(directoryOut, str):
                 logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("directoryOut needs to be of type string")
-        elif not isinstance(distributionTitle, int):
-                logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
-                sys.exit("distributionTitle needs to be of type int")
-        elif not isinstance(distributionAbstract, int):
-                logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
-                sys.exit("distributionAbstract needs to be of type int")
         else:
                 import numpy as np
                 import gensim.downloader as api
@@ -124,63 +114,42 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 documentEmbeddings = []
                 while (iteration < len(pmids)):
                         #Retrieve word embeddings.
-                        embeddingsTitle = []
-                        embeddingsAbstract = []
+                        embeddingList = []
+                        first = True
                         for word in titles[iteration]:
                                 try:
                                         if(hasCustomModel):
-                                                embeddingsTitle.append(word_vectors.wv[word])
+                                                embeddingList.append(word_vectors.wv[word])
                                         else:
-                                                embeddingsTitle.append(word_vectors[word])
+                                                embeddingList.append(word_vectors[word])
                                 except:
                                         missingWords += 1
                         for word in abstracts[iteration]:
                                 try:
                                         if(hasCustomModel):
-                                                embeddingsAbstract.append(word_vectors.wv[word])
+                                                embeddingList.append(word_vectors.wv[word])
                                         else:
-                                                embeddingsAbstract.append(word_vectors[word])
+                                                embeddingList.append(word_vectors[word])
                                 except:
                                         missingWords += 1
                         #Generate document embeddings from word embeddings.
                         first = True
-                        documentTitle = []
-                        for embedding in embeddingsTitle:
+                        document = []
+                        for embedding in embeddingList:
                                 if first:
                                         for dimension in embedding:
-                                                documentTitle.append(0.0)
+                                                document.append(0.0)
                                         first = False
                                 docDimension = 0
                                 for dimension in embedding:
-                                        documentTitle[docDimension] += dimension
+                                        document[docDimension] += dimension
                                         docDimension += 1
                         docDimension = 0
-                        for dimension in documentTitle:
-                                documentTitle[docDimension] = (dimension / len(embeddingsTitle)) * distributionTitle
+                        for dimension in document:
+                                document[docDimension] = (dimension / len(embeddingList))
                                 docDimension += 1
 
-                        first = True
-                        documentAbstract = []
-                        for embedding in embeddingsAbstract:
-                                if first:
-                                        for dimension in embedding:
-                                                documentAbstract.append(0.0)
-                                        first = False
-                                docDimension = 0
-                                for dimension in embedding:
-                                        documentAbstract[docDimension] += dimension
-                                        docDimension += 1
-                        docDimension = 0
-                        for dimension in documentAbstract:
-                                documentAbstract[docDimension] = (dimension / len(embeddingsAbstract)) * distributionAbstract
-                                docDimension += 1
-
-                        docDimension = 0
-                        for dimension in documentTitle:
-                                documentAbstract[docDimension] += dimension
-                                documentAbstract[docDimension] = documentAbstract[docDimension] / (distributionAbstract + distributionTitle)
-                                docDimension += 1
-                        documentEmbeddings.append(documentAbstract)
+                        documentEmbeddings.append(document)
                         iteration += 1
                 iteration = 0
                 while(iteration < len(documentEmbeddings)):
