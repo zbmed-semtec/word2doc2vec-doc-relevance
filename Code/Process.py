@@ -1,7 +1,7 @@
 import sys
 import logging
 
-def prepareFromTSV(filepathIn=None):
+def prepareFromNPY(filepathIn=None):
         '''
         Retrieves data from RELISH and TREC npy files, separating each column into their own respective list.
 
