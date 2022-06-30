@@ -34,35 +34,25 @@ def prepareFromNPY(filepathIn=None):
                         abstracts.append(np.ndarray.tolist(line[2]))
                 return (pmids, titles, abstracts)
 
-def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTREC, filepathOut):
+def generateWord2VecModel(abstractsRELISH, titlesRELISH, filepathOut):
         '''
-        Generates a word2vec model from all RELISH and TREC sentences using gensim and saves it as a .model file.
+        Generates a word2vec model from all RELISH or TREC sentences using gensim and saves it as a .model file.
 
         Parameters
         ----------
         titlesRELISH: list of str
                 A two dimensional list of all RELISH titles and its words.
-        titlesTREC: list of str
-                A two dimensional list of all TREC titles and its words.
         abstractsRELISH: list of str
                 A two dimensional list of all RELISH abstracts and its words.
-        filepathOut: list of str
-                A two dimensional list of all TREC abstracts and its words.
-        titlesRELISH: str
+        filepathOut: str
                 The filepath for the resulting word2vec model file.
         '''
         if not isinstance(titlesRELISH, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("titlesRELISH needs to be of type list")
-        elif not isinstance(titlesTREC, list):
-                logging.alert("Wrong parameter type for generateWord2VecModel.")
-                sys.exit("titlesTREC needs to be of type list")
         elif not isinstance(abstractsRELISH, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("abstractsRELISH needs to be of type list")
-        elif not isinstance(abstractsTREC, list):
-                logging.alert("Wrong parameter type for generateWord2VecModel.")
-                sys.exit("abstractsTREC needs to be of type list")
         elif not isinstance(filepathOut, str):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("filepathOut needs to be of type string")
@@ -71,11 +61,7 @@ def generateWord2VecModel(titlesRELISH, titlesTREC, abstractsRELISH, abstractsTR
                 sentenceList = []
                 for sentence in titlesRELISH:
                         sentenceList.append(sentence)
-                for sentence in titlesTREC:
-                        sentenceList.append(sentence)
                 for sentence in abstractsRELISH:
-                        sentenceList.append(sentence)
-                for sentence in abstractsTREC:
                         sentenceList.append(sentence)
                 model = Word2Vec(sentences=sentenceList, vector_size=200, epochs=5, window=5, min_count=1, workers=4)
                 model.save(filepathOut)
