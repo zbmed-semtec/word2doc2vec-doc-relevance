@@ -152,3 +152,47 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 while(iteration < len(documentEmbeddings)):
                         np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
                         iteration += 1
+
+def addCosineSimilarity(EvaluationFile, EmbeddingsDirectory):
+        '''
+        Adds cosine similarity to the evaluation matrix.
+
+        Parameters
+        ----------
+        EvaluationFile: str
+                The evaluation matrix csv file.
+        EmbeddingsDirectory: str
+                Directory in which document embeddings of each pmid is stored.
+        '''
+        if not isinstance(EvaluationFile, str):
+                logging.alert("Wrong parameter type for addCosineSimilarity.")
+                sys.exit("EvaluationFile needs to be of type string")
+        elif not isinstance(EmbeddingsDirectory, str):
+                logging.alert("Wrong parameter type for addCosineSimilarity.")
+                sys.exit("EmbeddingsDirectory needs to be of type string")
+        else:
+                import csv
+                import numpy as np
+                from scipy import spatial
+                with open(EvaluationFile, newline='') as csvfile:
+                        spamreader = csv.reader(csvfile, delimiter=',')
+                        header = True
+                        headerRow = []
+                        allRows = []
+                        for row in spamreader:
+                                if(header):
+                                        header = False
+                                        headerRow = row
+                                else:
+                                        try:
+                                                reference = np.load(f'{EmbeddingsDirectory}/{row[0]}.npy', allow_pickle=True)
+                                                assessed = np.load(f'{EmbeddingsDirectory}/{row[1]}.npy', allow_pickle=True)
+                                                row[3] = round((1 - spatial.distance.cosine(reference, assessed)), 2)
+                                        except:
+                                                row[3] = ""
+                                        allRows.append(row)
+                        with open(EvaluationFile, 'w', newline='') as csvfile:
+                                writer = csv.writer(csvfile, delimiter=',',)
+                                writer.writerow(headerRow)
+                                for row in allRows:
+                                        writer.writerow(row)
