@@ -34,23 +34,23 @@ def prepareFromNPY(filepathIn=None):
                         abstracts.append(np.ndarray.tolist(line[2]))
                 return (pmids, titles, abstracts)
 
-def generateWord2VecModel(abstractsRELISH, titlesRELISH, filepathOut):
+def generateWord2VecModel(titles, abstracts, filepathOut):
         '''
         Generates a word2vec model from all RELISH or TREC sentences using gensim and saves it as a .model file.
 
         Parameters
         ----------
-        titlesRELISH: list of str
-                A two dimensional list of all RELISH titles and its words.
-        abstractsRELISH: list of str
-                A two dimensional list of all RELISH abstracts and its words.
+        titles: list of str
+                A two dimensional list of all titles and its words.
+        abstracts: list of str
+                A two dimensional list of all abstracts and its words.
         filepathOut: str
                 The filepath for the resulting word2vec model file.
         '''
-        if not isinstance(titlesRELISH, list):
+        if not isinstance(titles, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("titlesRELISH needs to be of type list")
-        elif not isinstance(abstractsRELISH, list):
+        elif not isinstance(abstracts, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("abstractsRELISH needs to be of type list")
         elif not isinstance(filepathOut, str):
@@ -59,11 +59,11 @@ def generateWord2VecModel(abstractsRELISH, titlesRELISH, filepathOut):
         else:
                 from gensim.models import Word2Vec
                 sentenceList = []
-                for sentence in titlesRELISH:
+                for sentence in titles:
                         sentenceList.append(sentence)
-                for sentence in abstractsRELISH:
+                for sentence in abstracts:
                         sentenceList.append(sentence)
-                model = Word2Vec(sentences=sentenceList, vector_size=200, epochs=5, window=5, min_count=1, workers=4)
+                model = Word2Vec(sentences=sentenceList, vector_size=400, epochs=5, window=7, min_count=1, workers=8)
                 model.save(filepathOut)
 
 def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, directoryOut=None, gensimModelPath=None, saveAs="numpy"):
