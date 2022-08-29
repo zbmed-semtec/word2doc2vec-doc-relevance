@@ -49,10 +49,10 @@ def generateWord2VecModel(titles, abstracts, filepathOut):
         '''
         if not isinstance(titles, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
-                sys.exit("titlesRELISH needs to be of type list")
+                sys.exit("titles needs to be of type list")
         elif not isinstance(abstracts, list):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
-                sys.exit("abstractsRELISH needs to be of type list")
+                sys.exit("abstracts needs to be of type list")
         elif not isinstance(filepathOut, str):
                 logging.alert("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("filepathOut needs to be of type string")
