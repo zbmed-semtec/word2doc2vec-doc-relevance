@@ -223,5 +223,5 @@ if __name__ == "__main__":
         model_output_File = "./data/word2vec_model"
 
         pmids, titles, abstracts, docs = prepareFromNPY(args.input)
-        generateWord2VecModel(titles, abstracts, params, model_outout_file)
-        generateDocumentEmbeddings(pmids, titles, abstracts, args.output, model_output_file, saveAs="pandas")
+        generateWord2VecModel(titles, abstracts, params, model_output_File)
+        generateDocumentEmbeddings(pmids, titles, abstracts, args.output, model_output_File, saveAs="pandas")
