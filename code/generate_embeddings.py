@@ -21,7 +21,7 @@ def prepareFromNPY(filepathIn=None):
                 All words within the abstract.
         '''
         if not isinstance(filepathIn, str):
-                logging.alert("Wrong parameter type for prepareFromTSV.")
+                logging.warn("Wrong parameter type for prepareFromTSV.")
                 sys.exit("filepathIn needs to be of type string")
         else:
                 import numpy as np
@@ -51,13 +51,13 @@ def generateWord2VecModel(titles, abstracts, params, filepathOut):
                 The filepath for the resulting word2vec model file.
         '''
         if not isinstance(titles, list):
-                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                logging.warn("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("titles needs to be of type list")
         elif not isinstance(abstracts, list):
-                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                logging.warn("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("abstracts needs to be of type list")
         elif not isinstance(filepathOut, str):
-                logging.alert("Wrong parameter type for generateWord2VecModel.")
+                logging.warn("Wrong parameter type for generateWord2VecModel.")
                 sys.exit("filepathOut needs to be of type string")
         else:
                 from gensim.models import Word2Vec
@@ -91,19 +91,19 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 Can be saved as either 'numpy' or 'pandas'.
         '''
         if not isinstance(pmids, list):
-                logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
+                logging.warn("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("pmids needs to be of type list")
         elif not isinstance(titles, list):
-                logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
+                logging.warn("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("titles needs to be of type list")
         elif not isinstance(abstracts, list):
-                logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
+                logging.warn("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("abstracts needs to be of type list")
         elif not isinstance(directoryOut, str):
-                logging.alert("Wrong parameter type for generateDocumentEmbeddings.")
+                logging.warn("Wrong parameter type for generateDocumentEmbeddings.")
                 sys.exit("directoryOut needs to be of type string")
         elif not isinstance(saveAs, str) or not (saveAs == "numpy" or saveAs == "pandas"):
-                logging.alert("Wrong parameter type or value for saveAs.")
+                logging.warn("Wrong parameter type or value for saveAs.")
                 sys.exit("saveAs needs to be a string of either 'numpy' or 'pandas'")
         else:
                 import gensim.downloader as api
@@ -178,10 +178,10 @@ def addCosineSimilarity(EvaluationFile, EmbeddingsDirectory):
                 Directory in which document embeddings of each pmid is stored.
         '''
         if not isinstance(EvaluationFile, str):
-                logging.alert("Wrong parameter type for addCosineSimilarity.")
+                logging.warn("Wrong parameter type for addCosineSimilarity.")
                 sys.exit("EvaluationFile needs to be of type string")
         elif not isinstance(EmbeddingsDirectory, str):
-                logging.alert("Wrong parameter type for addCosineSimilarity.")
+                logging.warn("Wrong parameter type for addCosineSimilarity.")
                 sys.exit("EmbeddingsDirectory needs to be of type string")
         else:
                 import csv
