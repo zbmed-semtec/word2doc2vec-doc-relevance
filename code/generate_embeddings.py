@@ -118,7 +118,7 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                 missingWords = 0
                 iteration = 0
                 documentEmbeddings = []
-                while (iteration < len(pmids)):
+                for iteration in range(len(pmids)):
                         #Retrieve word embeddings.
                         embeddingList = []
                         first = True
@@ -156,8 +156,6 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                                 docDimension += 1
 
                         documentEmbeddings.append(document)
-                        iteration += 1
-                iteration = 0
                 if(saveAs == 'pandas'):
                         import pandas as pd
                         df = pd.DataFrame(list(zip((pmids), documentEmbeddings)), columns =['pmids', 'embeddings'])
@@ -165,9 +163,8 @@ def generateDocumentEmbeddings(pmids=None, titles=None, abstracts=None, director
                         df.to_pickle(f'{directoryOut}/embeddings.pkl')
                 elif(saveAs == 'numpy'):
                         import numpy as np
-                        while(iteration < len(documentEmbeddings)):
+                        for iteration in range(len(documentEmbeddings)):
                                 np.save(f'{directoryOut}/{pmids[iteration]}', documentEmbeddings[iteration])
-                                iteration += 1
 
 def addCosineSimilarity(EvaluationFile, EmbeddingsDirectory):
         '''
