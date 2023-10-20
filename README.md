@@ -48,7 +48,7 @@ The script consists of two main functions `generateWord2VecModel` and `generateD
 
 To run this script, please execute the following command:
 
-`python3 code/generate_embeddings.py --input data/RELISH_tokenized.npy --output data/embeddings.pkl`
+`python3 code/generate_embeddings.py --input data/RELISH_tokenized.npy --output data/`
 
 # Tutorial
 A [tutorial](./docs/Tutorial.ipynb) is accessible in the form of Jupyter notebook for the generation of embeddings.

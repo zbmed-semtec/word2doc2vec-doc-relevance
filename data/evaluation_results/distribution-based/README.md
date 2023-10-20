@@ -80,4 +80,3 @@ Each of the below tables contains seven columns. The first six of these columns 
 | 1     | 15          | 5             | 400         | 5       | 8       | 0.7653 |
 | 1     | 15          | 5             | 400         | 6       | 8       | 0.7698 |
 | 1     | 15          | 5             | 400         | 7       | 8       | 0.7733 |
-

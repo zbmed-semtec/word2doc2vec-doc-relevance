@@ -1,9 +1,37 @@
 import argparse
 import pandas as pd
+import csv
 from scipy import spatial
+from multiprocessing import Pool, freeze_support
+import os
+import shutil
+global_embeddings_df = None
+try:
+    print("Loading Pickle file")
+    global_embeddings_df = pd.read_pickle("./data/embeddings.pkl")
+except:
+    print("Pickle file currently unknown, attempting to access Pickle file.")
 
+def get_similarity(pair: list):
+    """
+    Calculates cosine similarity between two articles.
+    Parameters
+    ----------
+    pair : list of str
+        PMID pair of two articles.
+    Returns
+    ----------
+    float
+        Cosine similarity ccore.
+    """
+    try:
+        ref_pmid_vector = global_embeddings_df.loc[global_embeddings_df.pmids == pair[0], "embeddings"].iloc[0]
+        assessed_pmid_vector = global_embeddings_df.loc[global_embeddings_df.pmids == pair[1], "embeddings"].iloc[0]
+        return round(1 - spatial.distance.cosine(ref_pmid_vector, assessed_pmid_vector), 4)
+    except:
+        return ""
 
-def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, output_matrix_name: str, corpus: str) -> None:
+def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, output_matrix_name: str) -> None:
     """
     Creates a 4 column matrix by appending cosine similarity scores for all existing pairs
     of PMIDs to the Relevance matrix.
@@ -15,36 +43,37 @@ def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, output_m
         File path for pickle file of pmids and embeddings.
     output_matrix_name : str
         File path for the generated 4 column matrix.
-    corpus : str
-        Name of the corpus (TREC or RELISH).
     """
-    embeddings_df = pd.read_pickle(embeddings)
-    if corpus == "RELISH":
-        column_names = ["PMID1", "PMID2", "Relevance"]
-    elif corpus == "TREC":
-        column_names = ["PMID1", "PMID2", "Rel-d2d"]
-    relevance_matrix_df = pd.read_csv(input_relevance_matrix, names=column_names, sep="\t")
-    # Adds the empty 4th column to the file
-    print('Read embeddings pickle file')
-    relevance_matrix_df["Cosine Similarity"] = ""
+    if not os.path.isfile("./data/embeddings.pkl"):
+        shutil.copy(embeddings, "./data/embeddings.pkl")
+    tokenpairs = []
+    header = []
+    rows = []
+    with open(input_relevance_matrix, newline='') as csvfile:
+        spamreader = csv.reader(csvfile, delimiter='\t')
+        header = next(spamreader) # Save and remove header
+        for row in spamreader:
+            rows.append(row)
+            tokenpairs.append([row[0],row[1]])
 
-    for index, row in relevance_matrix_df.iterrows():
-        # print(type(row["PMID1"]), type(row["PMID2"]))
-        ref_pmid = str(row["PMID1"])
-        assessed_pmid = str(row["PMID2"])
-        try:
-            # Determine the cosine similarity of the ref and assessed pmids and add to the 4th column
-            ref_pmid_vector = embeddings_df.loc[embeddings_df.pmids == ref_pmid, "embeddings"].iloc[0]
-            assessed_pmid_vector = embeddings_df.loc[embeddings_df.pmids == assessed_pmid, "embeddings"].iloc[0]
-            row["Cosine Similarity"] = round(1 - spatial.distance.cosine(ref_pmid_vector, assessed_pmid_vector), 4)
-        except:
-            # Leave the 4th column empty if the ref or assessed pmid not found in the dataset
-            row["Cosine Similarity"] = ""
+    with open(output_matrix_name, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, delimiter='\t')
+        writer.writerow(header)
 
-        # Make changes in the original dataframe
-        relevance_matrix_df.at[index, 'Cosine Similarity'] = row['Cosine Similarity']
-    print('Added cosine scores')
-    relevance_matrix_df.to_csv(output_matrix_name, index=False, sep="\t")
+        total_processed = 0
+        with Pool() as p:
+            iterator = p.imap(get_similarity, tokenpairs, 100)
+            for similarity in iterator:
+                row = rows[total_processed]
+                row[3] = similarity
+                if(similarity != ""):
+                    writer.writerow(row)
+
+                total_processed += 1
+                if total_processed % 100 == 0 or total_processed == len(tokenpairs):
+                    print(f"Processed {total_processed}/{len(tokenpairs)} rows...")
+        p.join()
+        p.close()
     print('Saved matrix')
 
 if __name__ == "__main__":
@@ -52,6 +81,6 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, help="File path for the TREC-repurposed/RELISH relevance matrix")
     parser.add_argument("-e", "--embeddings", type=str, help="File path for the embeddings in pickle format")
     parser.add_argument("-o", "--output", type=str, help="Output file path for generated 4 column cosine similarity matrix")
-    parser.add_argument("-c", "--corpus", type=str, help="Name of the corpus (TREC or RELISH)")
     args = parser.parse_args()
-    get_cosine_similarity(args.input, args.embeddings, args.output, args.corpus)
+    freeze_support()
+    get_cosine_similarity(args.input, args.embeddings, args.output)
