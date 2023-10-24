@@ -25,7 +25,7 @@ def prepare_from_npy(filepath_in: str):
                 article_doc.extend(np.ndarray.tolist(line[2]))
         return (pmids, article_doc)
 
-def generate_Word2Vec_model(article_doc: list, params: list, filepath_out: str, use_pretrained: bool):
+def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str, use_pretrained: bool):
         '''
         Generates a word2vec model from all RELISH or TREC sentences using gensim and saves it as a .model file.
 
@@ -33,6 +33,8 @@ def generate_Word2Vec_model(article_doc: list, params: list, filepath_out: str, 
         ----------
         article_doc: list of list of str
                 A two dimensional list of all tokenized article documents (title + abstract).
+        pmids: list of str
+                A list of all appearing pubmed ids in the input dataset.
         params: dict
                 A dictionary of the hyperparameters for the model.
         filepath_out: str
@@ -41,7 +43,10 @@ def generate_Word2Vec_model(article_doc: list, params: list, filepath_out: str, 
                 Whether to use a pretrained Word2Vec model.
         '''
         from gensim.models import Word2Vec
-        params['sentences'] = article_doc
+        sentence_list = []
+        for index in range(len(pmids)):
+                sentence_list.append(article_doc[index])
+        params['sentences'] = sentence_list
         wv_model = None
         if use_pretrained:
                 print("Pretraining")
@@ -67,6 +72,10 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
         '''
         import gensim.downloader as api
         import gensim.models as model
+        import time
+
+        st = time.time()
+
         word_vectors = None
         has_custom_model = gensim_model_path != ""
         if has_custom_model:
@@ -81,32 +90,36 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
                 #Retrieve word embeddings.
                 embedding_list = []
                 first = True
-                for word in article_doc[iteration]:
-                        try:
-                                if(has_custom_model):
+                if(has_custom_model):
+                        for word in article_doc[iteration]:
+                                try:
                                         embedding_list.append(word_vectors.wv[word])
-                                else:
+                                except:
+                                        missing_words += 1
+                else:
+                        for word in article_doc[iteration]:
+                                try:
                                         embedding_list.append(word_vectors[word])
-                        except:
-                                missing_words += 1
+                                except:
+                                        missing_words += 1
                 #Generate document embeddings from word embeddings using word-vector centroids.
-                first = True
-                document = []
-                for embedding in embedding_list:
-                        if first:
-                                for dimension in embedding:
-                                        document.append(0.0)
-                                first = False
-                        doc_dimension = 0
-                        for dimension in embedding:
-                                document[doc_dimension] += dimension
-                                doc_dimension += 1
-                doc_dimension = 0
-                for dimension in document:
-                        document[doc_dimension] = (dimension / len(embedding_list))
-                        doc_dimension += 1
+                if len(embedding_list) == 0:
+                        continue
+                document = [0.0] * word_vectors.vector_size
 
+                for dim in range(word_vectors.vector_size):
+                        for word_embeddings in embedding_list:
+                                document[dim] += word_embeddings[dim]
+                        document[dim] = document[dim] / len(embedding_list)
                 document_embeddings.append(document)
+        print((document_embeddings[0]))
+
+        et = time.time()
+
+        # get the execution time
+        elapsed_time = et - st
+        print('Execution time:', elapsed_time, 'seconds')
+        
         import pandas as pd
         df = pd.DataFrame(list(zip((pmids), document_embeddings)), columns =['pmids', 'embeddings'])
         df = df.sort_values('pmids')
@@ -124,5 +137,5 @@ if __name__ == "__main__":
         model_output_File = "./data/word2vec_model"
 
         pmids, article_doc, docs = prepare_from_npy(args.input)
-        generate_Word2Vec_model(article_doc, params, model_output_File)
+        generate_Word2Vec_model(article_doc, pmids, params, model_output_File)
         generate_document_embeddings(pmids, article_doc, args.output, model_output_File)

@@ -22,7 +22,7 @@ def get_similarity(pair: list):
     Returns
     ----------
     float
-        Cosine similarity ccore.
+        Cosine similarity score.
     """
     try:
         ref_pmid_vector = global_embeddings_df.loc[global_embeddings_df.pmids == pair[0], "embeddings"].iloc[0]
