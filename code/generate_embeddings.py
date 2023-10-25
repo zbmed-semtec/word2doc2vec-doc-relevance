@@ -22,8 +22,8 @@ def prepare_from_npy(filepath_in: str):
     article_docs = []
     for line in doc:
         pmids.append(int(line[0]))
-        article_doc.append(np.ndarray.tolist(line[1]))
-        article_doc.extend(np.ndarray.tolist(line[2]))
+        article_docs.append(np.ndarray.tolist(line[1]))
+        article_docs.extend(np.ndarray.tolist(line[2]))
     return (pmids, article_docs)
 
 def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str, use_pretrained: bool):
@@ -138,15 +138,20 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--output", type=str,
         help="Path to save embeddings pickle file")       
     parser.add_argument("-pj", "--params_json", type=str,
-        help="File location of word2vec parameter list.")          
+        help="File location of word2vec parameter list.")
+    parser.add_argument("-up", "--use_pretrained", type=int,
+        help="Whether to use a pretrained model or not")        
     args = parser.parse_args()
 
     params = []
     with open(args.params_json, "r") as openfile:
         params = json.load(openfile)
+    
+    model_output_File = ""
+    if not args.use_pretrained:
         model_output_File = "./data/word2vec_model"
 
     for iteration in range(len(params)):
         pmids, article_doc = prepare_from_npy(args.input)
-        generate_Word2Vec_model(article_doc, pmids, params[iteration], model_output_File)
+        generate_Word2Vec_model(article_doc, pmids, params[iteration], model_output_File, args.use_pretrained)
         generate_document_embeddings(pmids, article_doc, args.output, iteration, model_output_File)
