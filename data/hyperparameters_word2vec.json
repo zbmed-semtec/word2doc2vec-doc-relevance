@@ -1,0 +1,9 @@
+[
+  {
+    "vector_size": 200,
+    "epochs": 15,
+    "window": 5,
+    "min_count": 5,
+    "workers": 8
+  }
+]

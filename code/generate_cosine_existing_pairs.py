@@ -31,7 +31,7 @@ def get_similarity(pair: list):
     except:
         return ""
 
-def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, output_matrix_name: str) -> None:
+def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, direct_path: bool, output_matrix_name: str, iteration: int = -1) -> None:
     """
     Creates a 4 column matrix by appending cosine similarity scores for all existing pairs
     of PMIDs to the Relevance matrix.
@@ -41,11 +41,18 @@ def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, output_m
         File path for relevance matrix (TREC/RELISH).
     embeddings : str
         File path for pickle file of pmids and embeddings.
+    direct_path : bool
+        Whether embeddings path is a direct path or the directory.
     output_matrix_name : str
         File path for the generated 4 column matrix.
+    iteration: int (optional)
+        If multiple matrices should be created, iteration is the suffix of the resulting matrix.
     """
-    if not os.path.isfile("./data/embeddings.pkl"):
-        shutil.copy(embeddings, "./data/embeddings.pkl")
+    if direct_path: # Embeddings path should be static to synchronize across processes
+        if not os.path.isfile("./data/embeddings.pkl"):
+            shutil.copy(embeddings, "./data/embeddings.pkl")
+    else:
+        shutil.copy(f"{embeddings}/{iteration}/embeddings.pkl", "./data/embeddings.pkl")
     tokenpairs = []
     header = []
     rows = []
@@ -56,7 +63,14 @@ def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, output_m
             rows.append(row)
             tokenpairs.append([row[0],row[1]])
 
-    with open(output_matrix_name, 'w', newline='') as csvfile:
+    output_file = ""
+    
+    if direct_path:
+        output_file = output_matrix_name
+    else:
+        output_file = f"{output_matrix_name}_{iteration}.tsv"
+        
+    with open(output_file, 'w', newline='') as csvfile:
         writer = csv.writer(csvfile, delimiter='\t')
         writer.writerow(header)
 
@@ -81,6 +95,12 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, help="File path for the TREC-repurposed/RELISH relevance matrix")
     parser.add_argument("-e", "--embeddings", type=str, help="File path for the embeddings in pickle format")
     parser.add_argument("-o", "--output", type=str, help="Output file path for generated 4 column cosine similarity matrix")
+    parser.add_argument("-dec", "--doc_embenddings_count", type=int, help="Number of docoument embeddings that have been created")
     args = parser.parse_args()
-    freeze_support()
-    get_cosine_similarity(args.input, args.embeddings, args.output)
+    if(not args.doc_embenddings_count):
+        freeze_support()
+        get_cosine_similarity(args.input, args.embeddings, True, args.output)
+    else:
+        for iteration in range(args.doc_embenddings_count):
+            freeze_support()
+            get_cosine_similarity(args.input, args.embeddings, False, args.output, iteration)
