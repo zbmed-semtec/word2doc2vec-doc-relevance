@@ -18,12 +18,12 @@ def prepare_from_npy(filepath_in: str):
         import numpy as np
         doc = np.load(filepath_in, allow_pickle=True)
         pmids = []
-        article_doc = []
+        article_docs = []
         for line in doc:
-                pmids.append(np.ndarray.tolist(line[0]))
+                pmids.append(int(line[0]))
                 article_doc.append(np.ndarray.tolist(line[1]))
                 article_doc.extend(np.ndarray.tolist(line[2]))
-        return (pmids, article_doc)
+        return (pmids, article_docs)
 
 def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str, use_pretrained: bool):
         '''
@@ -87,9 +87,8 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
         iteration = 0
         document_embeddings = []
         for iteration in range(len(pmids)):
-                #Retrieve word embeddings.
+                # Retrieve word embeddings.
                 embedding_list = []
-                first = True
                 if(has_custom_model):
                         for word in article_doc[iteration]:
                                 try:
@@ -102,8 +101,11 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
                                         embedding_list.append(word_vectors[word])
                                 except:
                                         missing_words += 1
-                #Generate document embeddings from word embeddings using word-vector centroids.
+
+                # Generate document embeddings from word embeddings using word-vector centroids.
                 if len(embedding_list) == 0:
+                        # This can be caused by a high min-count parameter or missing vocabulary when using a pretrained model
+                        document_embeddings.append([])
                         continue
                 document = [0.0] * word_vectors.vector_size
 
@@ -112,7 +114,6 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
                                 document[dim] += word_embeddings[dim]
                         document[dim] = document[dim] / len(embedding_list)
                 document_embeddings.append(document)
-        print((document_embeddings[0]))
 
         et = time.time()
 
