@@ -55,7 +55,7 @@ def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepa
         wv_model = Word2Vec(**params)
     wv_model.save(filepath_out)
 
-def generate_document_embeddings(pmids: str, article_doc: list, directory_out: str, iteration: int, gensim_model_path: str = ""):
+def generate_document_embeddings(pmids: str, article_doc: list, directory_out: str, param_iteration: int, gensim_model_path: str = ""):
     '''
     Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
     If no gensim model is given, the 'glove-wiki-gigaword-200' gensim model is used.
@@ -68,7 +68,7 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
         A two dimensional list of all tokenized article documents (title + abstract).
     directory_out: str
         The filepath of the output directory of all .npy embeddings.
-    iteration: int
+    param_iteration: int
         Iteration through paramter list.
     gensim_model_path: str (optional)
         The filepath of the custom gensimModel.
@@ -128,8 +128,8 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
     import pandas as pd
     df = pd.DataFrame(list(zip((pmids), document_embeddings)), columns =['pmids', 'embeddings'])
     df = df.sort_values('pmids')
-    os.makedirs(f"{directory_out}/{iteration}", exist_ok=True)
-    df.to_pickle(f'{directory_out}/{iteration}/embeddings.pkl')
+    os.makedirs(f"{directory_out}/{param_iteration}", exist_ok=True)
+    df.to_pickle(f'{directory_out}/{param_iteration}/embeddings.pkl')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
