@@ -1,7 +1,21 @@
 [
   {
+    "vector_size": 100,
+    "epochs": 5,
+    "window": 5,
+    "min_count": 5,
+    "workers": 8
+  },
+  {
     "vector_size": 200,
-    "epochs": 15,
+    "epochs": 5,
+    "window": 5,
+    "min_count": 5,
+    "workers": 8
+  },
+  {
+    "vector_size": 300,
+    "epochs": 5,
     "window": 5,
     "min_count": 5,
     "workers": 8

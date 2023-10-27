@@ -24,12 +24,7 @@ def get_similarity(pair: list):
     float
         Cosine similarity score.
     """
-    try:
-        ref_pmid_vector = global_embeddings_df.loc[global_embeddings_df.pmids == pair[0], "embeddings"].iloc[0]
-        assessed_pmid_vector = global_embeddings_df.loc[global_embeddings_df.pmids == pair[1], "embeddings"].iloc[0]
-        return round(1 - spatial.distance.cosine(ref_pmid_vector, assessed_pmid_vector), 4)
-    except:
-        return ""
+    return round(1 - spatial.distance.cosine(pair[0], pair[1]), 4)
 
 def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, direct_path: bool, output_matrix_name: str, iteration: int = -1) -> None:
     """
@@ -53,6 +48,7 @@ def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, direct_p
             shutil.copy(embeddings, "./data/embeddings.pkl")
     else:
         shutil.copy(f"{embeddings}/{iteration}/embeddings.pkl", "./data/embeddings.pkl")
+    global_embeddings_df = pd.read_pickle("./data/embeddings.pkl")
     tokenpairs = []
     header = []
     rows = []
@@ -60,8 +56,13 @@ def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, direct_p
         spamreader = csv.reader(csvfile, delimiter='\t')
         header = next(spamreader) # Save and remove header
         for row in spamreader:
-            rows.append(row)
-            tokenpairs.append([row[0],row[1]])
+            try:
+                tokenpairs.append([global_embeddings_df.loc[global_embeddings_df.pmids == int(row[0]),
+                "embeddings"].iloc[0], global_embeddings_df.loc[global_embeddings_df.pmids == int(row[1]), "embeddings"].iloc[0]])
+                rows.append(row)
+            except:
+                print(f"PMID {row[0]} or PMID {row[1]} not found.")
+                continue
 
     output_file = ""
     
@@ -80,8 +81,7 @@ def get_cosine_similarity(input_relevance_matrix: str, embeddings: str, direct_p
             for similarity in iterator:
                 row = rows[total_processed]
                 row[3] = similarity
-                if(similarity != ""):
-                    writer.writerow(row)
+                writer.writerow(row)
 
                 total_processed += 1
                 if total_processed % 100 == 0 or total_processed == len(tokenpairs):

@@ -20,10 +20,10 @@ def prepare_from_npy(filepath_in: str):
     doc = np.load(filepath_in, allow_pickle=True)
     pmids = []
     article_docs = []
-    for line in doc:
-        pmids.append(int(line[0]))
-        article_docs.append(np.ndarray.tolist(line[1]))
-        article_docs.extend(np.ndarray.tolist(line[2]))
+    for line in range(len(doc)):
+        pmids.append(int(doc[line][0]))
+        article_docs.append(np.ndarray.tolist(doc[line][1]))
+        article_docs[line].extend(np.ndarray.tolist(doc[line][2]))
     return (pmids, article_docs)
 
 def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str, use_pretrained: bool):
