@@ -95,12 +95,12 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--input", type=str, help="File path for the TREC-repurposed/RELISH relevance matrix")
     parser.add_argument("-e", "--embeddings", type=str, help="File path for the embeddings in pickle format")
     parser.add_argument("-o", "--output", type=str, help="Output file path for generated 4 column cosine similarity matrix")
-    parser.add_argument("-dec", "--doc_embenddings_count", type=int, help="Number of docoument embeddings that have been created")
+    parser.add_argument("-c", "--doc_embeddings_count", type=int, help="Number of docoument embeddings that have been created")
     args = parser.parse_args()
-    if(not args.doc_embenddings_count):
+    if(not args.doc_embeddings_count):
         freeze_support()
         get_cosine_similarity(args.input, args.embeddings, True, args.output)
     else:
-        for iteration in range(args.doc_embenddings_count):
+        for iteration in range(args.doc_embeddings_count):
             freeze_support()
             get_cosine_similarity(args.input, args.embeddings, False, args.output, iteration)

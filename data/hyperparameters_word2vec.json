@@ -1,23 +1,146 @@
 [
   {
-    "vector_size": 100,
-    "epochs": 5,
+    "vector_size": 200,
+    "epochs": 15,
     "window": 5,
     "min_count": 5,
-    "workers": 8
+    "workers": 8,
+    "sg": 0
   },
   {
     "vector_size": 200,
-    "epochs": 5,
+    "epochs": 15,
     "window": 5,
     "min_count": 5,
-    "workers": 8
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 200,
+    "epochs": 15,
+    "window": 6,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 200,
+    "epochs": 15,
+    "window": 6,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 200,
+    "epochs": 15,
+    "window": 7,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 200,
+    "epochs": 15,
+    "window": 7,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
   },
   {
     "vector_size": 300,
-    "epochs": 5,
+    "epochs": 15,
     "window": 5,
     "min_count": 5,
-    "workers": 8
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 300,
+    "epochs": 15,
+    "window": 5,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 300,
+    "epochs": 15,
+    "window": 6,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 300,
+    "epochs": 15,
+    "window": 6,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 300,
+    "epochs": 15,
+    "window": 7,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 300,
+    "epochs": 15,
+    "window": 7,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 400,
+    "epochs": 15,
+    "window": 5,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 400,
+    "epochs": 15,
+    "window": 5,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 400,
+    "epochs": 15,
+    "window": 6,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 400,
+    "epochs": 15,
+    "window": 6,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
+  },
+  {
+    "vector_size": 400,
+    "epochs": 15,
+    "window": 7,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 0
+  },
+  {
+    "vector_size": 400,
+    "epochs": 15,
+    "window": 7,
+    "min_count": 5,
+    "workers": 8,
+    "sg": 1
   }
 ]
