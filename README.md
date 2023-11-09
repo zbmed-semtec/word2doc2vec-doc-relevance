@@ -39,7 +39,7 @@ The following section outlines the process of generating document-level embeddin
 We construct Word2Vec models with customizable hyperparameters. We employ the parameters shown below in order to generate our models.
 ##### Parameters
 
-+ **dm:** {1,0} Refers to the training algorithm. If dm=1, distributed memory is used otherwise, distributed bag of words is used.
++ **sg:** {1,0} Refers to the training algorithm. If sg=1, skim grams is used otherwise, continuous bag of words (CBOW) is used.
 + **vector_size:** It represents the number of dimensions our embeddings will have.
 + **window:** It represents the maximum distance between the current and predicted word.
 + **epochs:** It is the nuber of iterations of the training dataset.
