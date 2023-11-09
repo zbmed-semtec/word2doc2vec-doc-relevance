@@ -128,8 +128,8 @@ For example, if you are running the code from the code folder and have the RELIS
 python3 code/generate_cosine_existing_pairs.py -i data/relevance_w2v_blank.tsv -e data/ -o data/w2v_relevance -c 18
 ```
 
-### Step 5: Precision@N
-In order to calculate the Precision@N scores and execute this [script](/code/precision.py), run the follwing command:
+### Step 4: Precision@N
+In order to calculate the Precision@N scores and execute this [script](/code/precision.py), run the following command:
 
 ```
 python3 code/precision.py [-c COSINE FILE PATH]  [-o OUTPUT PATH]
@@ -147,7 +147,7 @@ python3 code/precision.py -c data/w2v_relevance_0.tsv -o data/w2v_precision_0.ts
 ```
 
 
-### Step 6: nDCG@N
+### Step 5: nDCG@N
 In order to calculate nDCG scores and execute this [script](/code/calculate_gain.py), run the following command:
 
 ```
