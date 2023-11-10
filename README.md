@@ -4,35 +4,35 @@ This repository focuses on an approach exploring and assessing literature-based 
 ## Table of Contents
 
 1. [About](#about)
-2. [Input Data](#input-data-🗒)
-3. [Pipeline](#pipeline-📝)
-    1. [Generate Embeddings](#generate-embeddings-🧮)
+2. [Input Data](#input-data)
+3. [Pipeline](#pipeline)
+    1. [Generate Embeddings](#generate-embeddings)
         - [Using Trained Word2Vec models](#using-trained-word2vec-models)
           - [Parameters](#parameters)
           - [Hyperparameters](#hyperparameters)
         - [Using Pre-trained Word2Vec models](#using-pre-trained-word2vec-models)
         - [Document Embeddings](#document-embeddings)
-    2. [Calculate Cosine Similarity](#calculate-cosine-similarity-📐)
-    3. [Evaluation](#evaluation-📊)
+    2. [Calculate Cosine Similarity](#calculate-cosine-similarity)
+    3. [Evaluation](#evaluation)
         - [Precision@N](#precisionn)
         - [nDCG@N](#ndcgn)
-4. [Code Implementation](#code-implementation-🛠)
-5. [Getting Started](#getting-started-🧑‍💻)
+4. [Code Implementation](#code-implementation)
+5. [Getting Started](#getting-started)
 6. [Tutorial](#tutorial)
 
 ## About
 
 Our approach involves utilizing [Word2Vec](https://arxiv.org/pdf/1310.4546.pdf) for capturing word-level semantics and generating word embeddings. We then employ the centroid approach to create document-level embeddings, which entails calculating the centroids of word embeddings within each document's title and abstract. For word embeddings, we utilize both pretrained and trained models.
 
-## Input Data 🗒
+## Input Data
 
 The input data for this method consists of preprocessed tokens derived from the RELISH documents. These tokens are stored in the RELISH.npy file, which contains preprocessed arrays comprising PMIDs, document titles, and abstracts. These arrays are generated through an extensive preprocessing pipeline, as elaborated in the [relish-preprocessing repository](https://github.com/zbmed-semtec/relish-preprocessing). Within this preprocessing pipeline, both the title and abstract texts undergo several stages of refinement: structural words are eliminated, text is converted to lowercase, and finally, tokenization is employed, resulting in arrays of individual words.
 
-## Pipeline 📝
+## Pipeline
 
 The following section outlines the process of generating document-level embeddings through hyperparameter optimization, computing the cosine similarity scores and evaluating the given similarity results with the relevance matrix.
 
-### Generate Embeddings 🧮
+### Generate Embeddings
 The following section outlines the process of generating document-level embeddings out of word-level embeddings for each PMID of the RELISH corpus.
 
 #### Using Trained Word2Vec models
@@ -52,11 +52,11 @@ By default, we make use of the Gensim Word2Vec model "word2vec-google-news-300" 
 #### Document Embeddings
 Document embeddings are created by computing the centroids of all provided word embeddings within each title and abstract document. The resulting embeddings generated from various model hyperparameter configurations are stored. These embeddings, along with their respective PMIDs, are saved as a dataframe in a pickle file. Each specific set of hyperparameter combination results in having a separate pickle file.
 
-### Calculate Cosine Similarity 📐
+### Calculate Cosine Similarity
 
 To assess the similarity between two documents within the RELISH corpus, we employ the Cosine Similarity metric. This process enables the generation of a 4-column matrix containing cosine similarity scores for existing pairs of PMIDs within our corpus. For a more detailed explanation of the process, please refer to this [documentation](https://github.com/zbmed-semtec/medline-preprocessing/tree/main/code/Cosine_Similarity).
 
-## Evaluation 📊
+## Evaluation
 
 ### Precision@N
 
@@ -66,7 +66,7 @@ In order to evaluate the effectiveness of this approach, we make use of Precisio
 
 Another metric used is the nDCG@N (normalized Discounted Cumulative Gain). This ranking metric assesses document retrieval quality by considering both relevance and document ranking. It operates by using a TSV file containing relevance and cosine similarity scores, involving the computation of DCG@N and iDCG@N scores. The result is an nDCG@N matrix for various cutoff values (N) and each PMID in the corpus, with detailed information available in the [documentation](https://github.com/zbmed-semtec/medline-preprocessing/tree/main/code/Evaluation).
 
-## Code Implementation 🛠
+## Code Implementation
 
 The [`generate_embeddings.py`](./code/generate_embeddings.py) script uses the RELISH Tokenized npy file as input and supports the generation and training of Word2Vec models, generation of embeddings and saving the embeddings as pickle files.
 
@@ -76,7 +76,7 @@ The script consists of two main functions `generateWord2VecModel` and `generateD
 
 `generateDocumentEmbeddings` :  This function generates document embeddings from titles and abstracts using Word2Vec and centroid calculations. It can utilize either an existing or a default pretrained model for word embeddings and saves the results as .npy or .pkl files based on the specified format.
 
-## Getting Started 🧑‍💻
+## Getting Started
 
 To get started with this project, follow these steps:
 
