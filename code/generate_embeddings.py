@@ -27,7 +27,7 @@ def prepare_from_npy(filepath_in: str, remove_stop_words: bool):
         nltk.download('stopwords')
         from nltk.corpus import stopwords
         stop_words = set(stopwords.words('english'))
-        for line in doc:
+        for line in range(len(doc)):
             pmids.append(int(doc[line][0]))
             article_docs.append(np.ndarray.tolist(doc[line][1]))
             article_docs[line].extend(np.ndarray.tolist(doc[line][2]))
