@@ -1,7 +1,7 @@
 import argparse
 import json
 
-def prepare_from_npy(filepath_in: str, remove_stop_words: bool):
+def prepare_from_npy(filepath_in: str):
     '''
     Retrieves data from RELISH and TREC npy files, separating pmid and the document consisting of title and abstract..
 
@@ -9,8 +9,6 @@ def prepare_from_npy(filepath_in: str, remove_stop_words: bool):
     ----------
     filepath_in: str
         The filepath of the RELISH or TREC input npy file.
-    filepath_in: bool
-        Whether to remove stopwords (True) or not (False).
     Returns
     ----------
     list of str
@@ -22,16 +20,6 @@ def prepare_from_npy(filepath_in: str, remove_stop_words: bool):
     doc = np.load(filepath_in, allow_pickle=True)
     pmids = []
     article_docs = []
-    if remove_stop_words:
-        import nltk
-        nltk.download('stopwords')
-        from nltk.corpus import stopwords
-        stop_words = set(stopwords.words('english'))
-        for line in range(len(doc)):
-            pmids.append(int(doc[line][0]))
-            article_docs.append(np.ndarray.tolist(doc[line][1]))
-            article_docs[line].extend(np.ndarray.tolist(doc[line][2]))
-            article_docs[line] = [w for w in article_docs[line] if not w in stop_words]
     for line in range(len(doc)):
         pmids.append(int(doc[line][0]))
         article_docs.append(np.ndarray.tolist(doc[line][1]))
@@ -153,8 +141,6 @@ if __name__ == "__main__":
         help="File location of word2vec parameter list.")
     parser.add_argument("-up", "--use_pretrained", type=int,
         help="Whether to use a pretrained model or not")
-    parser.add_argument("-s", "--rm_stopwords", type=int,
-		help="Whether to remove stopwords or not") 
     args = parser.parse_args()
 
     params = []
@@ -166,6 +152,6 @@ if __name__ == "__main__":
         model_output_File = "./data/word2vec_model"
 
     for iteration in range(len(params)):
-        pmids, article_doc = prepare_from_npy(args.input, args.rm_stopwords)
+        pmids, article_doc = prepare_from_npy(args.input)
         generate_Word2Vec_model(article_doc, pmids, params[iteration], model_output_File, args.use_pretrained)
         generate_document_embeddings(pmids, article_doc, args.output, iteration, model_output_File)

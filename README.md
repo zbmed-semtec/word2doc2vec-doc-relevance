@@ -101,7 +101,7 @@ git clone git@github.com:zbmed-semtec/word2doc2vec-doc-relevance.git
 The [`generate_embeddings.py`](./code/generate_embeddings.py) script uses the RELISH Tokenized npy file as input and includes a default parameter json with preset hyperparameters. You can easily adapt it for different values and parameters by modifying the [`hyperparameters_word2vec.json`](./data/hyperparameters_word2vec.json). Make sure to have the RELISH Tokenized.npy file within the directory under the data folder.
 
 ```
-python3 code/generate_embeddings.py [-i INPUT PATH] [-o OUTPUT PATH] [-pj PARAMS JSON] [-up USE PRETRAINED] [-s REMOVE STOPWORDS]
+python3 code/generate_embeddings.py [-i INPUT PATH] [-o OUTPUT PATH] [-pj PARAMS JSON] [-up USE PRETRAINED]
 ```
 
 You must pass the following arguments:
@@ -110,12 +110,11 @@ You must pass the following arguments:
 + -o/ --output : File path to the resulting embeddings in pickle file format.
 + -pj/ --params_json : File path to the word2vec hyperparameters JSON.
 + -up/ --use_pretrained : Whether to use a pretrained Word2Vec model (1) or not (0), uses word2vec-google-news-300 if True.
-+ -s/ --rm_stopwords : Whether to remove stopwords (1) or not (0), uses standard NLTK package to remove English stopwords.
 
 To run this script, please execute the following command:
 
 ```
-python3 code/generate_embeddings.py --input data/RELISH/Tokenized_Input/RELISH_Tokenized_Sample.npy --output data/ --params_json data/hyperparameters_word2vec.json --use_pretrained 0 --rm_stopwords 0
+python3 code/generate_embeddings.py --input data/RELISH/Tokenized_Input/RELISH_Tokenized_Sample.npy --output data/ --params_json data/hyperparameters_word2vec.json --use_pretrained 0 
 ```
 
 The script will create document embeddings, and store them in separate directories. You should expect to find a total of 18 files corresponding to the various models, embeddings, and embedding pickle files.
