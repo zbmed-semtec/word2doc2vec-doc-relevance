@@ -12,6 +12,9 @@ authors:
   - family-names: Jael Castro
     given-names: Leyla
     orcid: "https://orcid.org/0000-0003-3986-0510"
+  - family-names: "Jahanshahi"
+    given-names: "Soudeh"
+    orcid: "https://orcid.org/0009-0000-9203-2437"
   - family-names: Rebholz-Schuhmann
     given-names: Dietrich
     orcid: "https://orcid.org/0000-0002-1018-0370"
@@ -20,9 +23,6 @@ authors:
     orcid: "https://orcid.org/0009-0004-4484-6283"
 version: 1.0.0
 date-released: "2022-4-15"
-identifiers:
-  - description: 
-    type: doi
-    value: ""
-license: gpl-3.0
+license: GPL-3.0-or-later
+copyright: ZB MED
 repository-code: "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance.git"
