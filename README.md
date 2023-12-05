@@ -96,8 +96,34 @@ Ensure you have set up SSH keys in your GitHub account.
 git clone git@github.com:zbmed-semtec/word2doc2vec-doc-relevance.git
 ```
 
+### Step 2: Create a virtual environment and install dependencies
 
-### Step 2: Generate Embeddings
+To create a virtual environment within your repository, run the following command:
+
+```
+python3 -m venv .venv 
+source .venv/bin/activate   # On Windows, use '.venv\Scripts\activate' 
+```
+
+To confirm if the virtual environment is activated and check the location of yourPython interpreter, run the following command:
+
+```
+which python    # On Windows command prompt, use 'where python'
+                # On Windows PowerShell, use 'Get-Command python'
+```
+The code is stable with python 3.6 and higher. The required python packages are listed in the requirements.txt file. To install the required packages, run the following command:
+
+```
+pip install -r code/requirements.txt
+```
+
+To deactivate the virtual environment after running the project, run the following command:
+
+```
+deactivate
+```
+
+### Step 3: Generate Embeddings
 The [`generate_embeddings.py`](./code/generate_embeddings.py) script uses the RELISH Tokenized npy file as input and includes a default parameter json with preset hyperparameters. You can easily adapt it for different values and parameters by modifying the [`hyperparameters_word2vec.json`](./data/hyperparameters_word2vec.json). Make sure to have the RELISH Tokenized.npy file within the directory under the data folder.
 
 ```
@@ -119,7 +145,7 @@ python3 code/generate_embeddings.py --input data/RELISH/Tokenized_Input/RELISH_T
 
 The script will create document embeddings, and store them in separate directories. You should expect to find a total of 18 files corresponding to the various models, embeddings, and embedding pickle files.
 
-### Step 3: Calculate Cosine Similarity
+### Step 4: Calculate Cosine Similarity
 In order to generate the cosine similarity matrix and execute this [script](./code/generate_cosine_existing_pairs.py), run the following command:
 
 ```
@@ -139,7 +165,7 @@ For example, if you are running the code from the code folder and have the RELIS
 python3 code/generate_cosine_existing_pairs.py -i data/relevance_w2v_blank.tsv -e data/ -o data/w2v_relevance -c 18
 ```
 
-### Step 4: Precision@N
+### Step 5: Precision@N
 In order to calculate the Precision@N scores and execute this [script](/code/precision.py), run the following command:
 
 ```
@@ -158,7 +184,7 @@ python3 code/precision.py -c data/w2v_relevance_0.tsv -o data/w2v_precision_0.ts
 ```
 
 
-### Step 5: nDCG@N
+### Step 6: nDCG@N
 In order to calculate nDCG scores and execute this [script](/code/calculate_gain.py), run the following command:
 
 ```
