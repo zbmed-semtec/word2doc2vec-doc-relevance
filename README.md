@@ -114,7 +114,7 @@ which python    # On Windows command prompt, use 'where python'
 The code is stable with python 3.6 and higher. The required python packages are listed in the requirements.txt file. To install the required packages, run the following command:
 
 ```
-pip install -r code/requirements.txt
+pip install -r requirements.txt
 ```
 
 To deactivate the virtual environment after running the project, run the following command:
