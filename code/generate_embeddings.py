@@ -1,6 +1,7 @@
 import argparse
 import json
 
+
 def prepare_from_npy(filepath_in: str):
     '''
     Retrieves data from RELISH and TREC npy files, separating pmid and the document consisting of title and abstract..
@@ -20,11 +21,17 @@ def prepare_from_npy(filepath_in: str):
     doc = np.load(filepath_in, allow_pickle=True)
     pmids = []
     article_docs = []
+
     for line in range(len(doc)):
         pmids.append(int(doc[line][0]))
-        article_docs.append(np.ndarray.tolist(doc[line][1]))
-        article_docs[line].extend(np.ndarray.tolist(doc[line][2]))
+        if isinstance(doc[line][1], (np.ndarray, np.generic)):
+            article_docs.append(np.ndarray.tolist(doc[line][1]))
+            article_docs[line].extend(np.ndarray.tolist(doc[line][2]))
+        else:
+            article_docs.append(doc[line][1])
+            article_docs[line].extend(doc[line][2])
     return (pmids, article_docs)
+
 
 def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str, use_pretrained: bool):
     '''
@@ -55,11 +62,12 @@ def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepa
         wv_model = Word2Vec(**params)
     wv_model.save(filepath_out)
 
+
 def generate_document_embeddings(pmids: str, article_doc: list, directory_out: str, param_iteration: int, gensim_model_path: str = ""):
     '''
     Generates document embeddings from a titles and abstracts in a given paper using word2vec and calculating the cenroids of all given word embeddings.
     If no gensim model is given, the 'glove-wiki-gigaword-200' gensim model is used.
-    
+
     Parameters
     ----------
     pmids: list of str
@@ -93,7 +101,7 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
     for iteration in range(len(pmids)):
         # Retrieve word embeddings.
         embedding_list = []
-        if(has_custom_model):
+        if (has_custom_model):
             for word in article_doc[iteration]:
                 try:
                     embedding_list.append(word_vectors.wv[word])
@@ -124,34 +132,38 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
     # get the execution time
     elapsed_time = et - st
     print('Execution time:', elapsed_time, 'seconds')
-    
+
     import pandas as pd
-    df = pd.DataFrame(list(zip((pmids), document_embeddings)), columns =['pmids', 'embeddings'])
+    df = pd.DataFrame(list(zip((pmids), document_embeddings)),
+                      columns=['pmids', 'embeddings'])
     df = df.sort_values('pmids')
     os.makedirs(f"{directory_out}/{param_iteration}", exist_ok=True)
     df.to_pickle(f'{directory_out}/{param_iteration}/embeddings.pkl')
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", type=str,
-        help="Path to input RELISH tokenized .npy file")
+                        help="Path to input RELISH tokenized .npy file")
     parser.add_argument("-o", "--output", type=str,
-        help="Path to save embeddings pickle file")       
+                        help="Path to save embeddings pickle file")
     parser.add_argument("-pj", "--params_json", type=str,
-        help="File location of word2vec parameter list.")
+                        help="File location of word2vec parameter list.")
     parser.add_argument("-up", "--use_pretrained", type=int,
-        help="Whether to use a pretrained model or not")
+                        help="Whether to use a pretrained model or not")
     args = parser.parse_args()
 
     params = []
     with open(args.params_json, "r") as openfile:
         params = json.load(openfile)
-    
+
     model_output_File = ""
     if not args.use_pretrained:
         model_output_File = "./data/word2vec_model"
 
     for iteration in range(len(params)):
         pmids, article_doc = prepare_from_npy(args.input)
-        generate_Word2Vec_model(article_doc, pmids, params[iteration], model_output_File, args.use_pretrained)
-        generate_document_embeddings(pmids, article_doc, args.output, iteration, model_output_File)
+        generate_Word2Vec_model(
+            article_doc, pmids, params[iteration], model_output_File, args.use_pretrained)
+        generate_document_embeddings(
+            pmids, article_doc, args.output, iteration, model_output_File)
