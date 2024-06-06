@@ -1,18 +1,18 @@
 # Source code: https://github.com/zbmed-semtec/medline-preprocessing/blob/main/code/Evaluation/calculate_gain.py
 # This file includes the modifications to the source code according to this project
 
-import os, sys
+from numpy import ndarray
+from typing import Any, List, Tuple
+import numpy as np
+import pandas as pd
+import math
+import os
+import sys
 import argparse
 
 currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
-
-import math
-import pandas as pd
-import numpy as np
-from typing import Any, List, Tuple
-from numpy import ndarray
 
 
 def load_cosine_sim_matrix(cosine_similarity_matrix: str) -> pd.DataFrame:
@@ -40,12 +40,8 @@ def get_dcg_matrix(similarity_matrix: pd.DataFrame, output_file: str):
     similarity_matrix : pd.Dataframe
         Cosine similarity matrix.
     """
-    # dcg_matrix = similarity_matrix.sort_values(['PMID Reference', 'Cosine Similarity'],
-    #                                            ascending=[True, False], ignore_index=True)
-    dcg_matrix = similarity_matrix.sort_values(['PMID1', 'Cosine Similarity'],
-                                               ascending=[True, False], ignore_index=True)                                               
+    dcg_matrix = similarity_matrix
     dcg_matrix.index = dcg_matrix.index + 1
-    # dcg_matrix.to_csv("./data/doc2vec-doc/dcg_doc2vec-doc.tsv", sep='\t')
     dcg_matrix.to_csv(output_file, sep='\t')
 
 
@@ -58,12 +54,9 @@ def get_identity_dcg_matrix(similarity_matrix: pd.DataFrame, output_file: str):
     similarity_matrix : pd.Dataframe
         Cosine similarity matrix.
     """
-    # idcg_matrix = similarity_matrix.sort_values(['PMID Reference', 'Relevance Assessment'],
-    #                                             ascending=[True, False], ignore_index=True)
-    idcg_matrix = similarity_matrix.sort_values(['PMID1', 'Relevance'],
-                                                ascending=[True, False], ignore_index=True)                                                
+    idcg_matrix = similarity_matrix.sort_values(['PMID1', 'Cosine Similarity'],
+                                                ascending=[True, False], ignore_index=True)
     idcg_matrix.index = idcg_matrix.index + 1
-    # idcg_matrix.to_csv("./data/doc2vec-doc/idcg_doc2vec-doc.tsv", sep='\t')
     idcg_matrix.to_csv(output_file, sep='\t')
 
 
@@ -83,8 +76,7 @@ def calculate_dcg_at_n(n: int, all_assessed_pmids: pd.DataFrame) -> float:
     """
     dcg_n = 0
     for i, (index, row) in enumerate(all_assessed_pmids[:n].iterrows(), start=1):
-        # rel = row['Relevance Assessment']
-        rel = row['Relevance']
+        rel = row['Cosine Similarity']
         value = (2**rel - 1) / math.log2(i + 1)
         dcg_n += value
     return round(dcg_n, 4)
@@ -108,7 +100,7 @@ def calculate_idcg_at_n(n: int, sorted_assessed_pmids: pd.DataFrame) -> float:
     idcg_n = 0
     for i, (index, row) in enumerate(sorted_assessed_pmids[:n].iterrows(), start=1):
         # rel = row['Relevance Assessment']
-        rel = row['Relevance']
+        rel = row['Cosine Similarity']
         value = (2**rel - 1) / math.log2(i + 1)
         idcg_n += value
     return round(idcg_n, 4)
@@ -143,8 +135,10 @@ def fill_ndcg_scores(dcg_matrix: str, idcg_matrix: str) -> Tuple[List[Any], ndar
     for pmid_index, pmid in enumerate(all_pmids):
         # all_assessed_pmids = pd.DataFrame(dcg_matrix.loc[dcg_matrix['PMID Reference'] == pmid])
         # sorted_assessed_pmids = pd.DataFrame(idcg_matrix.loc[idcg_matrix['PMID Reference'] == pmid])
-        all_assessed_pmids = pd.DataFrame(dcg_matrix.loc[dcg_matrix['PMID1'] == pmid])
-        sorted_assessed_pmids = pd.DataFrame(idcg_matrix.loc[idcg_matrix['PMID1'] == pmid])
+        all_assessed_pmids = pd.DataFrame(
+            dcg_matrix.loc[dcg_matrix['PMID1'] == pmid])
+        sorted_assessed_pmids = pd.DataFrame(
+            idcg_matrix.loc[idcg_matrix['PMID1'] == pmid])
 
         for index, n in enumerate(value_of_n):
             dcg_score = calculate_dcg_at_n(n, all_assessed_pmids)
@@ -166,7 +160,8 @@ def write_to_tsv(pmids: list, ndcg_matrix: np.matrix, output_file: str):
         Numpy matrix with all nDCG scores.
     """
 
-    ndcg_matrix = pd.DataFrame(ndcg_matrix, columns=['nDCG@5', 'nDCG@10', 'nDCG@15', 'nDCG@20', 'nDCG@25', 'nDCG@50'])
+    ndcg_matrix = pd.DataFrame(ndcg_matrix, columns=[
+                               'nDCG@5', 'nDCG@10', 'nDCG@15', 'nDCG@20', 'nDCG@25', 'nDCG@50'])
     # Insert all PMIDs
     ndcg_matrix.insert(0, 'PMIDs', pmids)
     # Calculate and append average of each nDCG score
@@ -176,49 +171,59 @@ def write_to_tsv(pmids: list, ndcg_matrix: np.matrix, output_file: str):
     # pd.DataFrame(ndcg_matrix).to_csv("ndcg_doc2vec-doc.tsv", sep="\t")
     pd.DataFrame(ndcg_matrix).to_csv(output_file, sep="\t")
 
+
 def relish_run():
     hp_df = hp.generate_hyperparameters(hp.params_d2v)
 
     for index, row in hp_df.iterrows():
-        print ("Row: " + str(index), flush=True)
+        print("Row: " + str(index), flush=True)
 
-        sim_matrix = load_cosine_sim_matrix("Data/RELISH/nDCG-gain/Cosine_Similarities/relish_cosine_" + str(index) + ".tsv")
-        print ("Cosine Similarity Matrix Loaded", flush=True)
+        sim_matrix = load_cosine_sim_matrix(
+            "Data/RELISH/nDCG-gain/Cosine_Similarities/relish_cosine_" + str(index) + ".tsv")
+        print("Cosine Similarity Matrix Loaded", flush=True)
 
-        get_dcg_matrix(sim_matrix, "Data/RELISH/nDCG-gain/DCG/relish_dcg_" + str(index) + ".tsv")
-        print ("DCG Matrix Created", flush=True)
+        get_dcg_matrix(
+            sim_matrix, "Data/RELISH/nDCG-gain/DCG/relish_dcg_" + str(index) + ".tsv")
+        print("DCG Matrix Created", flush=True)
 
-        get_identity_dcg_matrix(sim_matrix, "Data/RELISH/nDCG-gain/iDCG/relish_idcg_" + str(index) + ".tsv")
-        print ("iDCG Matrix Created", flush=True)
+        get_identity_dcg_matrix(
+            sim_matrix, "Data/RELISH/nDCG-gain/iDCG/relish_idcg_" + str(index) + ".tsv")
+        print("iDCG Matrix Created", flush=True)
 
-        all_pmids, ndcg_matrix = fill_ndcg_scores("Data/RELISH/nDCG-gain/DCG/relish_dcg_" + str(index) + ".tsv", 
+        all_pmids, ndcg_matrix = fill_ndcg_scores("Data/RELISH/nDCG-gain/DCG/relish_dcg_" + str(index) + ".tsv",
                                                   "Data/RELISH/nDCG-gain/iDCG/relish_idcg_" + str(index) + ".tsv")
-        print ("nDCG Matrix Created", flush=True)
+        print("nDCG Matrix Created", flush=True)
 
-        write_to_tsv(all_pmids, ndcg_matrix, "Data/RELISH/nDCG-gain/nDCG/relish_ndcg_" + str(index) + ".tsv")
-        print ("Matrix Saved!!", flush=True)
+        write_to_tsv(all_pmids, ndcg_matrix,
+                     "Data/RELISH/nDCG-gain/nDCG/relish_ndcg_" + str(index) + ".tsv")
+        print("Matrix Saved!!", flush=True)
+
 
 def trec_run():
     hp_df = hp.generate_hyperparameters(hp.params_d2v)
 
     for index, row in hp_df.iterrows():
-        print ("Row: " + str(index), flush=True)
+        print("Row: " + str(index), flush=True)
 
-        sim_matrix = load_cosine_sim_matrix("Data/TREC/nDCG-gain/Cosine_Similarities/trec_repurposed_cosine_" + str(index) + ".tsv")
-        print ("Cosine Similarity Matrix Loaded", flush=True)
+        sim_matrix = load_cosine_sim_matrix(
+            "Data/TREC/nDCG-gain/Cosine_Similarities/trec_repurposed_cosine_" + str(index) + ".tsv")
+        print("Cosine Similarity Matrix Loaded", flush=True)
 
-        get_dcg_matrix(sim_matrix, "Data/TREC/nDCG-gain/DCG/trec_dcg_" + str(index) + ".tsv")
-        print ("DCG Matrix Created", flush=True)
+        get_dcg_matrix(
+            sim_matrix, "Data/TREC/nDCG-gain/DCG/trec_dcg_" + str(index) + ".tsv")
+        print("DCG Matrix Created", flush=True)
 
-        get_identity_dcg_matrix(sim_matrix, "Data/TREC/nDCG-gain/iDCG/trec_idcg_" + str(index) + ".tsv")
-        print ("iDCG Matrix Created", flush=True)
+        get_identity_dcg_matrix(
+            sim_matrix, "Data/TREC/nDCG-gain/iDCG/trec_idcg_" + str(index) + ".tsv")
+        print("iDCG Matrix Created", flush=True)
 
-        all_pmids, ndcg_matrix = fill_ndcg_scores("Data/TREC/nDCG-gain/DCG/trec_dcg_" + str(index) + ".tsv", 
+        all_pmids, ndcg_matrix = fill_ndcg_scores("Data/TREC/nDCG-gain/DCG/trec_dcg_" + str(index) + ".tsv",
                                                   "Data/TREC/nDCG-gain/iDCG/trec_idcg_" + str(index) + ".tsv")
-        print ("nDCG Matrix Created", flush=True)
+        print("nDCG Matrix Created", flush=True)
 
-        write_to_tsv(all_pmids, ndcg_matrix, "Data/TREC/nDCG-gain/nDCG/trec_ndcg_" + str(index) + ".tsv")
-        print ("Matrix Saved!!", flush=True)
+        write_to_tsv(all_pmids, ndcg_matrix,
+                     "Data/TREC/nDCG-gain/nDCG/trec_ndcg_" + str(index) + ".tsv")
+        print("Matrix Saved!!", flush=True)
 
 
 # relish_run()
@@ -228,7 +233,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input', type=str,
                         help="Path for TREC/RELISH 4 column TSV file (with relevance and cosine similarity scores).")
-    parser.add_argument('-o', '--output', type=str, help="Path for generated nDCG@n matrix TSV file.")
+    parser.add_argument('-o', '--output', type=str,
+                        help="Path for generated nDCG@n matrix TSV file.")
     args = parser.parse_args()
 
     if not os.path.exists("./data/output/gain_matrices"):
@@ -236,6 +242,8 @@ if __name__ == "__main__":
 
     similarity_matrix = load_cosine_sim_matrix(args.input)
     get_dcg_matrix(similarity_matrix, "./data/output/gain_matrices/dcg.tsv")
-    get_identity_dcg_matrix(similarity_matrix, "./data/output/gain_matrices/idcg.tsv")
-    pmids, ndcg_matrix = fill_ndcg_scores("./data/output/gain_matrices/dcg.tsv", "./data/output/gain_matrices/idcg.tsv")
+    get_identity_dcg_matrix(
+        similarity_matrix, "./data/output/gain_matrices/idcg.tsv")
+    pmids, ndcg_matrix = fill_ndcg_scores(
+        "./data/output/gain_matrices/dcg.tsv", "./data/output/gain_matrices/idcg.tsv")
     write_to_tsv(pmids, ndcg_matrix, args.output)
