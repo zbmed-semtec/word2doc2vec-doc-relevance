@@ -40,7 +40,8 @@ def get_dcg_matrix(similarity_matrix: pd.DataFrame, output_file: str):
     similarity_matrix : pd.Dataframe
         Cosine similarity matrix.
     """
-    dcg_matrix = similarity_matrix
+    dcg_matrix = similarity_matrix.sort_values(['PMID1', 'Cosine Similarity'],
+                                               ascending=[True, False], ignore_index=True)
     dcg_matrix.index = dcg_matrix.index + 1
     dcg_matrix.to_csv(output_file, sep='\t')
 
