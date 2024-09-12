@@ -99,7 +99,7 @@ def calculate_idcg_at_n(n: int, sorted_assessed_pmids: pd.DataFrame) -> float:
     """
     idcg_n = 0
     for i, (index, row) in enumerate(sorted_assessed_pmids[:n].iterrows(), start=1):
-        # rel = row['Relevance Assessment']
+
         rel = row['Cosine Similarity']
         value = (2**rel - 1) / math.log2(i + 1)
         idcg_n += value
@@ -126,15 +126,12 @@ def fill_ndcg_scores(dcg_matrix: str, idcg_matrix: str) -> Tuple[List[Any], ndar
 
     dcg_matrix = pd.read_csv(dcg_matrix, sep="\t")
     idcg_matrix = pd.read_csv(idcg_matrix, sep="\t")
-    # Get list of all Reference PMIDs
-    # all_pmids = sorted((dcg_matrix['PMID Reference'].unique()))
+    
     all_pmids = sorted((dcg_matrix['PMID1'].unique()))
     # Creates an empty numpy matrix
     ndcg_matrix = np.empty(shape=(len(all_pmids), len(value_of_n)))
 
     for pmid_index, pmid in enumerate(all_pmids):
-        # all_assessed_pmids = pd.DataFrame(dcg_matrix.loc[dcg_matrix['PMID Reference'] == pmid])
-        # sorted_assessed_pmids = pd.DataFrame(idcg_matrix.loc[idcg_matrix['PMID Reference'] == pmid])
         all_assessed_pmids = pd.DataFrame(
             dcg_matrix.loc[dcg_matrix['PMID1'] == pmid])
         sorted_assessed_pmids = pd.DataFrame(
@@ -168,66 +165,10 @@ def write_to_tsv(pmids: list, ndcg_matrix: np.matrix, output_file: str):
     average_values = ['Average'] + list(ndcg_matrix[['nDCG@5', 'nDCG@10', 'nDCG@15', 'nDCG@20', 'nDCG@25', 'nDCG@50']]
                                         .mean(axis=0).round(4))
     ndcg_matrix.loc[len(ndcg_matrix.index)] = average_values
-    # pd.DataFrame(ndcg_matrix).to_csv("ndcg_doc2vec-doc.tsv", sep="\t")
+    output_directory = os.path.dirname(output_file)
+    if output_directory: 
+        os.makedirs(output_directory, exist_ok=True)
     pd.DataFrame(ndcg_matrix).to_csv(output_file, sep="\t")
-
-
-def relish_run():
-    hp_df = hp.generate_hyperparameters(hp.params_d2v)
-
-    for index, row in hp_df.iterrows():
-        print("Row: " + str(index), flush=True)
-
-        sim_matrix = load_cosine_sim_matrix(
-            "Data/RELISH/nDCG-gain/Cosine_Similarities/relish_cosine_" + str(index) + ".tsv")
-        print("Cosine Similarity Matrix Loaded", flush=True)
-
-        get_dcg_matrix(
-            sim_matrix, "Data/RELISH/nDCG-gain/DCG/relish_dcg_" + str(index) + ".tsv")
-        print("DCG Matrix Created", flush=True)
-
-        get_identity_dcg_matrix(
-            sim_matrix, "Data/RELISH/nDCG-gain/iDCG/relish_idcg_" + str(index) + ".tsv")
-        print("iDCG Matrix Created", flush=True)
-
-        all_pmids, ndcg_matrix = fill_ndcg_scores("Data/RELISH/nDCG-gain/DCG/relish_dcg_" + str(index) + ".tsv",
-                                                  "Data/RELISH/nDCG-gain/iDCG/relish_idcg_" + str(index) + ".tsv")
-        print("nDCG Matrix Created", flush=True)
-
-        write_to_tsv(all_pmids, ndcg_matrix,
-                     "Data/RELISH/nDCG-gain/nDCG/relish_ndcg_" + str(index) + ".tsv")
-        print("Matrix Saved!!", flush=True)
-
-
-def trec_run():
-    hp_df = hp.generate_hyperparameters(hp.params_d2v)
-
-    for index, row in hp_df.iterrows():
-        print("Row: " + str(index), flush=True)
-
-        sim_matrix = load_cosine_sim_matrix(
-            "Data/TREC/nDCG-gain/Cosine_Similarities/trec_repurposed_cosine_" + str(index) + ".tsv")
-        print("Cosine Similarity Matrix Loaded", flush=True)
-
-        get_dcg_matrix(
-            sim_matrix, "Data/TREC/nDCG-gain/DCG/trec_dcg_" + str(index) + ".tsv")
-        print("DCG Matrix Created", flush=True)
-
-        get_identity_dcg_matrix(
-            sim_matrix, "Data/TREC/nDCG-gain/iDCG/trec_idcg_" + str(index) + ".tsv")
-        print("iDCG Matrix Created", flush=True)
-
-        all_pmids, ndcg_matrix = fill_ndcg_scores("Data/TREC/nDCG-gain/DCG/trec_dcg_" + str(index) + ".tsv",
-                                                  "Data/TREC/nDCG-gain/iDCG/trec_idcg_" + str(index) + ".tsv")
-        print("nDCG Matrix Created", flush=True)
-
-        write_to_tsv(all_pmids, ndcg_matrix,
-                     "Data/TREC/nDCG-gain/nDCG/trec_ndcg_" + str(index) + ".tsv")
-        print("Matrix Saved!!", flush=True)
-
-
-# relish_run()
-# trec_run()
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

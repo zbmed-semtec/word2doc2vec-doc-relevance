@@ -1,5 +1,7 @@
-import argparse
 import json
+import yaml
+import argparse
+import itertools
 
 
 def prepare_from_npy(filepath_in: str):
@@ -32,8 +34,24 @@ def prepare_from_npy(filepath_in: str):
             article_docs[line].extend(doc[line][2])
     return (pmids, article_docs)
 
+def generate_param_combinations(params):
+    param_keys = []
+    param_values = []
+    
+    for key, value in params.items():
+        if 'values' in value:  # Check if 'values' exist in this parameter
+            param_keys.append(key)
+            param_values.append(value['values'])
+        else:
+            param_keys.append(key)
+            param_values.append([value['value']])  # Use the single value as a list
+    
+    param_combinations = [dict(zip(param_keys, combination)) 
+                          for combination in itertools.product(*param_values)]
+    
+    return param_combinations
 
-def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str, use_pretrained: bool):
+def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepath_out: str):
     '''
     Generates a word2vec model from all RELISH or TREC sentences using gensim and saves it as a .model file.
 
@@ -47,8 +65,6 @@ def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepa
         A dictionary of the hyperparameters for the model.
     filepath_out: str
         The filepath for the resulting word2vec model file.
-    use_pretrained: bool
-        Whether to use a pretrained Word2Vec model.
     '''
     from gensim.models import Word2Vec
     sentence_list = []
@@ -56,10 +72,7 @@ def generate_Word2Vec_model(article_doc: list, pmids: list, params: list, filepa
         sentence_list.append(article_doc[index])
     params['sentences'] = sentence_list
     wv_model = None
-    if use_pretrained:
-        print("Pretraining")
-    else:
-        wv_model = Word2Vec(**params)
+    wv_model = Word2Vec(**params)
     wv_model.save(filepath_out)
 
 
@@ -89,30 +102,18 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
     st = time.time()
 
     word_vectors = None
-    has_custom_model = gensim_model_path != ""
-    if has_custom_model:
-        word_vectors = model.Word2Vec.load(gensim_model_path)
-    else:
-        print('using pretrained model')
-        word_vectors = api.load('word2vec-google-news-300')
+    word_vectors = model.Word2Vec.load(gensim_model_path)
     missing_words = 0
     iteration = 0
     document_embeddings = []
     for iteration in range(len(pmids)):
         # Retrieve word embeddings.
         embedding_list = []
-        if (has_custom_model):
-            for word in article_doc[iteration]:
-                try:
-                    embedding_list.append(word_vectors.wv[word])
-                except:
-                    missing_words += 1
-        else:
-            for word in article_doc[iteration]:
-                try:
-                    embedding_list.append(word_vectors[word])
-                except:
-                    missing_words += 1
+        for word in article_doc[iteration]:
+            try:
+                embedding_list.append(word_vectors.wv[word])
+            except:
+                missing_words += 1
 
         # Generate document embeddings from word embeddings using word-vector centroids.
         if len(embedding_list) == 0:
@@ -137,9 +138,8 @@ def generate_document_embeddings(pmids: str, article_doc: list, directory_out: s
     df = pd.DataFrame(list(zip((pmids), document_embeddings)),
                       columns=['pmids', 'embeddings'])
     df = df.sort_values('pmids')
-    os.makedirs(f"{directory_out}/{param_iteration}", exist_ok=True)
-    df.to_pickle(f'{directory_out}/{param_iteration}/embeddings.pkl')
-
+    os.makedirs(f"{directory_out}", exist_ok=True)
+    df.to_pickle(f'{directory_out}/embeddings_{param_iteration}.pkl')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -147,23 +147,23 @@ if __name__ == "__main__":
                         help="Path to input RELISH tokenized .npy file")
     parser.add_argument("-o", "--output", type=str,
                         help="Path to save embeddings pickle file")
-    parser.add_argument("-pj", "--params_json", type=str,
-                        help="File location of word2vec parameter list.")
-    parser.add_argument("-up", "--use_pretrained", type=int,
-                        help="Whether to use a pretrained model or not")
+    parser.add_argument("-p", "--params", type=str,
+                        help="Path to hyperparameter yaml file.")
     args = parser.parse_args()
 
     params = []
-    with open(args.params_json, "r") as openfile:
-        params = json.load(openfile)
+    with open(args.params, "r") as file:
+        content = yaml.safe_load(file)
+        params = content['params']
 
-    model_output_File = ""
-    if not args.use_pretrained:
-        model_output_File = "./data/word2vec_model"
-
-    for iteration in range(len(params)):
+    param_combinations = generate_param_combinations(params)
+    model_output_file_base = "./data/word2vec_model"
+ 
+    for i, param_set in enumerate(param_combinations):
+        print(f"Training model with hyperparameters: {param_set}")
         pmids, article_doc = prepare_from_npy(args.input)
+        model_output_file = f"{model_output_file_base}_{i}"
         generate_Word2Vec_model(
-            article_doc, pmids, params[iteration], model_output_File, args.use_pretrained)
+            article_doc, pmids, param_set, model_output_file)
         generate_document_embeddings(
-            pmids, article_doc, args.output, iteration, model_output_File)
+                pmids, article_doc, args.output, i, model_output_file)

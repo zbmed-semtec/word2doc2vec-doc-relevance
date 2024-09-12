@@ -65,7 +65,7 @@ def calculate_precision(sorted_collection: pd.DataFrame, n: int) -> float:
     return precision_n
 
 
-def generate_matrix(ref_pmids: list, data: pd.DataFrame) -> np.array:
+def generate_matrix(ref_pmids: list, data: pd.DataFrame, classes: int) -> np.array:
     """
     Wrapper function to generate the precision matrix at the given values of n for every unique PMID in the input data.
     Parameters
@@ -74,6 +74,8 @@ def generate_matrix(ref_pmids: list, data: pd.DataFrame) -> np.array:
         List of all unique PMIDs.
     data : pd.Dataframe
         Pandas Dataframe cosisting of 4 columns: PMID1, PMID2, Relevance, Cosine similarity.
+    classes : int
+        Number of classes for class distribution.
     Returns
     -------
     precision_matrix : np.array
@@ -112,13 +114,14 @@ def write_to_tsv(ref_pmids: list, precision_matrix: np.array, output_filepath: s
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-c", "--cosine_file_path", help="File path to the 4-column cosine similarity existing pair matrix"
+    parser.add_argument("-i", "--cosine_file_path", help="File path to the 4-column cosine similarity existing pair matrix"
                         , required=True)
     parser.add_argument("-o", "--output_path", help="File path to save the precision matrix",
                         required=True)
-
+    parser.add_argument("-c", "--classes", help="Number of classes",
+                        required=True)
     args = parser.parse_args()
 
     ref_pmids, data = read_file(args.cosine_file_path)
-    matrix = generate_matrix(ref_pmids, data)
+    matrix = generate_matrix(ref_pmids, data, args.classes)
     write_to_tsv(ref_pmids, matrix, args.output_path)

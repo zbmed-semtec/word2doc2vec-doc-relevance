@@ -1,0 +1,23 @@
+params:
+  sg:
+    type: int
+    values: [0, 1]  
+  vector_size:
+    type: int
+    values: [200, 300, 400]  
+    step: 50
+  window:
+    type: int
+    values: [5, 6, 7] 
+  min_count:
+    type: int
+    value: 5
+  epochs:
+    type: int
+    value: 15  
+  workers:
+    type: int
+    value: 8  
+  seed:
+    type: int
+    value: 42
