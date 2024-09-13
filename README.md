@@ -1,3 +1,7 @@
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+
+[![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:51e827e63084faece4fe491da89c9ffb0ef9a92c/)](https://archive.softwareheritage.org/swh:1:dir:51e827e63084faece4fe491da89c9ffb0ef9a92c;origin=https://github.com/zbmed-semtec/word2doc2vec-doc-relevance;visit=swh:1:snp:028e1ef544c731738cbfa4c3ba073522bf53987e;anchor=swh:1:rev:248bd9af17a7c09df3572fc854e714e00cad51e5)
+
 # Word2doc2vec-Doc-relevance
 This repository focuses on an approach exploring and assessing literature-based doc-2-doc recommendations using the Word2Vec technique, followed  centroid aggregation method to create document-level embeddings. The approach is applied to the RELISH dataset.
 
@@ -197,7 +201,7 @@ done
 In order to calculate the Precision@N scores and execute this [script](/code/precision.py), run the following command:
 
 ```
-python3 code/precision.py [-i COSINE FILE PATH]  [-o OUTPUT PATH]
+python3 code/precision.py [-i COSINE FILE PATH]  [-o OUTPUT PATH] [-c CLASSES]
 ```
 
 You must pass the following two arguments:

@@ -1,0 +1,87 @@
+{
+    "@context": "https://w3id.org/codemeta/3.0",
+    "type": "SoftwareSourceCode",
+    "applicationCategory": "Recommendation Systems",
+    "codeRepository": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance",
+    "contributor": [
+        {
+            "id": "http://orcid.org/0000-0002-2910-7982",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences"
+            },
+            "familyName": "Geist",
+            "givenName": "Lukas"
+        },
+        {
+            "id": "https://orcid.org/0009-0004-4484-6283",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences"
+            },
+            "email": "ravinder@zbmed.de",
+            "familyName": "Ravinder",
+            "givenName": "Rohitha"
+        },
+        {
+            "id": "_:contributor_3",
+            "type": "Person",
+            "familyName": "Talha",
+            "givenName": "Muhammad"
+        },
+        {
+            "id": "https://orcid.org/0000-0002-1018-0370",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences"
+            },
+            "familyName": "Rebholz-Schuhmann",
+            "givenName": "Dietrich"
+        },
+        {
+            "id": "https://orcid.org/0000-0003-3986-0510",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences"
+            },
+            "familyName": "Castro",
+            "givenName": "Leyla Jael"
+        }
+    ],
+    "dateCreated": "2022-04-04",
+    "description": "An approach exploring and assessing literature-based doc-2-doc recommendations using word2vec combined with doc2vec, and applying it to RELISH dataset.",
+    "funder": {
+        "type": "Organization",
+        "name": "DFG "
+    },
+    "identifier": "swh:1:dir:51e827e63084faece4fe491da89c9ffb0ef9a92c",
+    "keywords": [
+        "word-embeddings",
+        "document-similarity",
+        "document-embeddings",
+        "doc2doc-relevance"
+    ],
+    "license": "https://spdx.org/licenses/GPL-3.0",
+    "name": "word2doc2vec-doc-relevance",
+    "operatingSystem": [
+        "Linux",
+        "Windows 10"
+    ],
+    "programmingLanguage": "Python 3",
+    "softwareRequirements": [
+        "Python3.9",
+        "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/blob/main/requirements.txt"
+    ],
+    "version": "1.0.0",
+    "developmentStatus": "active",
+    "funding": "DFG Grant No. 407518790",
+    "issueTracker": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/issues",
+    "referencePublication": [
+        "",
+        ""
+    ]
+}
