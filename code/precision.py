@@ -45,7 +45,7 @@ def sort_collection(pmid: str, data: pd.DataFrame) -> pd.DataFrame:
     return sorted_collection
 
 
-def calculate_precision(sorted_collection: pd.DataFrame, n: int, cllasses: int) -> float:
+def calculate_precision(sorted_collection: pd.DataFrame, n: int, classes: int) -> float:
     """
     Calculates the precision score for the input sorted_collection at given n value.
     Parameters
@@ -91,7 +91,7 @@ def generate_matrix(ref_pmids: list, data: pd.DataFrame, classes: int) -> np.arr
     for pmid_index, pmid in enumerate(ref_pmids):
         sorted_collection = sort_collection(pmid, data)
         for index, n in enumerate(value_of_n):
-            precision_n = calculate_precision(sorted_collection, n)
+            precision_n = calculate_precision(sorted_collection, n, classes)
             precision_matrix[pmid_index][index] = precision_n
     return precision_matrix
 
