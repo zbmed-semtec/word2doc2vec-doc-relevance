@@ -51,8 +51,8 @@ We construct Word2Vec models with customizable hyperparameters. We employ the pa
 
 #### Hyperparameters
 The hyperparameters can be modified in [`hyperparameters.yaml`](./code/hyperparameters.yaml)
-#### Using Pre-trained Word2Vec models
-By default, we make use of the Gensim Word2Vec model **"word2vec-google-news-300"** to generate pre-trained word embeddings.
+
+
 #### Document Embeddings
 Document embeddings are created by computing the centroids of all provided word embeddings within each title and abstract document. The resulting embeddings generated from various model hyperparameter configurations are stored. These embeddings, along with their respective PMIDs, are saved as a dataframe in a pickle file. Each specific set of hyperparameter combination results in having a separate pickle file.
 
