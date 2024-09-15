@@ -187,4 +187,7 @@ if __name__ == "__main__":
         similarity_matrix, "./data/output/gain_matrices/idcg.tsv")
     pmids, ndcg_matrix = fill_ndcg_scores(
         "./data/output/gain_matrices/dcg.tsv", "./data/output/gain_matrices/idcg.tsv")
+    output_dir = os.path.dirname(args.output)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
     write_to_tsv(pmids, ndcg_matrix, args.output)

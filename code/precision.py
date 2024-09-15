@@ -45,7 +45,7 @@ def sort_collection(pmid: str, data: pd.DataFrame) -> pd.DataFrame:
     return sorted_collection
 
 
-def calculate_precision(sorted_collection: pd.DataFrame, n: int) -> float:
+def calculate_precision(sorted_collection: pd.DataFrame, n: int, cllasses: int) -> float:
     """
     Calculates the precision score for the input sorted_collection at given n value.
     Parameters
@@ -54,13 +54,18 @@ def calculate_precision(sorted_collection: pd.DataFrame, n: int) -> float:
         Sorted Pandas Dataframe based on the given PMID .
     n : int
         Value of n at which precision is to be calculated.
+    classes : int
+        Number of classes 2 or 3 for class distribution.
     Returns
     -------
     precision_n : float
         Value of Precision@n.
     """
     top_n = sorted_collection[:n]
-    true_positives_n = len(top_n[(top_n["Relevance"] == 2) | (top_n["Relevance"] == 1)])
+    if int(classes) == 2:
+        true_positives_n = len(top_n[(top_n["Relevance"] == 2) | (top_n["Relevance"] == 1)]) # two classes
+    else:
+        true_positives_n = len(top_n[top_n["Relevance"] == 2])  # three classes
     precision_n = round(true_positives_n/n, 4)
     return precision_n
 
@@ -124,4 +129,7 @@ if __name__ == "__main__":
 
     ref_pmids, data = read_file(args.cosine_file_path)
     matrix = generate_matrix(ref_pmids, data, args.classes)
+    output_dir = os.path.dirname(args.output_path)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
     write_to_tsv(ref_pmids, matrix, args.output_path)
