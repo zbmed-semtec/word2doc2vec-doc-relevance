@@ -149,10 +149,9 @@ This script makes sure that the necessary folders are created and the files are 
 ```
 
 ### Step 4: Generate Embeddings
-The [`generate_embeddings.py`](./code/generate_embeddings.py) script uses the RELISH Tokenized npy file as input and includes a default parameter json with preset hyperparameters. You can easily adapt it for different values and parameters by modifying the [`hyperparameters_word2vec.json`](./data/hyperparameters_word2vec.json). Make sure to have the RELISH Tokenized.npy file within the directory under the data folder.
-
+The [`generate_embeddings.py`](./code/generate_embeddings.py) script uses the RELISH Tokenized npy file as input. You can easily adapt it for different values and parameters by modifying the [[`hyperparameters.yaml`](./code/hyperparameters.yaml) Make sure to have the RELISH Tokenized.npy file within the directory under the data folder.
 ```
-python3 code/generate_embeddings.py [-i INPUT PATH] [-o OUTPUT PATH] [-p PARAMS] [-up USE PRETRAINED]
+python3 code/generate_embeddings.py [-i INPUT PATH] [-o OUTPUT PATH] [-p PARAMS]
 ```
 
 You must pass the following arguments:
