@@ -14,7 +14,6 @@ This repository focuses on an approach exploring and assessing literature-based 
         - [Using Trained Word2Vec models](#using-trained-word2vec-models)
           - [Parameters](#parameters)
           - [Hyperparameters](#hyperparameters)
-        - [Using Pre-trained Word2Vec models](#using-pre-trained-word2vec-models)
         - [Document Embeddings](#document-embeddings)
     2. [Calculate Cosine Similarity](#calculate-cosine-similarity)
     3. [Evaluation](#evaluation)
