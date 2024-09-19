@@ -71,14 +71,12 @@
         "document similarity",
         "document embeddings"
     ],
-    "license": "https://spdx.org/licenses/GPL-3.0",
     "license": {
         "@type": "CreativeWork",
-        "@id": "http://spdx.org/licenses/CC-BY-4.0",
-        "name": "Creative Commons Attribution 4.0 International", 
-        "alternateName": "CC BY 4.0",
-        "url": "https://creativecommons.org/licenses/by/4.0/"
-      },
+        "@id": "http://spdx.org/licenses/GPL-3.0-only",
+        "name": "GPLv3",
+        "url": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+    }
     "name": "word2doc2vec-doc-relevance",
     "operatingSystem": [
         "Linux",
