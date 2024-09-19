@@ -1,5 +1,8 @@
 {
-    "@context": "https://w3id.org/codemeta/3.0",
+    "@context": [
+        "http://schema.org/",
+        {"codemeta": "https://w3id.org/codemeta/3.0"}
+    ],
     "@type": "SoftwareSourceCode",
     "@id": "https://archive.softwareheritage.org/swh:1:rev:248bd9af17a7c09df3572fc854e714e00cad51e5",
     "applicationCategory": "Machine Learning",
@@ -113,7 +116,7 @@
     }
     ],
     "issueTracker": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/issues",
-    "referencePublication": {
+    "codemeta:referencePublication": {
       "@type": "ScholarlyArticle",
       "@id": "https://ceur-ws.org/Vol-3466/paper5.pdf",
       "identifier": "CEUR:Vol-3466/paper5",
@@ -138,5 +141,7 @@
         {"@id": "https://orcid.org/0000-0002-1018-0370"},
         {"@id": "https://orcid.org/0000-0003-3986-0510"}
       ]
-    }
+    },
+    "codemeta:readme": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/blob/main/README.md",
+    "maintainer": {"@id": "https://orcid.org/0000-0003-3986-0510"}
 }
