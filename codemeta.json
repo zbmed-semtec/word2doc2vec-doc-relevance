@@ -79,7 +79,7 @@
         "@id": "http://spdx.org/licenses/GPL-3.0-only",
         "name": "GPLv3",
         "url": "https://www.gnu.org/licenses/gpl-3.0.en.html"
-    }
+    },
     "name": "word2doc2vec-doc-relevance",
     "operatingSystem": [
         "Linux",
@@ -92,7 +92,7 @@
         "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/blob/main/requirements.txt"
     ],
     "version": "1.0.0",
-    "developmentStatus": "active",
+    "codemeta:developmentStatus": "active",
     "funding": [
     {
       "@type": "Grant",
@@ -115,7 +115,7 @@
       "description": "Project no. 407518790 (corresponding to the STELLA project)"
     }
     ],
-    "issueTracker": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/issues",
+    "codemeta:issueTracker": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/issues",
     "codemeta:referencePublication": {
       "@type": "ScholarlyArticle",
       "@id": "https://ceur-ws.org/Vol-3466/paper5.pdf",
