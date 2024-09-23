@@ -148,6 +148,13 @@ This script makes sure that the necessary folders are created and the files are 
          └─ relevance_matrix.tsv
 ```
 
+The file *relish.npy* is in the NumPy binary format (.npy), which is specifically used to store NumPy arrays efficiently. These arrays contain the PMID, title, and abstract for each document.
+
+In contrast, *relevance_matrix.tsv* is a Tab-separated Values file, similar to CSV but using tabs as delimiters. It stores tabular data with four columns: PMID1 | PMID2 | Relevance | WMD Similarity.
+
+Reference: Tab-separated values (TSV) file format:  
+[![FAIRsharing DOI](https://img.shields.io/badge/DOI-10.25504%2FFAIRsharing.a978c9-blue)](https://doi.org/10.25504/FAIRsharing.a978c9)
+
 ### Step 4: Generate Embeddings
 The [`generate_embeddings.py`](./code/generate_embeddings.py) script uses the RELISH Tokenized npy file as input. You can easily adapt it for different values and parameters by modifying the [[`hyperparameters.yaml`](./code/hyperparameters.yaml) Make sure to have the RELISH Tokenized.npy file within the directory under the data folder.
 ```
