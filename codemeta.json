@@ -1,52 +1,59 @@
 {
-    "@context": "https://w3id.org/codemeta/3.0",
-    "type": "SoftwareSourceCode",
-    "applicationCategory": "Recommendation Systems",
+    "@context": [
+        "http://schema.org/",
+        {"codemeta": "https://w3id.org/codemeta/3.0"}
+    ],
+    "@type": "SoftwareSourceCode",
+    "@id": "https://archive.softwareheritage.org/swh:1:rev:248bd9af17a7c09df3572fc854e714e00cad51e5",
+    "applicationCategory": "Machine Learning",
     "codeRepository": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance",
-    "contributor": [
+    "author": [
         {
-            "id": "http://orcid.org/0000-0002-2910-7982",
-            "type": "Person",
+            "@id": "http://orcid.org/0000-0002-2910-7982",
+            "@type": "Person",
             "affiliation": {
-                "type": "Organization",
-                "name": "ZB MED - Information Centre for Life Sciences"
+                "@type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences",
+                "@id": "https://ror.org/0259fwx54"
             },
             "familyName": "Geist",
             "givenName": "Lukas"
         },
         {
-            "id": "https://orcid.org/0009-0004-4484-6283",
-            "type": "Person",
+            "@id": "https://orcid.org/0009-0004-4484-6283",
+            "@type": "Person",
             "affiliation": {
-                "type": "Organization",
-                "name": "ZB MED - Information Centre for Life Sciences"
+                "@type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences",
+                "@id": "https://ror.org/0259fwx54"
             },
-            "email": "ravinder@zbmed.de",
             "familyName": "Ravinder",
             "givenName": "Rohitha"
         },
         {
-            "id": "_:contributor_3",
-            "type": "Person",
+            "@id": "https://zbmed-semtec.github.io/previous_members/#muhammad-talha",
+            "@type": "Person",
             "familyName": "Talha",
             "givenName": "Muhammad"
         },
         {
-            "id": "https://orcid.org/0000-0002-1018-0370",
-            "type": "Person",
+            "@id": "https://orcid.org/0000-0002-1018-0370",
+            "@type": "Person",
             "affiliation": {
-                "type": "Organization",
-                "name": "ZB MED - Information Centre for Life Sciences"
+                "@type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences",
+                "@id": "https://ror.org/0259fwx54"
             },
             "familyName": "Rebholz-Schuhmann",
             "givenName": "Dietrich"
         },
         {
-            "id": "https://orcid.org/0000-0003-3986-0510",
-            "type": "Person",
+            "@id": "https://orcid.org/0000-0003-3986-0510",
+            "@type": "Person",
             "affiliation": {
-                "type": "Organization",
-                "name": "ZB MED - Information Centre for Life Sciences"
+                "@type": "Organization",
+                "name": "ZB MED - Information Centre for Life Sciences",
+                "@id": "https://ror.org/0259fwx54"
             },
             "familyName": "Castro",
             "givenName": "Leyla Jael"
@@ -55,21 +62,29 @@
     "dateCreated": "2022-04-04",
     "description": "An approach exploring and assessing literature-based doc-2-doc recommendations using word2vec combined with doc2vec, and applying it to RELISH dataset.",
     "funder": {
-        "type": "Organization",
-        "name": "DFG "
-    },
+        "@type": "Organization",
+        "@id": "https://ror.org/018mejw64",
+        "name": "Deutsche Forschungsgemeinschaft", 
+        "alternateName": "German Research Foundation",
+        "url": "http://www.dfg.de/en/"  
+      },
     "identifier": "swh:1:dir:51e827e63084faece4fe491da89c9ffb0ef9a92c",
     "keywords": [
-        "word-embeddings",
-        "document-similarity",
-        "document-embeddings",
-        "doc2doc-relevance"
+        "word embeddings",
+        "document similarity",
+        "document embeddings"
     ],
-    "license": "https://spdx.org/licenses/GPL-3.0",
+    "license": {
+        "@type": "CreativeWork",
+        "@id": "http://spdx.org/licenses/GPL-3.0-only",
+        "name": "GPLv3",
+        "url": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+    },
     "name": "word2doc2vec-doc-relevance",
     "operatingSystem": [
         "Linux",
-        "Windows 10"
+        "Windows 10",
+        "macOS"
     ],
     "programmingLanguage": "Python 3",
     "softwareRequirements": [
@@ -77,11 +92,56 @@
         "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/blob/main/requirements.txt"
     ],
     "version": "1.0.0",
-    "developmentStatus": "active",
-    "funding": "DFG Grant No. 407518790",
-    "issueTracker": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/issues",
-    "referencePublication": [
-        "",
-        ""
-    ]
+    "codemeta:developmentStatus": "active",
+    "funding": [
+    {
+      "@type": "Grant",
+      "@id": "https://gepris.dfg.de/gepris/projekt/460234259",
+      "funder": {
+        "@type": "Organization",
+        "@id": "https://ror.org/018mejw64"
+      },
+      "identifier": "460234259",
+      "description": "Project no. 460234259 (corresponding to the NFDI4DataScience consortium)"
+    },
+    {
+      "@type": "Grant",
+      "@id": "https://gepris.dfg.de/gepris/projekt/407518790",
+      "funder": {
+        "@type": "Organization",
+        "@id": "https://ror.org/018mejw64" 
+      },
+      "identifier": "407518790",
+      "description": "Project no. 407518790 (corresponding to the STELLA project)"
+    }
+    ],
+    "codemeta:issueTracker": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/issues",
+    "codemeta:referencePublication": {
+      "@type": "ScholarlyArticle",
+      "@id": "https://ceur-ws.org/Vol-3466/paper5.pdf",
+      "identifier": "CEUR:Vol-3466/paper5",
+      "creditText": "Ravinder R, Fellerhof T, Dadi V, Geist L, Talha M, Rebholz-Schuhmann D, et al. A Comparison of Vector-based Approaches for Document Similarity Using the RELISH Corpus. Proceedings of the 6th Workshop on Semantic Web Solutions for Large-Scale Biomedical Data Analytics co-located with ESWC 2023. CEUR; 2023. Available: https://ceur-ws.org/Vol-3466/paper5.pdf",
+      "name": "A Comparison of Vector-based Approaches for Document Similarity Using the RELISH Corpus",
+      "datePublished": "2023-03-01",
+      "license": {
+        "@type": "CreativeWork",
+        "@id": "http://spdx.org/licenses/CC-BY-4.0",
+        "name": "Creative Commons Attribution 4.0 International", 
+        "alternateName": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "url": "https://ceur-ws.org/Vol-3466/paper5.pdf#",
+      "author": [
+        {"@id": "https://orcid.org/0009-0004-4484-6283"},
+        {"@id": "https://orcid.org/0000-0002-8725-1317"},
+        {"@id": "https://orcid.org/0000-0002-3082-7522"},
+        {"@id": "https://orcid.org/0000-0002-2910-7982"},
+        {"@id": "https://orcid.org/0000-0002-4795-3648"},
+        {"@id": "https://zbmed-semtec.github.io/previous_members/#muhammad-talha"},
+        {"@id": "https://orcid.org/0000-0002-1018-0370"},
+        {"@id": "https://orcid.org/0000-0003-3986-0510"}
+      ]
+    },
+    "codemeta:readme": "https://github.com/zbmed-semtec/word2doc2vec-doc-relevance/blob/main/README.md",
+    "maintainer": {"@id": "https://orcid.org/0000-0003-3986-0510"}
 }
