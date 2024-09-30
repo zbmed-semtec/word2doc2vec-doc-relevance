@@ -1,5 +1,7 @@
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13861950.svg)](https://doi.org/10.5281/zenodo.13861950)
+
 [![SWH](https://archive.softwareheritage.org/badge/swh:1:dir:51e827e63084faece4fe491da89c9ffb0ef9a92c/)](https://archive.softwareheritage.org/swh:1:dir:51e827e63084faece4fe491da89c9ffb0ef9a92c;origin=https://github.com/zbmed-semtec/word2doc2vec-doc-relevance;visit=swh:1:snp:028e1ef544c731738cbfa4c3ba073522bf53987e;anchor=swh:1:rev:248bd9af17a7c09df3572fc854e714e00cad51e5)
 
 # Word2doc2vec-Doc-relevance
